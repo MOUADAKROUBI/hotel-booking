@@ -1,0 +1,37 @@
+:root {
+    --neutral-600: #626262;
+    --neutral-700: #060606;
+    --primary-1: #060606;
+    --neutral-500: #8b8b8b;
+    --neutral-400: #b8b8b8;
+    --neutral-300: #cfcfcf;
+    --neutral-200: #f8f8f8;
+    --neutral-100: white;
+}
+
+body {
+    color: var(--neutral-600);
+    letter-spacing: -.02em;
+    font-family: Muli, sans-serif;
+    font-size: 18px;
+    line-height: 1.778em;
+}
+
+.linkCate {
+    overflow: hidden;
+}
+
+img {
+    vertical-align: middle;
+    border: 0;
+}
+
+h3 {
+    color: var(--neutral-700);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: Playfair Display, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.25em;
+}
