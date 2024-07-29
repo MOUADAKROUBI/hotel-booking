@@ -21,6 +21,13 @@ body {
     overflow: hidden;
 }
 
+@media screen and (max-width: 1080px) {
+    .linkCate {
+        width: 100%;
+    }
+    
+}
+
 img {
     vertical-align: middle;
     border: 0;
@@ -34,4 +41,17 @@ h3 {
     font-size: 32px;
     font-weight: 400;
     line-height: 1.25em;
+    transition: "color .35s";
+}
+
+.button-slider {
+    width: 200px;
+}
+
+.arrowLeftHoverd {
+    transform: translate3d(-20px, 0, 0) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+}
+
+.arrowRightHoverd {
+    transform: translate3d(20px, 0, 0) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
 }

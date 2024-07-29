@@ -1,0 +1,585 @@
+{
+  "data": [
+    {
+      "villas": [
+        {
+          "id": 1,
+          "name_1": "Luxury",
+          "name_2": "Villas in Agadir",
+          "description": "<strong>Experience</strong> the height of luxury at Agadir Concierge's curated villas, set amidst the breathtaking scenery of Agadir, Morocco. Whether you're seeking a serene retreat or an opulent escape, our villas provide a remarkable experience crafted to exceed your highest expectations.",
+          "data": [
+            {
+              "id": 1,
+              "catName": "iligh villas",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7f2_Main%20Image.jpeg"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7f6_Room%25203-p-500.jpeg"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7f1_Room%25202-p-500.jpeg"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7fc_WhatsApp%2520Image%25202024-02-22%2520at%252019.14.51%2520(3)-p-500.jpeg"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7fa_WhatsApp%2520Image%25202024-02-22%2520at%252019.14.50%2520(8)-p-500.jpeg"
+                }
+              ],
+              "name": "5 Bedroom Villa",
+              "description": "Immerse Yourself in Opulence: Discover the epitome of luxury in our 5-bedroom villa. Boasting expansive interiors, breathtaking vistas, and top-tier amenities, this villa is the perfect sanctuary for families or groups seeking an extraordinary retreat.",
+              "rooms": 5,
+              "bathrooms": 3,
+              "privetePool": true,
+              "wifi": false,
+              "balcony": false
+            },
+            {
+              "id": 2,
+              "catName": "iligh villas",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df812_Main.jpeg"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df811_Room%25201-p-500.jpeg"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df810_WhatsApp%20Image%202024-02-04%20at%2014.46.17%20(5).jpeg"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df813_WhatsApp%2520Image%25202024-02-04%2520at%252014.46.53-p-500.jpeg"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df814_WhatsApp%2520Image%25202024-02-04%2520at%252014.47.21%2520(2)-p-500.jpeg"
+                }
+              ],
+              "name": "6 Bedroom Villa",
+              "description": "Indulge in ultimate luxury at our <strong> 6-bedroom villa.</strong> With spacious interiors, stunning views, and lavish amenities, this villa offers an unparalleled retreat for families or groups.",
+              "rooms": 6,
+              "bathrooms": 3,
+              "privetePool": true,
+              "wifi": false,
+              "balcony": false
+            },
+            {
+              "id": 3,
+              "catName": "iligh villas",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df723_WhatsApp%20Image%202024-02-04%20at%2014.48.47%20(7).jpeg"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df71f_Room%25201-p-500.jpeg"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df71e_Room%25202-p-500.jpeg"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df72c_WhatsApp%2520Image%25202024-02-04%2520at%252014.48.48%2520(2)-p-500.jpeg"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df724_A.Main-p-500.jpeg"
+                }
+              ],
+              "name": "6 Bedroom Villa",
+              "description": "Experience opulent living at its finest in our exquisite <strong> 6-bedroom villa.</strong> Perfect for large families or groups, this spacious retreat boasts luxurious amenities, breathtaking views.",
+              "rooms": 6,
+              "bathrooms": 3,
+              "privetePool": true,
+              "wifi": false,
+              "balcony": false
+            },
+            {
+              "id": 4,
+              "catName": "iligh villas",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/6635180127c2366e6ea5d0bf_Main.jpeg"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/66351801bc76b440a4e662c1_R3-p-500.jpeg"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/663518013e880ee7c8daf893_R5-p-500.jpeg"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/6635180279c51318fb6a2bd8_WhatsApp%20Image%202024-05-01%20at%2017.32.06-p-500.jpeg"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/66351801c4a87bf5e3f75b0d_WhatsApp%20Image%202024-05-01%20at%2017.32.06%20(4)-p-500.jpeg"
+                }
+              ],
+              "name": "6 Bedroom Villa",
+              "description": "<strong>6-bedroom villa.</strong> Perfect for large families or groups, this spacious retreat boasts luxurious amenities, breathtaking views.",
+              "rooms": 6,
+              "bathrooms": 5,
+              "privetePool": true,
+              "wifi": true,
+              "balcony": true
+            },
+            {
+              "id": 5,
+              "catName": "iligh villas",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df796_WhatsApp%20Image%202024-02-04%20at%2014.37.50%20(7).jpeg"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df78b_Room%25204-p-500.jpeg"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df784_Room%25206-p-500.jpeg"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df799_WhatsApp%2520Image%25202024-02-04%2520at%252014.37.50%2520(3)-p-500.jpeg"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df79d_WhatsApp%2520Image%25202024-02-04%2520at%252014.38.24%2520(4)-p-500.jpeg"
+                }
+              ],
+              "name": "8 Bedroom Villa",
+              "description": "Escape to luxury in our prestigious<strong> 8-bedroom villa.</strong> Offering expansive living spaces, unparalleled comfort, and top-tier amenities, this villa is ideal for accommodating large groups or families.",
+              "rooms": 8,
+              "bathrooms": 4,
+              "privetePool": true,
+              "wifi": false,
+              "balcony": false
+            },
+            {
+              "id": 6,
+              "catName": "sonaba villas",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7c1_WhatsApp%20Image%202024-02-04%20at%2014.53.13.jpeg"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7c3_IMG-20230113-WA0049-1-p-500.jpg"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7be_WhatsApp%2520Image%25202024-02-04%2520at%252014.53.13%2520(4)-p-500.jpeg"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7bc_WhatsApp%2520Image%25202024-02-04%2520at%252014.53.13%2520(3)-p-500.jpeg"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7c2_WhatsApp%2520Image%25202024-02-04%2520at%252014.53.13%2520(2)-p-500.jpeg"
+                }
+              ],
+              "name": "3 Bedroom Villa",
+              "description": "<strong>3-bedroom</strong> villa perfect for families or small groups, this cozy retreat offers modern amenities, breathtaking views and personalised service.",
+              "rooms": 3,
+              "bathrooms": 2,
+              "privetePool": true,
+              "wifi": false,
+              "balcony": false
+            }
+          ]
+        }
+      ],
+      "apartments": [
+        {
+          "id": 2,
+          "name_1": "Discover Exquisite Apartments",
+          "name_2": "in Agadir",
+          "description": "Whether you're seeking a serene escape or a lavish retreat, our apartments in <strong> Agadir</strong> promise an unforgettable experience crafted to exceed all expectations.",
+          "data": [
+            {
+              "id": 1,
+              "catName": "sonaba",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd88f0f09d85f79988d26_L-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd88f0f09d85f79988d7c_R1-1-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd8983274d0d4dec7713e_OP1-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd88e602641e2afd0be1e_B-p-500.webp"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd88f1c199e177a6a3828_OP2-p-500.webp"
+                }
+              ],
+              "name": "Apartment 404",
+              "description": "Nestled in Sonaba, this <strong>bedroom apartment</strong> offers a cozy retreat with modern comforts and a stylish ambiance. Perfectly situated for exploring Agadir's vibrant streets, it provides the ideal base for your city adventures.",
+              "rooms": 1,
+              "bathrooms": 1,
+              "pool": true,
+              "privetePool": false,
+              "roomservices": true,
+              "wifi": true,
+              "balcony": false
+            },
+            {
+              "id": 2,
+              "catName": "sonaba",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd8ac0f09d85f7998a3d3_L-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd8ad656f8bb6e546dc35_R1-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd8983274d0d4dec7713e_OP1-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd88e602641e2afd0be1e_B-p-500.webp"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd88f1c199e177a6a3828_OP2-p-500.webp"
+                }
+              ],
+              "name": "Apartment 405",
+              "description": "Nestled in Sonaba, this <strong>bedroom apartment</strong> offers a cozy retreat with modern comforts and a stylish ambiance. Perfectly situated for exploring Agadir's vibrant streets, it provides the ideal base for your city adventures.",
+              "rooms": 1,
+              "bathrooms": 1,
+              "pool": true,
+                "privetePool": false,
+              "roomservices": true,
+              "wifi": true,
+              "balcony": false
+            },
+            {
+              "id": 3,
+              "catName": "sonaba",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd8bdd75afffac60313f4_L-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd8bec39aaaef6b5b4575_R1-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd8be9c4b8999e4b9cbab_B1-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd8bd85963119377b7899_OP1-p-500.webp"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd8bd0f09d85f7998af98_OP2-p-500.webp"
+                }
+              ],
+              "name": "Apartment 406",
+              "description": "<strong>Experience</strong> the vibrant energy of Agadir from this centrally located 1-bedroom apartment in Sonaba. Designed for urban explorers, it combines contemporary comforts with a warm ambiance, offering a chic and delightful city retreat.",
+              "rooms": 1,
+              "bathrooms": 1,
+              "pool": true,
+                "privetePool": false,
+              "roomservices": true,
+              "wifi": true,
+              "balcony": true
+            },
+            {
+                "id": 4,
+                "catName": "sonaba",
+                "images": [
+                    {
+                    "id": 1,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9483fe11c38a0128fe9_L-p-1600.webp"
+                    },
+                    {
+                    "id": 2,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9480347f760d83658c3_R1-p-500.webp"
+                    },
+                    {
+                    "id": 3,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9473274d0d4dec7f5ab_B-p-500.webp"
+                    },
+                    {
+                    "id": 4,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd949239d0d1fc855c2da_OP2-p-500.webp"
+                    }
+                ],
+                "name": "Apartment 109",
+                "description": "Experience the vibrant pulse of Agadir from this centrally located<strong> 2-bedroom apartment</strong> in Sonaba. Designed for urban explorers, it combines contemporary comforts with an inviting ambiance, making it a perfect base for a memorable city retreat.",
+                "rooms": 2,
+                "bathrooms": 1,
+                "pool": true,
+                "privetePool": false,
+                "roomservices": true,
+                "wifi": true,
+                "balcony": true
+            },
+            {
+                "id": 5,
+                "catName": "sonaba",
+                "images": [
+                    {
+                    "id": 1,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd958656f8bb6e5476e12_L1-p-1600.webp"
+                    },
+                    {
+                    "id": 2,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9589c4b8999e4ba35e2_R1-p-500.webp"
+                    },
+                    {
+                    "id": 3,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd957fa3dd45aa94aadd8_L2-p-500.webp"
+                    },
+                    {
+                    "id": 4,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd957e846c8879e109c43_OP2-p-500.webp"
+                    }
+                ],
+                "name": "Apartment 201",
+                "description": "Situated in the heart of Sonaba, this<strong> 2-bedroom apartment</strong> is perfect for exploring Agadir's lively streets. The chic residence features contemporary amenities and a welcoming ambiance, making it ideal for an unforgettable urban getaway.",
+                "rooms": 2,
+                "bathrooms": 1,
+                "pool": true,
+                "privetePool": false,
+                "roomservices": true,
+                "wifi": true,
+                "balcony": true
+            },
+            {
+                "id": 6,
+                "catName": "sonaba",
+                "images": [
+                    {
+                    "id": 1,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd981f59319b6bb9b6449_L-p-1600.webp"
+                    },
+                    {
+                    "id": 2,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd980c21eebf81b077682_R1-p-500.webp"
+                    },
+                    {
+                    "id": 3,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd957b70d6d5d1c152dbe_B-p-500.webp"
+                    },
+                    {
+                    "id": 4,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd957c21eebf81b074cc7_OP1-p-500.webp"
+                    }
+                ],
+                "name": "Apartment 202",
+                "description": "<strong>2-bedroom</strong> flat situated in the lively center of Sonaba. Crafted for discovering Agadir’s energetic environment, this chic sanctuary provides modern amenities and a welcoming ambiance, guaranteeing an unforgettable urban getaway.",
+                "rooms": 2,
+                "bathrooms": 1,
+                "pool": true,
+                "privetePool": false,
+                "roomservices": true,
+                "wifi": true,
+                "balcony": true
+            },
+            {
+                "id": 7,
+                "catName": "sonaba",
+                "images": [
+                    {
+                    "id": 1,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9ba39758bbef79fda6d_L-p-1600.webp"
+                    },
+                    {
+                    "id": 2,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9ba9d354ff31710efbd_R1-p-500.webp"
+                    },
+                    {
+                    "id": 3,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9bbc0ac6e1ce4d59530_R2-p-500.webp"
+                    },
+                    {
+                    "id": 4,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9b9b01abe152dfd485c_B1-p-500.webp"
+                    },
+                    {
+                    "id": 5,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9b9b01abe152dfd485c_B1-p-500.webp"
+                    }
+                ],
+                "name": "Apartment 106",
+                "description": "2-bedroom flat, located in the lively core of Sonaba. Carefully crafted for sophisticated travelers, this elegant abode boasts modern features and opulent touches, ensuring a matchless combination of comfort and sophistication.",
+                "rooms": 2,
+                "bathrooms": 2,
+                "pool": true,
+                "privetePool": false,
+                "roomservices": true,
+                "wifi": true,
+                "balcony": true
+            },
+            {
+                "id": 8,
+                "catName": "sonaba",
+                "images": [
+                    {
+                    "id": 1,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7da_WhatsApp%20Image%202024-02-18%20at%2019.04.11%20(2).jpeg"
+                    },
+                    {
+                    "id": 2,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7d4_WhatsApp%2520Image%25202024-02-18%2520at%252019.04.11%2520(5)-p-500.jpeg"
+                    },
+                    {
+                    "id": 3,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7d6_WhatsApp%2520Image%25202024-02-18%2520at%252019.04.11%2520(3)-p-500.jpeg"
+                    },
+                    {
+                    "id": 4,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7d7_WhatsApp%2520Image%25202024-02-18%2520at%252019.04.11%2520(1)-p-500.jpeg"
+                    }
+                ],
+                "name": "Apartment 107",
+                "description": "2-bedroom flat, located in the lively core of Sonaba. Carefully crafted for sophisticated travelers, this elegant abode boasts modern features and opulent touches, ensuring a matchless combination of comfort and sophistication.",
+                "rooms": 3,
+                "bathrooms": 2,
+                "pool": true,
+                "privetePool": false,
+                "roomservices": true,
+                "wifi": true,
+                "balcony": true
+            },
+            {
+                "id": 9,
+                "catName": "sonaba",
+                "images": [
+                    {
+                    "id": 1,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9cbdfaed297ea89cceb_L1-p-1600.webp"
+                    },
+                    {
+                    "id": 2,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9cb70317b01a3aa6d53_R2-p-500.webp"
+                    },
+                    {
+                    "id": 3,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9ca3274d0d4dec85513_L3-p-500.webp"
+                    },
+                    {
+                    "id": 4,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9cae846c8879e112368_OP3-p-500.webp"
+                    }
+                ],
+                "name": "Apartment 111",
+                "description": "2-bedroom upscale apartment, perfectly situated in the center of Sonaba. Designed for the discerning traveler, this sumptuous haven features modern conveniences and elegant touches.",
+                "rooms": 2,
+                "bathrooms": 2,
+                "pool": true,
+                "privetePool": false,
+                "roomservices": true,
+                "wifi": true,
+                "balcony": true
+            },
+            {
+                "id": 10,
+                "catName": "sonaba",
+                "images": [
+                    {
+                    "id": 1,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9dd3274d0d4dec86831_L2-p-1600.webp"
+                    },
+                    {
+                    "id": 2,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9de424e563902030fe5_R1-p-800.webp"
+                    },
+                    {
+                    "id": 3,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9ddfa3dd45aa94b3769_OP1-p-500.webp"
+                    },
+                    {
+                    "id": 4,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9ddb70d6d5d1c159214_OP2-p-500.webp"
+                    }
+                ],
+                "name": "Apartment 112",
+                "description": "2-bedroom high-end apartment, ideally positioned in Sonaba. Tailored for discerning guests, this refined residence offers contemporary amenities and premium finishes, delivering an unparalleled blend of elegance and comfort in the heart of Agadir.",
+                "rooms": 2,
+                "bathrooms": 1,
+                "pool": true,
+                "privetePool": false,
+                "roomservices": true,
+                "wifi": true,
+                "balcony": true
+            },
+            {
+                "id": 11,
+                "catName": "sonaba",
+                "images": [
+                    {
+                    "id": 1,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9f7d1a96b992c4056f2_L1-p-1600.webp"
+                    },
+                    {
+                    "id": 2,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9f82529026867cc21c0_R1-p-500.webp"
+                    },
+                    {
+                    "id": 3,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9f7740cf5042e6aefdb_R2-p-500.webp"
+                    },
+                    {
+                    "id": 4,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9f758ac00c2932d8fe3_OP3-p-500.webp"
+                    },
+                    {
+                    "id": 5,
+                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9f7393dad4baddcd46b_OP2-p-500.webp"
+                    }
+                ],
+                "name": "Apartment 303",
+                "description": "2-bedroom premium apartment located in the heart of Sonaba. Designed with the discerning traveler in mind, this refined residence features modern amenities and sumptuous details, guaranteeing an exceptional blend of sophistication and comfort.",
+                "rooms": 2,
+                "bathrooms": 2,
+                "pool": true,
+                "privetePool": false,
+                "roomservices": true,
+                "wifi": true,
+                "balcony": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

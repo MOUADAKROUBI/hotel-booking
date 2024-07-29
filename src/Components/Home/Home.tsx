@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from './Hero'
 import Aboutus from './Aboutus'
-import Villas from './Villas'
+import AllCategories from './AllCategories'
 
 
 export default function Main() {
@@ -9,7 +9,8 @@ export default function Main() {
     <>
       <Hero />
       <Aboutus />
-      <Villas />
+      <AllCategories category= "villas" />
+      <AllCategories category= "apartments" />
     </>
   )
 }
