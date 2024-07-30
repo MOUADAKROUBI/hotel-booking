@@ -2,12 +2,11 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Aboutus() {
+export default function Aboutus({ aboutusRef }: { aboutusRef: React.RefObject<HTMLDivElement> }) {
   return (
     <>
       <Box
         component="section"
-        id="aboutus"
         sx={{
           backgroundColor: "#f8f8f8",
           paddingTop: {xs: "80px", sm: "100px", md: "120px", lg: "140px"},
@@ -25,6 +24,7 @@ export default function Aboutus() {
           }}
         >
           <Box
+            ref={aboutusRef}
             sx={{
               alignItems: "center",
               display: "flex",

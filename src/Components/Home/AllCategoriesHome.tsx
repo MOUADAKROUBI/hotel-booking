@@ -12,7 +12,7 @@ import { Balcony, Pool, Shower, Wifi } from "@mui/icons-material";
 import ReactWhatsapp from "react-whatsapp";
 import data from "../../Data/data.json";
 
-export default function AllCategories({ category }) {
+export default function AllCategoriesHome({ category }) {
   const dataImported = data.data[0][category];
   const [currentSlide, setCurrentSlide] = useState(0);
 

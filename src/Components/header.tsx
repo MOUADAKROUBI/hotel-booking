@@ -9,16 +9,16 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
-
-const pages = [
-  { link: "HOME", url: "/" },
-  { link: "VILLAS", url: "/villas" },
-  { link: "APARTMENTS", url: "/apartments" },
-  { link: "PENTHOUSES", url: "/penthouses" },
-  { link: "CAR HIRE", url: "/car-hire" },
-];
+import data from '../Data/data.json';
 
 function Header() {
+  const [categories, setCategories] = React.useState<string[]>([]);
+
+  React.useEffect(() => {
+    const categoryNames = Object.keys(data.data[0]);
+    setCategories(["home", ...categoryNames]);
+  }, []);
+
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -114,9 +114,9 @@ function Header() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
+              {categories.map((page) => (
                 <MenuItem
-                  key={page.link}
+                  key={page}
                   sx={{
                     display: "flex",
                     justifyContent: "center",
@@ -126,8 +126,8 @@ function Header() {
                     },
                   }}
                 >
-                  <Link to={page.url}>
-                    <Typography textAlign="center">{page.link}</Typography>
+                  <Link to={page.replace(' ', '')}>
+                    <Typography textAlign="center">{page}</Typography>
                   </Link>
                 </MenuItem>
               ))}
@@ -160,21 +160,23 @@ function Header() {
             </Menu>
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Link to={page.url} key={page.link}>
+            {categories.map((page) => (
+              <Link to={page.replace(' ', '')} key={page}>
                 <Typography
-                  key={page.link}
                   sx={{
                     ml: 2,
                     color: "#060606",
                     display: "block",
+                    textTransform: "uppercase",
+                    fontWeight: 700,
                     fontSize: "16px",
+                    fontFamily: "monospace",
                     "&:hover": {
                       opacity: 0.7,
                     },
                   }}
                 >
-                  {page.link}
+                  {page}
                 </Typography>
               </Link>
             ))}

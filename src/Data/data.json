@@ -281,7 +281,7 @@
               "rooms": 1,
               "bathrooms": 1,
               "pool": true,
-                "privetePool": false,
+              "privetePool": false,
               "roomservices": true,
               "wifi": true,
               "balcony": false
@@ -316,266 +316,266 @@
               "rooms": 1,
               "bathrooms": 1,
               "pool": true,
-                "privetePool": false,
+              "privetePool": false,
               "roomservices": true,
               "wifi": true,
               "balcony": true
             },
             {
-                "id": 4,
-                "catName": "sonaba",
-                "images": [
-                    {
-                    "id": 1,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9483fe11c38a0128fe9_L-p-1600.webp"
-                    },
-                    {
-                    "id": 2,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9480347f760d83658c3_R1-p-500.webp"
-                    },
-                    {
-                    "id": 3,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9473274d0d4dec7f5ab_B-p-500.webp"
-                    },
-                    {
-                    "id": 4,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd949239d0d1fc855c2da_OP2-p-500.webp"
-                    }
-                ],
-                "name": "Apartment 109",
-                "description": "Experience the vibrant pulse of Agadir from this centrally located<strong> 2-bedroom apartment</strong> in Sonaba. Designed for urban explorers, it combines contemporary comforts with an inviting ambiance, making it a perfect base for a memorable city retreat.",
-                "rooms": 2,
-                "bathrooms": 1,
-                "pool": true,
-                "privetePool": false,
-                "roomservices": true,
-                "wifi": true,
-                "balcony": true
+              "id": 4,
+              "catName": "sonaba",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9483fe11c38a0128fe9_L-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9480347f760d83658c3_R1-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9473274d0d4dec7f5ab_B-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd949239d0d1fc855c2da_OP2-p-500.webp"
+                }
+              ],
+              "name": "Apartment 109",
+              "description": "Experience the vibrant pulse of Agadir from this centrally located<strong> 2-bedroom apartment</strong> in Sonaba. Designed for urban explorers, it combines contemporary comforts with an inviting ambiance, making it a perfect base for a memorable city retreat.",
+              "rooms": 2,
+              "bathrooms": 1,
+              "pool": true,
+              "privetePool": false,
+              "roomservices": true,
+              "wifi": true,
+              "balcony": true
             },
             {
-                "id": 5,
-                "catName": "sonaba",
-                "images": [
-                    {
-                    "id": 1,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd958656f8bb6e5476e12_L1-p-1600.webp"
-                    },
-                    {
-                    "id": 2,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9589c4b8999e4ba35e2_R1-p-500.webp"
-                    },
-                    {
-                    "id": 3,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd957fa3dd45aa94aadd8_L2-p-500.webp"
-                    },
-                    {
-                    "id": 4,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd957e846c8879e109c43_OP2-p-500.webp"
-                    }
-                ],
-                "name": "Apartment 201",
-                "description": "Situated in the heart of Sonaba, this<strong> 2-bedroom apartment</strong> is perfect for exploring Agadir's lively streets. The chic residence features contemporary amenities and a welcoming ambiance, making it ideal for an unforgettable urban getaway.",
-                "rooms": 2,
-                "bathrooms": 1,
-                "pool": true,
-                "privetePool": false,
-                "roomservices": true,
-                "wifi": true,
-                "balcony": true
+              "id": 5,
+              "catName": "sonaba",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd958656f8bb6e5476e12_L1-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9589c4b8999e4ba35e2_R1-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd957fa3dd45aa94aadd8_L2-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd957e846c8879e109c43_OP2-p-500.webp"
+                }
+              ],
+              "name": "Apartment 201",
+              "description": "Situated in the heart of Sonaba, this<strong> 2-bedroom apartment</strong> is perfect for exploring Agadir's lively streets. The chic residence features contemporary amenities and a welcoming ambiance, making it ideal for an unforgettable urban getaway.",
+              "rooms": 2,
+              "bathrooms": 1,
+              "pool": true,
+              "privetePool": false,
+              "roomservices": true,
+              "wifi": true,
+              "balcony": true
             },
             {
-                "id": 6,
-                "catName": "sonaba",
-                "images": [
-                    {
-                    "id": 1,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd981f59319b6bb9b6449_L-p-1600.webp"
-                    },
-                    {
-                    "id": 2,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd980c21eebf81b077682_R1-p-500.webp"
-                    },
-                    {
-                    "id": 3,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd957b70d6d5d1c152dbe_B-p-500.webp"
-                    },
-                    {
-                    "id": 4,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd957c21eebf81b074cc7_OP1-p-500.webp"
-                    }
-                ],
-                "name": "Apartment 202",
-                "description": "<strong>2-bedroom</strong> flat situated in the lively center of Sonaba. Crafted for discovering Agadir’s energetic environment, this chic sanctuary provides modern amenities and a welcoming ambiance, guaranteeing an unforgettable urban getaway.",
-                "rooms": 2,
-                "bathrooms": 1,
-                "pool": true,
-                "privetePool": false,
-                "roomservices": true,
-                "wifi": true,
-                "balcony": true
+              "id": 6,
+              "catName": "sonaba",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd981f59319b6bb9b6449_L-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd980c21eebf81b077682_R1-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd957b70d6d5d1c152dbe_B-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd957c21eebf81b074cc7_OP1-p-500.webp"
+                }
+              ],
+              "name": "Apartment 202",
+              "description": "<strong>2-bedroom</strong> flat situated in the lively center of Sonaba. Crafted for discovering Agadir’s energetic environment, this chic sanctuary provides modern amenities and a welcoming ambiance, guaranteeing an unforgettable urban getaway.",
+              "rooms": 2,
+              "bathrooms": 1,
+              "pool": true,
+              "privetePool": false,
+              "roomservices": true,
+              "wifi": true,
+              "balcony": true
             },
             {
-                "id": 7,
-                "catName": "sonaba",
-                "images": [
-                    {
-                    "id": 1,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9ba39758bbef79fda6d_L-p-1600.webp"
-                    },
-                    {
-                    "id": 2,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9ba9d354ff31710efbd_R1-p-500.webp"
-                    },
-                    {
-                    "id": 3,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9bbc0ac6e1ce4d59530_R2-p-500.webp"
-                    },
-                    {
-                    "id": 4,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9b9b01abe152dfd485c_B1-p-500.webp"
-                    },
-                    {
-                    "id": 5,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9b9b01abe152dfd485c_B1-p-500.webp"
-                    }
-                ],
-                "name": "Apartment 106",
-                "description": "2-bedroom flat, located in the lively core of Sonaba. Carefully crafted for sophisticated travelers, this elegant abode boasts modern features and opulent touches, ensuring a matchless combination of comfort and sophistication.",
-                "rooms": 2,
-                "bathrooms": 2,
-                "pool": true,
-                "privetePool": false,
-                "roomservices": true,
-                "wifi": true,
-                "balcony": true
+              "id": 7,
+              "catName": "sonaba",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9ba39758bbef79fda6d_L-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9ba9d354ff31710efbd_R1-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9bbc0ac6e1ce4d59530_R2-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9b9b01abe152dfd485c_B1-p-500.webp"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9b9b01abe152dfd485c_B1-p-500.webp"
+                }
+              ],
+              "name": "Apartment 106",
+              "description": "2-bedroom flat, located in the lively core of Sonaba. Carefully crafted for sophisticated travelers, this elegant abode boasts modern features and opulent touches, ensuring a matchless combination of comfort and sophistication.",
+              "rooms": 2,
+              "bathrooms": 2,
+              "pool": true,
+              "privetePool": false,
+              "roomservices": true,
+              "wifi": true,
+              "balcony": true
             },
             {
-                "id": 8,
-                "catName": "sonaba",
-                "images": [
-                    {
-                    "id": 1,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7da_WhatsApp%20Image%202024-02-18%20at%2019.04.11%20(2).jpeg"
-                    },
-                    {
-                    "id": 2,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7d4_WhatsApp%2520Image%25202024-02-18%2520at%252019.04.11%2520(5)-p-500.jpeg"
-                    },
-                    {
-                    "id": 3,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7d6_WhatsApp%2520Image%25202024-02-18%2520at%252019.04.11%2520(3)-p-500.jpeg"
-                    },
-                    {
-                    "id": 4,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7d7_WhatsApp%2520Image%25202024-02-18%2520at%252019.04.11%2520(1)-p-500.jpeg"
-                    }
-                ],
-                "name": "Apartment 107",
-                "description": "2-bedroom flat, located in the lively core of Sonaba. Carefully crafted for sophisticated travelers, this elegant abode boasts modern features and opulent touches, ensuring a matchless combination of comfort and sophistication.",
-                "rooms": 3,
-                "bathrooms": 2,
-                "pool": true,
-                "privetePool": false,
-                "roomservices": true,
-                "wifi": true,
-                "balcony": true
+              "id": 8,
+              "catName": "sonaba",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7da_WhatsApp%20Image%202024-02-18%20at%2019.04.11%20(2).jpeg"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7d4_WhatsApp%2520Image%25202024-02-18%2520at%252019.04.11%2520(5)-p-500.jpeg"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7d6_WhatsApp%2520Image%25202024-02-18%2520at%252019.04.11%2520(3)-p-500.jpeg"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7d7_WhatsApp%2520Image%25202024-02-18%2520at%252019.04.11%2520(1)-p-500.jpeg"
+                }
+              ],
+              "name": "Apartment 107",
+              "description": "2-bedroom flat, located in the lively core of Sonaba. Carefully crafted for sophisticated travelers, this elegant abode boasts modern features and opulent touches, ensuring a matchless combination of comfort and sophistication.",
+              "rooms": 3,
+              "bathrooms": 2,
+              "pool": true,
+              "privetePool": false,
+              "roomservices": true,
+              "wifi": true,
+              "balcony": true
             },
             {
-                "id": 9,
-                "catName": "sonaba",
-                "images": [
-                    {
-                    "id": 1,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9cbdfaed297ea89cceb_L1-p-1600.webp"
-                    },
-                    {
-                    "id": 2,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9cb70317b01a3aa6d53_R2-p-500.webp"
-                    },
-                    {
-                    "id": 3,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9ca3274d0d4dec85513_L3-p-500.webp"
-                    },
-                    {
-                    "id": 4,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9cae846c8879e112368_OP3-p-500.webp"
-                    }
-                ],
-                "name": "Apartment 111",
-                "description": "2-bedroom upscale apartment, perfectly situated in the center of Sonaba. Designed for the discerning traveler, this sumptuous haven features modern conveniences and elegant touches.",
-                "rooms": 2,
-                "bathrooms": 2,
-                "pool": true,
-                "privetePool": false,
-                "roomservices": true,
-                "wifi": true,
-                "balcony": true
+              "id": 9,
+              "catName": "sonaba",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9cbdfaed297ea89cceb_L1-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9cb70317b01a3aa6d53_R2-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9ca3274d0d4dec85513_L3-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9cae846c8879e112368_OP3-p-500.webp"
+                }
+              ],
+              "name": "Apartment 111",
+              "description": "2-bedroom upscale apartment, perfectly situated in the center of Sonaba. Designed for the discerning traveler, this sumptuous haven features modern conveniences and elegant touches.",
+              "rooms": 2,
+              "bathrooms": 2,
+              "pool": true,
+              "privetePool": false,
+              "roomservices": true,
+              "wifi": true,
+              "balcony": true
             },
             {
-                "id": 10,
-                "catName": "sonaba",
-                "images": [
-                    {
-                    "id": 1,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9dd3274d0d4dec86831_L2-p-1600.webp"
-                    },
-                    {
-                    "id": 2,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9de424e563902030fe5_R1-p-800.webp"
-                    },
-                    {
-                    "id": 3,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9ddfa3dd45aa94b3769_OP1-p-500.webp"
-                    },
-                    {
-                    "id": 4,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9ddb70d6d5d1c159214_OP2-p-500.webp"
-                    }
-                ],
-                "name": "Apartment 112",
-                "description": "2-bedroom high-end apartment, ideally positioned in Sonaba. Tailored for discerning guests, this refined residence offers contemporary amenities and premium finishes, delivering an unparalleled blend of elegance and comfort in the heart of Agadir.",
-                "rooms": 2,
-                "bathrooms": 1,
-                "pool": true,
-                "privetePool": false,
-                "roomservices": true,
-                "wifi": true,
-                "balcony": true
+              "id": 10,
+              "catName": "sonaba",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9dd3274d0d4dec86831_L2-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9de424e563902030fe5_R1-p-800.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9ddfa3dd45aa94b3769_OP1-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9ddb70d6d5d1c159214_OP2-p-500.webp"
+                }
+              ],
+              "name": "Apartment 112",
+              "description": "2-bedroom high-end apartment, ideally positioned in Sonaba. Tailored for discerning guests, this refined residence offers contemporary amenities and premium finishes, delivering an unparalleled blend of elegance and comfort in the heart of Agadir.",
+              "rooms": 2,
+              "bathrooms": 1,
+              "pool": true,
+              "privetePool": false,
+              "roomservices": true,
+              "wifi": true,
+              "balcony": true
             },
             {
-                "id": 11,
-                "catName": "sonaba",
-                "images": [
-                    {
-                    "id": 1,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9f7d1a96b992c4056f2_L1-p-1600.webp"
-                    },
-                    {
-                    "id": 2,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9f82529026867cc21c0_R1-p-500.webp"
-                    },
-                    {
-                    "id": 3,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9f7740cf5042e6aefdb_R2-p-500.webp"
-                    },
-                    {
-                    "id": 4,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9f758ac00c2932d8fe3_OP3-p-500.webp"
-                    },
-                    {
-                    "id": 5,
-                    "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9f7393dad4baddcd46b_OP2-p-500.webp"
-                    }
-                ],
-                "name": "Apartment 303",
-                "description": "2-bedroom premium apartment located in the heart of Sonaba. Designed with the discerning traveler in mind, this refined residence features modern amenities and sumptuous details, guaranteeing an exceptional blend of sophistication and comfort.",
-                "rooms": 2,
-                "bathrooms": 2,
-                "pool": true,
-                "privetePool": false,
-                "roomservices": true,
-                "wifi": true,
-                "balcony": true
+              "id": 11,
+              "catName": "sonaba",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9f7d1a96b992c4056f2_L1-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9f82529026867cc21c0_R1-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9f7740cf5042e6aefdb_R2-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9f758ac00c2932d8fe3_OP3-p-500.webp"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9f7393dad4baddcd46b_OP2-p-500.webp"
+                }
+              ],
+              "name": "Apartment 303",
+              "description": "2-bedroom premium apartment located in the heart of Sonaba. Designed with the discerning traveler in mind, this refined residence features modern amenities and sumptuous details, guaranteeing an exceptional blend of sophistication and comfort.",
+              "rooms": 2,
+              "bathrooms": 2,
+              "pool": true,
+              "privetePool": false,
+              "roomservices": true,
+              "wifi": true,
+              "balcony": true
             }
           ]
         }

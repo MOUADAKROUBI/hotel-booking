@@ -1,8 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import { Link } from "react-router-dom";
 
-export default function Hero() {
+export default function Hero({ aboutusRef }: { aboutusRef: React.RefObject<HTMLDivElement> }) {
   return (
     <>
       <Box
@@ -55,8 +54,10 @@ export default function Hero() {
             >
               Welcome to Agadir Concierge, your gateway to a hassle-free vacation experience in Agadir.
             </Typography>
-            <Box sx={{ mt: 5, ml: 3 }}>
-              <Link to="#aboutus">
+            <Box sx={{ mt: 5, ml: 3, cursor: "pointer" }}>
+              <Box
+                onClick={() => {aboutusRef.current?.scrollIntoView({ behavior: "smooth" })}}
+              >
                 <Typography
                   component="span"
                   sx={{
@@ -79,7 +80,7 @@ export default function Hero() {
                 >
                   About Us
                 </Typography>
-              </Link>
+              </Box>
             </Box>
           </Box>
         </Box>
