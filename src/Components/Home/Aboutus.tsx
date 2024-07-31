@@ -73,17 +73,33 @@ export default function Aboutus({ aboutusRef }: { aboutusRef: React.RefObject<HT
                 bgcolor: "white",
               }}
             >
-              <Typography variant="h6" component="div" sx={{ 
-                color: "#060606",
-                letterSpacing: ".1em",
-                textTransform: "uppercase",
-                fontSize: "14px",
-                fontWeight: 600,
-                lineHeight: "1em",
-                mb: 2
-               }}>
-                01 &mdash; ABOUT
-              </Typography>
+              <Box
+                className="subtitle-amenties"
+                sx={{
+                  color: "#060606",
+                  "letter-spacing": ".1em",
+                  "text-transform": "uppercase",
+                  "justify-content": "center",
+                  "align-items": "center",
+                  "margin-bottom": "32px",
+                  "font-size": "14px",
+                  "font-weight": 600,
+                  "line-height": "1em",
+                  display: "flex",
+                }}
+              >
+                <div>1</div>
+                <Box
+                  className="dash"
+                  sx={{
+                    width: "40px",
+                    height: "1px",
+                    backgroundColor: "#060606",
+                    mx: "20px",
+                  }}
+                />
+                <Box sx={{ textTransform: "capitalize" }}>about us</Box>
+              </Box>
               <Typography
                 variant="h2"
                 sx={{ 

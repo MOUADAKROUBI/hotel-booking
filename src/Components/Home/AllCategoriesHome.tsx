@@ -29,24 +29,33 @@ export default function AllCategoriesHome({ category }) {
   return (
     <>
       <Box maxWidth="lg" sx={{ textAlign: "center", mt: 4 }}>
-        <Typography
-          variant="h6"
-          component="div"
+        <Box
+          className="subtitle-amenties"
           sx={{
             color: "#060606",
-            letterSpacing: ".1em",
-            textTransform: "uppercase",
-            justifyContent: "center",
-            alignItems: "center",
-            marginBottom: "32px",
-            fontSize: "14px",
-            fontWeight: 600,
-            lineHeight: "1em",
+            "letter-spacing": ".1em",
+            "text-transform": "uppercase",
+            "justify-content": "center",
+            "align-items": "center",
+            "margin-bottom": "32px",
+            "font-size": "16px",
+            "font-weight": 600,
+            "line-height": "1em",
             display: "flex",
           }}
         >
-          0{dataImported[0].id+1} &mdash; {category}
-        </Typography>
+          <div>0{dataImported[0].id+1}</div>
+          <Box
+            className="dash"
+            sx={{
+              width: "40px",
+              height: "1px",
+              backgroundColor: "#060606",
+              mx: "20px",
+            }}
+          />
+          <Box sx={{ textTransform: "capitalize" }}>{category}</Box>
+        </Box>
         <Typography
           variant="h2"
           component="h1"

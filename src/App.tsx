@@ -34,7 +34,7 @@ function App() {
           }
           {
             categories.map((category) => (
-              <Route key={category} path={category.replace(' ', '') + '/:id'} element={<SingleCategory />} />
+              <Route key={category} path={category.replace(' ', '') + '/:id'} element={<SingleCategory category={category} />} />
             ))
           }
         </Routes>
