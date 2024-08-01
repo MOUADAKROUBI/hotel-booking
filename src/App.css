@@ -16,11 +16,11 @@
 }
 
 body {
-    color: var(--neutral-600);
-    letter-spacing: -.02em;
-    font-family: Muli, sans-serif;
-    font-size: 18px;
-    line-height: 1.778em;
+    color: var(--neutral-600) !important;
+    letter-spacing: -.02em !important;
+    font-family: Muli, sans-serif !important;;
+    font-size: 18px !important;
+    line-height: 1.778em !important;
 }
 
 .linkCate {
@@ -64,11 +64,10 @@ img, .card-centent {
 
 h1 {
     color: var(--neutral-700);
-    margin-top: 0;
     margin-bottom: 24px;
     font-family: Playfair Display, sans-serif;
     font-size: 64px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.313em;
 }
 
@@ -152,10 +151,10 @@ h3 {
     padding-bottom: 140px;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 991px) {
     .section {
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding-top: 120px;
+        padding-bottom: 120px;
     }
 }
 
@@ -166,9 +165,10 @@ h3 {
     }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 479px) {
     .section {
-        padding-top: 120px;
-        padding-bottom: 120px;
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 }
+

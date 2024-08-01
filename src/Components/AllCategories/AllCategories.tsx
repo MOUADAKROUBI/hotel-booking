@@ -7,10 +7,16 @@ import MeetingRoomIconOutlined from "@mui/icons-material/MeetingRoom";
 
 export default function AllCategories({ category }: { category: string }) {
   const dataImported = data.data[0][category];
+  const sectionRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, []);
 
   return (
     <>
       <Box
+        ref={sectionRef}
         className="all-categories"
         sx={{
           pt: "212px",

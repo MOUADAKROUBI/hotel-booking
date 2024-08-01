@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import {
-  Box,
-  Typography,
-  Divider,
-} from "@mui/material";
+import { Box, Typography, Divider, Container } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import MeetingRoomIcon from "@mui/icons-material/MeetingRoom";
@@ -19,32 +15,39 @@ export default function AllCategoriesHome({ category }) {
   const totalSlides = dataImported[0].data.length;
 
   const goToPrevious = () => {
-    setCurrentSlide((prevSlide) => (prevSlide === 0 ? totalSlides - 1 : prevSlide - 1));
+    setCurrentSlide((prevSlide) =>
+      prevSlide === 0 ? totalSlides - 1 : prevSlide - 1
+    );
   };
 
   const goToNext = () => {
-    setCurrentSlide((prevSlide) => (prevSlide === totalSlides - 1 ? 0 : prevSlide + 1));
+    setCurrentSlide((prevSlide) =>
+      prevSlide === totalSlides - 1 ? 0 : prevSlide + 1
+    );
   };
 
   return (
     <>
-      <Box maxWidth="lg" sx={{ textAlign: "center", mt: 4 }}>
+      <Box
+        className="section"
+        sx={{ mt: 4, textAlign: "center" }}
+      >
         <Box
           className="subtitle-amenties"
           sx={{
             color: "#060606",
-            "letter-spacing": ".1em",
-            "text-transform": "uppercase",
-            "justify-content": "center",
-            "align-items": "center",
-            "margin-bottom": "32px",
-            "font-size": "16px",
-            "font-weight": 600,
-            "line-height": "1em",
+            letterSpacing: ".1em",
+            textTransform: "uppercase",
+            justifyContent: "center",
+            alignItems: "center",
+            marginBottom: "32px",
+            fontSize: "16px",
+            fontWeight: 600,
+            lineHeight: "1em",
             display: "flex",
           }}
         >
-          <div>0{dataImported[0].id+1}</div>
+          <div>0{dataImported[0].id + 1}</div>
           <Box
             className="dash"
             sx={{
@@ -56,36 +59,12 @@ export default function AllCategoriesHome({ category }) {
           />
           <Box sx={{ textTransform: "capitalize" }}>{category}</Box>
         </Box>
-        <Typography
-          variant="h2"
-          component="h1"
-          sx={{
-            color: "#060606",
-            marginTop: 0,
-            marginBottom: "16px",
-            fontFamily: "Playfair Display, sans-serif",
-            fontSize: { xs: "29.5px", sm: "33px", md: "37px", lg: "42px" },
-            fontWeight: 400,
-            lineHeight: "1.286em",
-          }}
-        >
+        <h1>
           {dataImported[0].name_1}
-        </Typography>
-        <Typography
-          variant="h2"
-          component="h2"
-          sx={{
-            color: "#8b8b8b",
-            marginTop: 0,
-            marginBottom: "16px",
-            fontFamily: "Playfair Display, sans-serif",
-            fontSize: { xs: "29.5px", sm: "33px", md: "37px", lg: "42px" },
-            fontWeight: "bold",
-            lineHeight: "1.286em",
-          }}
-        >
+        </h1>
+        <h2>
           {dataImported[0].name_2}
-        </Typography>
+        </h2>
         <Typography
           component="p"
           sx={{
@@ -100,10 +79,6 @@ export default function AllCategoriesHome({ category }) {
         <Box>
           <Box
             sx={{
-              transform:
-                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-              transformStyle: "preserve-3d",
-              opacity: 1,
               clear: "both",
               maxWidth: "1024px",
               width: "auto",
@@ -140,286 +115,285 @@ export default function AllCategoriesHome({ category }) {
                   position: "relative",
                 }}
               >
-                <Box sx={{
-                  display: 'flex',
-                  overflow: 'hidden',
-                  width: '100%',
-                }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    overflow: "hidden",
+                    width: "100%",
+                  }}
+                >
                   <Box
                     className="list"
-                    sx= {{
-                      display: 'flex',
-                      transition: 'transform 0.5s ease',
+                    sx={{
+                      display: "flex",
+                      transition: "transform 0.5s ease",
                       transform: `translateX(-${currentSlide * 100}%)`,
-                      width: '100%',
+                      width: "100%",
                     }}
                   >
-                    {
-                      dataImported[0].data.map((item) => (
-                        <Box key={item.id} className="listItem"
-                          sx= {{
-                            minWidth: '100%', boxSizing: 'border-box'
+                    {dataImported[0].data.map((item) => (
+                      <Box
+                        key={item.id}
+                        className="listItem"
+                        sx={{
+                          minWidth: "100%",
+                          boxSizing: "border-box",
+                        }}
+                      >
+                        <Box
+                          sx={{
+                            justifyContent: "center",
+                            alignItems: "center",
+                            display: "flex",
+                            flexDirection: { xs: "column", lg: "row" },
                           }}
                         >
+                          <div className="linkCate">
+                            <Box
+                              component="img"
+                              src={item.images[0].url}
+                              alt={item.name}
+                              sx={{
+                                height: {
+                                  xs: "280px",
+                                  sm: "380px",
+                                  md: "450px",
+                                  lg: "542px",
+                                },
+                                maxWidth: { xs: "none", lg: "454px" },
+                                width: { xs: "100%", lg: "auto" },
+                                objectFit: "cover",
+                              }}
+                            />
+                          </div>
                           <Box
                             sx={{
-                              justifyContent: "center",
-                              alignItems: "center",
-                              display: "flex",
-                              flexDirection: { xs: "column", lg: "row" },
+                              maxWidth: { xs: "90%", lg: "570px" },
+                              backgroundColor: "#f8f8f8",
+                              padding: { xs: "48px 20px", md: "40px 48px" },
+                              mt: {
+                                xs: "-68px",
+                                sm: "-68px",
+                                md: "-121px",
+                                lg: 0,
+                              },
+                              whiteSpace: "normal",
+                              zIndex: 2,
+                              flexDirection: { xs: "column", sm: "row" },
+                              display: { xs: "flex", sm: "block" },
+                              overflow: { xs: "hidden", sm: "visible" },
                             }}
                           >
-                            <div className="linkCate">
-                              <Box
-                                component="img"
-                                src={item.images[0].url}
-                                alt={item.name}
-                                sx={{
-                                  height: {
-                                    xs: "280px",
-                                    sm: "380px",
-                                    md: "450px",
-                                    lg: "542px",
-                                  },
-                                  maxWidth: { xs: "none", lg: "454px" },
-                                  width: { xs: "100%", lg: "auto" },
-                                  objectFit: "cover",
+                            <Box>
+                              <h3>{item.name}</h3>
+                              <Typography
+                                component="p"
+                                dangerouslySetInnerHTML={{
+                                  __html: item.description,
                                 }}
                               />
-                            </div>
-                            <Box
-                              sx={{
-                                maxWidth: { xs: "90%", lg: "570px" },
-                                backgroundColor: "#f8f8f8",
-                                padding: { xs: "48px 20px", md: "40px 48px" },
-                                mt: {
-                                  xs: "-68px",
-                                  sm: "-68px",
-                                  md: "-121px",
-                                  lg: 0,
-                                },
-                                whiteSpace: "normal",
 
-                                flexDirection: { xs: "column", sm: "row" },
-                                display: { xs: "flex", sm: "block" },
-                                overflow: { xs: "hidden", sm: "visible" },
-                              }}
-                            >
-                              <Box>
-                                <h3>{item.name}</h3>
-                                <Typography
-                                  component="p"
-                                  dangerouslySetInnerHTML={{ __html: item.description }}
-                                />
+                              <Divider />
 
-                                <Divider />
-
-                                <Box
-                                  sx={{
-                                    display: "flex",
-                                    flexWrap: "wrap",
-                                    alignItems: "center",
-                                    mt: 2,
-                                  }}
-                                >
-                                  {
-                                    item.rooms && (
-                                      <Box
-                                        sx={{
-                                          display: "flex",
-                                          alignItems: "center",
-                                          mr: 4,
-                                        }}
-                                      >
-                                        <MeetingRoomIcon fontSize="large" />
-                                        <Typography
-                                          variant="body2"
-                                          sx={{
-                                            ml: 1,
-                                            letterSpacing: "normal",
-                                            whiteSpace: "nowrap",
-                                            fontSize: "14px",
-                                            fontWeight: 600,
-                                            lineHeight: "1em",
-                                          }}
-                                        >
-                                          {item.rooms} Rooms
-                                        </Typography>
-                                      </Box>
-                                    )
-                                  }
-                                  {
-                                    item.bathrooms && (
-                                      <Box
-                                        sx={{
-                                          display: "flex",
-                                          alignItems: "center",
-                                          mr: 4,
-                                        }}
-                                      >
-                                        <Shower fontSize="large" />
-                                        <Typography
-                                          variant="body2"
-                                          sx={{
-                                            ml: 1,
-                                            letterSpacing: "normal",
-                                            whiteSpace: "nowrap",
-                                            fontSize: "14px",
-                                            fontWeight: 600,
-                                            lineHeight: "1em",
-                                          }}
-                                        >
-                                          {item.bathrooms} BathRooms
-                                        </Typography>
-                                      </Box>
-                                    )
-                                  }
-                                  {
-                                    item.privetePool && (
-                                      <Box
-                                        sx={{
-                                          display: "flex",
-                                          alignItems: "center",
-                                        }}
-                                      >
-                                        <Pool fontSize="large" />
-                                        <Typography
-                                          variant="body2"
-                                          sx={{
-                                            ml: 1,
-                                            letterSpacing: "normal",
-                                            whiteSpace: "nowrap",
-                                            fontSize: "14px",
-                                            fontWeight: 600,
-                                            lineHeight: "1em",
-                                          }}
-                                        >
-                                          Private Pool
-                                        </Typography>
-                                      </Box>
-                                    )
-                                  }
-                                  {
-                                    item.pool && (
-                                      <Box
-                                        sx={{
-                                          display: "flex",
-                                          alignItems: "center",
-                                          mr: 4,
-                                        }}
-                                      >
-                                        <Pool fontSize="large" />
-                                        <Typography
-                                          variant="body2"
-                                          sx={{
-                                            ml: 1,
-                                            letterSpacing: "normal",
-                                            whiteSpace: "nowrap",
-                                            fontSize: "14px",
-                                            fontWeight: 600,
-                                            lineHeight: "1em",
-                                          }}
-                                        >
-                                          Pool
-                                        </Typography>
-                                      </Box>
-                                    )
-                                  }
-                                  {
-                                    item.wifi && (
-                                      <Box
-                                        sx={{
-                                          display: "flex",
-                                          alignItems: "center",
-                                          mr: 4,
-                                        }}
-                                      >
-                                        <Wifi fontSize="large" />
-                                        <Typography
-                                          variant="body2"
-                                          sx={{
-                                            ml: 1,
-                                            letterSpacing: "normal",
-                                            whiteSpace: "nowrap",
-                                            fontSize: "14px",
-                                            fontWeight: 600,
-                                            lineHeight: "1em",
-                                          }}
-                                        >
-                                          Wifi
-                                        </Typography>
-                                      </Box>
-                                    )
-                                  }
-                                  {
-                                    item.balcony && (
-                                      <Box
-                                        sx={{
-                                          display: "flex",
-                                          alignItems: "center",
-                                        }}
-                                      >
-                                        <Balcony fontSize="large" />
-                                        <Typography
-                                          variant="body2"
-                                          sx={{
-                                            ml: 1,
-                                            letterSpacing: "normal",
-                                            whiteSpace: "nowrap",
-                                            fontSize: "14px",
-                                            fontWeight: 600,
-                                            lineHeight: "1em",
-                                          }}
-                                        >
-                                          Balcony
-                                        </Typography>
-                                      </Box>
-                                    )
-                                  }
-                                </Box>
-                                <Divider sx={{ my: 2 }} />
-                                <ReactWhatsapp
-                                  number="+212680-844679"
-                                  message="hi..."
-                                  element="button"
-                                >
-                                  <Link to="#">
+                              <Box
+                                sx={{
+                                  gridColumnGap: {xs: "15px", sm: "40px", md: "44px", lg: "2vw"},
+                                  gridRowGap: "53px",
+                                  gridTemplateRows: "auto auto auto",
+                                  gridTemplateColumns: {xs: "auto auto", md: "auto auto auto"},
+                                  gridAutoColumns: "1fr",
+                                  justifyContent: {xs: "center", lg: "start"},
+                                  display: "grid",
+                                  mt: 2,
+                                }}
+                              >
+                                {item.rooms && (
+                                  <Box
+                                    sx={{
+                                      display: "flex",
+                                      alignItems: "center",
+                                      mr: 4,
+                                    }}
+                                  >
+                                    <MeetingRoomIcon fontSize="large" />
                                     <Typography
-                                      component="span"
+                                      variant="body2"
                                       sx={{
-                                        bgcolor: "black",
-                                        color: "white",
-                                        borderRadius: 0,
-                                        fontWeight: { xs: 500, md: 700 },
-                                        letterSpacing: ".1rem",
-                                        px: { xs: 2, md: 4 },
-                                        py: 2,
-                                        textTransform: "uppercase",
-                                        fontSize: { xs: "14px", md: "16px" },
-                                        "&:hover": {
-                                          bgcolor: "white",
-                                          color: "black",
-                                          border: "1.5px solid black",
-                                          boxShadow: "none",
-                                        },
+                                        ml: 1,
+                                        letterSpacing: "normal",
+                                        whiteSpace: "nowrap",
+                                        fontSize: "14px",
+                                        fontWeight: 600,
+                                        lineHeight: "1em",
                                       }}
                                     >
-                                      Book Now
+                                      {item.rooms} Rooms
                                     </Typography>
-                                  </Link>
-                                </ReactWhatsapp>
+                                  </Box>
+                                )}
+                                {item.bathrooms && (
+                                  <Box
+                                    sx={{
+                                      display: "flex",
+                                      alignItems: "center",
+                                      mr: 4,
+                                    }}
+                                  >
+                                    <Shower fontSize="large" />
+                                    <Typography
+                                      variant="body2"
+                                      sx={{
+                                        ml: 1,
+                                        letterSpacing: "normal",
+                                        whiteSpace: "nowrap",
+                                        fontSize: "14px",
+                                        fontWeight: 600,
+                                        lineHeight: "1em",
+                                      }}
+                                    >
+                                      {item.bathrooms} BathRooms
+                                    </Typography>
+                                  </Box>
+                                )}
+                                {item.privetePool && (
+                                  <Box
+                                    sx={{
+                                      display: "flex",
+                                      alignItems: "center",
+                                    }}
+                                  >
+                                    <Pool fontSize="large" />
+                                    <Typography
+                                      variant="body2"
+                                      sx={{
+                                        ml: 1,
+                                        letterSpacing: "normal",
+                                        whiteSpace: "nowrap",
+                                        fontSize: "14px",
+                                        fontWeight: 600,
+                                        lineHeight: "1em",
+                                      }}
+                                    >
+                                      Private Pool
+                                    </Typography>
+                                  </Box>
+                                )}
+                                {item.pool && (
+                                  <Box
+                                    sx={{
+                                      display: "flex",
+                                      alignItems: "center",
+                                      mr: 4,
+                                    }}
+                                  >
+                                    <Pool fontSize="large" />
+                                    <Typography
+                                      variant="body2"
+                                      sx={{
+                                        ml: 1,
+                                        letterSpacing: "normal",
+                                        whiteSpace: "nowrap",
+                                        fontSize: "14px",
+                                        fontWeight: 600,
+                                        lineHeight: "1em",
+                                      }}
+                                    >
+                                      Pool
+                                    </Typography>
+                                  </Box>
+                                )}
+                                {item.wifi && (
+                                  <Box
+                                    sx={{
+                                      display: "flex",
+                                      alignItems: "center",
+                                      mr: 4,
+                                    }}
+                                  >
+                                    <Wifi fontSize="large" />
+                                    <Typography
+                                      variant="body2"
+                                      sx={{
+                                        ml: 1,
+                                        letterSpacing: "normal",
+                                        whiteSpace: "nowrap",
+                                        fontSize: "14px",
+                                        fontWeight: 600,
+                                        lineHeight: "1em",
+                                      }}
+                                    >
+                                      Wifi
+                                    </Typography>
+                                  </Box>
+                                )}
+                                {item.balcony && (
+                                  <Box
+                                    sx={{
+                                      display: "flex",
+                                      alignItems: "center",
+                                    }}
+                                  >
+                                    <Balcony fontSize="large" />
+                                    <Typography
+                                      variant="body2"
+                                      sx={{
+                                        ml: 1,
+                                        letterSpacing: "normal",
+                                        whiteSpace: "nowrap",
+                                        fontSize: "14px",
+                                        fontWeight: 600,
+                                        lineHeight: "1em",
+                                      }}
+                                    >
+                                      Balcony
+                                    </Typography>
+                                  </Box>
+                                )}
                               </Box>
+                              <Divider sx={{ my: 2 }} />
+                              <ReactWhatsapp
+                                number="+212680-844679"
+                                message="hi..."
+                                element="button"
+                              >
+                                <Link to="#">
+                                  <Typography
+                                    component="span"
+                                    sx={{
+                                      bgcolor: "black",
+                                      color: "white",
+                                      borderRadius: 0,
+                                      fontWeight: { xs: 500, md: 700 },
+                                      letterSpacing: ".1rem",
+                                      px: { xs: 2, md: 4 },
+                                      py: 2,
+                                      textTransform: "uppercase",
+                                      fontSize: { xs: "14px", md: "16px" },
+                                      "&:hover": {
+                                        bgcolor: "white",
+                                        color: "black",
+                                        border: "1.5px solid black",
+                                        boxShadow: "none",
+                                      },
+                                    }}
+                                  >
+                                    Book Now
+                                  </Typography>
+                                </Link>
+                              </ReactWhatsapp>
                             </Box>
                           </Box>
                         </Box>
-                      ))
-                    }
+                      </Box>
+                    ))}
                   </Box>
                 </Box>
                 {/* Navigation Controls */}
-                <Box sx= {{
-                  my: {xs: 0, sm: 1, md: 3, lg:5},
-                }}>
+                <Box
+                  sx={{
+                    my: { xs: 0, sm: 1, md: 3, lg: 5 },
+                  }}
+                >
                   <Box
                     sx={{
                       display: "flex",
@@ -428,7 +402,6 @@ export default function AllCategoriesHome({ category }) {
                       flexWrap: "wrap",
                     }}
                   >
-                    
                     <Box
                       className="sectionLeftArrow"
                       onClick={goToPrevious}
@@ -443,8 +416,8 @@ export default function AllCategoriesHome({ category }) {
                         zIndex: 4,
                         cursor: "pointer",
                         userSelect: "none",
-                        flex: {xs: "50%", sm: "20%"},
-                        order: {xs: 1, sm: 0},
+                        flex: { xs: "50%", sm: "20%" },
+                        order: { xs: 1, sm: 0 },
                       }}
                     >
                       <Box
@@ -466,10 +439,9 @@ export default function AllCategoriesHome({ category }) {
                         >
                           <ArrowBackIcon />
                         </Typography>
-                        previous
                       </Box>
                     </Box>
-                    
+
                     <Box
                       className="sectionRightArrow"
                       onClick={goToNext}
@@ -482,8 +454,8 @@ export default function AllCategoriesHome({ category }) {
                         lineHeight: "1em",
                         overflow: "visible",
                         zIndex: 4,
-                        flex: {xs: "50%", sm: "20%"},
-                        order: {xs: 2, sm: 3},
+                        flex: { xs: "50%", sm: "20%" },
+                        order: { xs: 2, sm: 3 },
                       }}
                     >
                       <Box
@@ -493,11 +465,9 @@ export default function AllCategoriesHome({ category }) {
                           display: "flex",
                           cursor: "pointer",
                           justifyContent: "end",
-                          userSelect: "none", 
+                          userSelect: "none",
                         }}
                       >
-                        
-                        next
                         <Typography
                           className="arrow"
                           sx={{
@@ -514,10 +484,10 @@ export default function AllCategoriesHome({ category }) {
                     </Box>
                     <Box
                       className="slider-button"
-                      sx= {{
-                        flex: {xs: "100%", sm: "60%"},
-                        order: {xs: 3, sm: 2}, 
-                        mt: {xs: 3, sm: 0},
+                      sx={{
+                        flex: { xs: "100%", sm: "60%" },
+                        order: { xs: 3, sm: 2 },
+                        mt: { xs: 3, sm: 0 },
                       }}
                     >
                       <Link to={`/${category}`} className="button-slider">

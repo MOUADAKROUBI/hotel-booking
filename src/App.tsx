@@ -15,15 +15,15 @@ function App() {
   const [categories, setCategories] = useState<string[]>([]);
 
   useEffect(() => {
-    const categoryNames = Object.keys(data.data[0]);
-    setCategories(categoryNames);
+    const pages = Object.keys(data.data[0]);
+    setCategories(pages);
   }, []);
 
   return (
     <>
       <CssBaseline />
       <Router>
-        <Header />
+        <Header categories={categories}  />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />
@@ -38,8 +38,8 @@ function App() {
             ))
           }
         </Routes>
-        <FeedBack />
-        <Footer />
+        {/* <FeedBack /> */}
+        <Footer categories={categories} />
       </Router>
     </>
   )

@@ -1,138 +1,260 @@
-import * as React from "react";
-import AppBar from "@mui/material/AppBar";
+import React from "react";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import MenuItem from "@mui/material/MenuItem";
-import { Link } from "react-router-dom";
-import data from '../Data/data.json';
+import { Link, useNavigate } from "react-router-dom";
+import {
+  AppBar,
+  Dialog,
+  List,
+  ListItemButton,
+  ListItemText,
+  Slide,
+  Toolbar,
+} from "@mui/material";
+import { TransitionProps } from "@mui/material/transitions";
+import CloseIcon from "@mui/icons-material/Close";
 
-function Header() {
-  const [categories, setCategories] = React.useState<string[]>([]);
+const Transition = React.forwardRef(function Transition(
+  props: TransitionProps & {
+    children: React.ReactElement;
+  },
+  ref: React.Ref<unknown>
+) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 
-  React.useEffect(() => {
-    const categoryNames = Object.keys(data.data[0]);
-    setCategories(["home", ...categoryNames]);
-  }, []);
+function Header({ categories }) {
+  const navigate = useNavigate();
 
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null
-  );
+  const [open, setOpen] = React.useState(false);
 
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
+  const handleClickOpen = () => {
+    setOpen(true);
   };
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleClickCategory = (categoryName) => {
+    navigate(
+      "/" + categoryName.target.innerText.replace(" ", "").toLowerCase()
+    );
+    setOpen(false);
   };
 
   return (
-    <AppBar
+    <Box
+      component="header"
+      className="header"
       sx={{
-        boxShadow: 0,
         maxWidth: "1176px",
-        bgcolor: "white",
-        marginTop: "32px",
+        backgroundColor: "white",
+        marginTop: { xs: 0, lg: "32px" },
+        pt: { xs: 2, lg: 0 },
         marginLeft: "auto",
         marginRight: "auto",
-        paddingTop: "10px",
-        paddingBottom: "10px",
         position: "absolute",
         top: 0,
         left: 0,
         right: 0,
-        display: "flex",
+        zIndex: 999,
       }}
     >
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Link to="/" className="logo">
+      <Container
+        maxWidth="xl"
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          px: { xs: "16px", sm: "32px" },
+        }}
+      >
+        <Box
+          className="header-left"
+          sx={{
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          {/* categories */}
+          <Box
+            component="nav"
+            className="categories"
+            sx={{
+              order: 2,
+              transition: "all",
+              transform: "translateX(0px) translateY(0px)",
+              display: { xs: "none", md: "block" },
+              float: "right",
+              position: "relative",
+            }}
+          >
             <Box
-              sx={{ display: 'flex', alignItems: "center" }}
+              component="ul"
+              className="categories-list"
+              sx={{
+                justifyContent: "flex-end",
+                alignItems: "center",
+                marginBottom: 0,
+                marginRight: 20,
+                paddingLeft: 0,
+                listStyleType: "none",
+                display: "flex",
+              }}
             >
+              {categories.map((page) => (
+                <Box key={page} component="li" sx={{ ml: 2 }}>
+                  <Link to={page.replace(" ", "")}>
+                    <Typography
+                      sx={{
+                        color: "#060606",
+                        textTransform: "uppercase",
+                        fontFamily: "Muli, sans-serif",
+                        fontSize: "16px",
+                        letterSpacing: ".08em",
+                        lineHeight: "1em",
+                        transition: "color .35s",
+                        "&:hover": {
+                          opacity: 0.7,
+                        },
+                      }}
+                    >
+                      {page}
+                    </Typography>
+                  </Link>
+                </Box>
+              ))}
+            </Box>
+          </Box>
+          {/* logo */}
+          <Box
+            className="brand"
+            sx={{
+              order: 1,
+              float: "right",
+              position: "relative",
+            }}
+          >
+            <Link to="/" className="logo">
               <Box
                 component="img"
                 src="../src/assets/logo.png"
                 sx={{
                   width: "100px",
-                  height: "100px",
-                  mr: 1,
+                  maxWidth: "none",
                 }}
               />
+            </Link>
+          </Box>
+        </Box>
+        <Box
+          className="header-right"
+          sx={{
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          {/* contact us */}
+          <Box
+            sx={{
+              display: { xs: "none", md: "block" },
+              whiteSpace: "nowrap",
+            }}
+          >
+            <Link to="/contactUs">
               <Typography
-                variant="h6"
-                noWrap
+                component="span"
                 sx={{
-                  mr: 2,
-                  display: { xs: "none", md: "flex" },
-                  fontFamily: "monospace",
+                  bgcolor: "black",
+                  color: "white",
+                  borderRadius: 0,
                   fontWeight: 700,
-                  letterSpacing: ".3rem",
-                  color: "black",
+                  letterSpacing: ".1rem",
+                  textTransform: "uppercase",
+                  fontSize: "1rem",
+                  padding: "18px 2vw",
+                  "&:hover": {
+                    bgcolor: "white",
+                    color: "black",
+                    border: "1.5px solid black",
+                    boxShadow: "none",
+                  },
                 }}
               >
-                Luxury Rentals
+                Contact Us
               </Typography>
-            </Box>
-          </Link>
+            </Link>
+          </Box>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          {/* menu */}
+          <Box sx={{ display: { xs: "block", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="nav menu"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              sx= {{
-                fontSize: "20px",
+              onClick={handleClickOpen}
+              sx={{
+                fontSize: "40px",
                 fontWeight: "bold",
                 color: "black",
               }}
             >
               <MenuIcon />
             </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
+            <Dialog
+              fullScreen
+              open={open}
+              onClose={handleClose}
+              TransitionComponent={Transition}
             >
-              {categories.map((page) => (
-                <MenuItem
-                  key={page}
-                  sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    margin: "10px",
-                    "&:hover": {
-                      opacity: 0.7,
-                    },
+              <AppBar
+                sx={{
+                  position: "relative",
+                  backgroundColor: "#060606",
+                }}
+              >
+                <Toolbar>
+                  <IconButton
+                    edge="start"
+                    color="inherit"
+                    onClick={handleClose}
+                    aria-label="close"
+                  >
+                    <CloseIcon />
+                  </IconButton>
+                  <Typography
+                    sx={{ ml: 2, flex: 1 }}
+                    variant="h6"
+                    component="div"
+                  >
+                    Mafaman Company
+                  </Typography>
+                </Toolbar>
+              </AppBar>
+              <List>
+                {categories.map((page) => (
+                  <ListItemButton
+                    key={page}
+                    onClick={(page) => handleClickCategory(page)}
+                    sx={{
+                      textTransform: "uppercase",
+                      letterSpacing: ".1rem",
+                    }}
+                  >
+                    <ListItemText primary={page} />
+                  </ListItemButton>
+                ))}
+                <ListItemButton
+                  onClick={() => {
+                    navigate("/contactUs");
+                    setOpen(false);
                   }}
                 >
-                  <Link to={page.replace(' ', '')}>
-                    <Typography textAlign="center">{page}</Typography>
-                  </Link>
-                </MenuItem>
-              ))}
-              <MenuItem>
-                <Link to="/contactUs">
                   <Typography
                     component="span"
                     sx={{
@@ -155,62 +277,13 @@ function Header() {
                   >
                     Contact Us
                   </Typography>
-                </Link>
-              </MenuItem>
-            </Menu>
+                </ListItemButton>
+              </List>
+            </Dialog>
           </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {categories.map((page) => (
-              <Link to={page.replace(' ', '')} key={page}>
-                <Typography
-                  sx={{
-                    ml: 2,
-                    color: "#060606",
-                    display: "block",
-                    textTransform: "uppercase",
-                    fontWeight: 700,
-                    fontSize: "16px",
-                    fontFamily: "monospace",
-                    "&:hover": {
-                      opacity: 0.7,
-                    },
-                  }}
-                >
-                  {page}
-                </Typography>
-              </Link>
-            ))}
-          </Box>
-
-          <Box sx={{ flexGrow: 0, display: {'xs': 'none', 'md': 'block'} }}>
-            <Link to="/contactUs">
-              <Typography
-                component="span"
-                sx={{
-                  bgcolor: "black",
-                  color: "white",
-                  borderRadius: 0,
-                  fontWeight: 700,
-                  letterSpacing: ".1rem",
-                  px: 4,
-                  py: 2,
-                  textTransform: "uppercase",
-                  fontSize: "1rem",
-                  "&:hover": {
-                    bgcolor: "white",
-                    color: "black",
-                    border: "1.5px solid black",
-                    boxShadow: "none",
-                  },
-                }}
-              >
-                Contact Us
-              </Typography>
-            </Link>
-          </Box>
-        </Toolbar>
+        </Box>
       </Container>
-    </AppBar>
+    </Box>
   );
 }
 
