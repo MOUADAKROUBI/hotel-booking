@@ -6,6 +6,7 @@ import SingleCategoryHero from "./SingleCategoryHero";
 import SingleCategoryAbout from "./SingleCategoryAbout";
 import SingleCategoryAmenities from "./SingleCategoryAmenities";
 import Gallery from "./Gallery";
+import NotFound from "../NotFound";
 
 
 export default function SingleCategory({ category }: { category: string }) {
@@ -15,6 +16,8 @@ export default function SingleCategory({ category }: { category: string }) {
     (singleData: any) => singleData.id == id
   );
   const galleryRef = useRef<HTMLDivElement>(null);
+
+  if (!singleData) return <NotFound />;
 
   return (
     <>

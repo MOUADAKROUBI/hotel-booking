@@ -4,7 +4,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import MeetingRoomIcon from "@mui/icons-material/MeetingRoom";
 import { Link } from "react-router-dom";
-import { Balcony, Pool, Shower, Wifi } from "@mui/icons-material";
+import { Balcony, HotTubOutlined, Pool, Shower, Wifi } from "@mui/icons-material";
 import ReactWhatsapp from "react-whatsapp";
 import data from "../../Data/data.json";
 
@@ -28,10 +28,7 @@ export default function AllCategoriesHome({ category }) {
 
   return (
     <>
-      <Box
-        className="section"
-        sx={{ mt: 4, textAlign: "center" }}
-      >
+      <Box className="section" sx={{ mt: 4, textAlign: "center" }}>
         <Box
           className="subtitle-amenties"
           sx={{
@@ -59,12 +56,8 @@ export default function AllCategoriesHome({ category }) {
           />
           <Box sx={{ textTransform: "capitalize" }}>{category}</Box>
         </Box>
-        <h1>
-          {dataImported[0].name_1}
-        </h1>
-        <h2>
-          {dataImported[0].name_2}
-        </h2>
+        <h1>{dataImported[0].name_1}</h1>
+        <h2>{dataImported[0].name_2}</h2>
         <Typography
           component="p"
           sx={{
@@ -197,12 +190,20 @@ export default function AllCategoriesHome({ category }) {
 
                               <Box
                                 sx={{
-                                  gridColumnGap: {xs: "15px", sm: "40px", md: "44px", lg: "2vw"},
+                                  gridColumnGap: {
+                                    xs: "15px",
+                                    sm: "40px",
+                                    md: "44px",
+                                    lg: "2vw",
+                                  },
                                   gridRowGap: "53px",
                                   gridTemplateRows: "auto auto auto",
-                                  gridTemplateColumns: {xs: "auto auto", md: "auto auto auto"},
+                                  gridTemplateColumns: {
+                                    xs: "auto auto",
+                                    md: "auto auto auto",
+                                  },
                                   gridAutoColumns: "1fr",
-                                  justifyContent: {xs: "center", lg: "start"},
+                                  justifyContent: { xs: "center", lg: "start" },
                                   display: "grid",
                                   mt: 2,
                                 }}
@@ -346,6 +347,29 @@ export default function AllCategoriesHome({ category }) {
                                       }}
                                     >
                                       Balcony
+                                    </Typography>
+                                  </Box>
+                                )}
+                                {item.jacuzzi && (
+                                  <Box
+                                    sx={{
+                                      display: "flex",
+                                      alignItems: "center",
+                                    }}
+                                  >
+                                    <HotTubOutlined fontSize="large" />
+                                    <Typography
+                                      variant="body2"
+                                      sx={{
+                                        ml: 1,
+                                        letterSpacing: "normal",
+                                        whiteSpace: "nowrap",
+                                        fontSize: "14px",
+                                        fontWeight: 600,
+                                        lineHeight: "1em",
+                                      }}
+                                    >
+                                      Jacuzzi
                                     </Typography>
                                   </Box>
                                 )}

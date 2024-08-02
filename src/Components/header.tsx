@@ -192,20 +192,55 @@ function Header({ categories }) {
 
           {/* menu */}
           <Box sx={{ display: { xs: "block", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="nav menu"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
+            <Box
+              className="btn-menu"
               onClick={handleClickOpen}
               sx={{
-                fontSize: "40px",
-                fontWeight: "bold",
-                color: "black",
+                cursor: "pointer",
+                "&:hover": {
+                  backgroundColor: "transparent"
+                }
               }}
             >
-              <MenuIcon />
-            </IconButton>
+              <Box
+                className="line-one"
+                sx= {{
+                  width: "40px",
+                  height: "3px",
+                  backgroundColor: "black",
+                  marginBottom: "8px",
+                  borderRadius: "5px",
+                  transition: "all 0.3s",
+                  transform: open ? "rotate(45deg) translate(5px, 5px)" : "none",
+                }}
+              />
+              <Box
+                className="line-two"
+                sx= {{
+                  width: "40px",
+                  height: "3px",
+                  backgroundColor: "black",
+                  marginBottom: "8px",
+                  borderRadius: "5px",
+                  transition: "all 0.3s",
+                  opacity: open ? 0 : 1,
+                }}
+
+              />
+              <Box
+                className="line-three"
+                sx= {{
+                  width: "40px",
+                  height: "3px",
+                  backgroundColor: "black",
+                  marginBottom: "8px",
+                  borderRadius: "5px",
+                  transition: "all 0.3s",
+                  transform: open ? "rotate(-45deg) translate(7px, -6px)" : "none",
+                }}
+              />
+
+            </Box>
             <Dialog
               fullScreen
               open={open}
@@ -215,7 +250,9 @@ function Header({ categories }) {
               <AppBar
                 sx={{
                   position: "relative",
-                  backgroundColor: "#060606",
+                  backgroundColor: "transparent",
+                  color: "black",
+                  boxShadow: "none",
                 }}
               >
                 <Toolbar>

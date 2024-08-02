@@ -148,7 +148,7 @@ export default function Footer({ categories }) {
                       display: "flex",
                     }}
                   >
-                    <i className="fa fa-twitter"></i>
+                    X
                   </Box>
                 </a>
               </Box>

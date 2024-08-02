@@ -2,7 +2,7 @@ import { Box, Container, Divider, Typography } from "@mui/material";
 import React from "react";
 import data from "../../Data/data.json";
 import { Link } from "react-router-dom";
-import { BalconyOutlined, PoolOutlined, ShowerOutlined, WifiOutlined } from "@mui/icons-material";
+import { BalconyOutlined, HotTubOutlined, PoolOutlined, ShowerOutlined, WifiOutlined } from "@mui/icons-material";
 import MeetingRoomIconOutlined from "@mui/icons-material/MeetingRoom";
 
 export default function AllCategories({ category }: { category: string }) {
@@ -268,6 +268,31 @@ export default function AllCategories({ category }: { category: string }) {
                             </Typography>
                           </Box>
                         )}
+                        {
+                          item.jacuzzi && (
+                            <Box
+                              sx={{
+                                display: "flex",
+                                alignItems: "center",
+                              }}
+                            >
+                              <HotTubOutlined fontSize="large" />
+                              <Typography
+                                variant="body2"
+                                sx={{
+                                  ml: 1,
+                                  letterSpacing: "normal",
+                                  whiteSpace: "nowrap",
+                                  fontSize: "14px",
+                                  fontWeight: 600,
+                                  lineHeight: "1em",
+                                }}
+                              >
+                                Jacuzzi
+                              </Typography>
+                            </Box>
+                          )
+                        }
                       </Box>
                       <Divider sx={{}} />
                       <Link to={`${item.id}`}>

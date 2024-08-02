@@ -579,6 +579,228 @@
             }
           ]
         }
+      ],
+      "penthouses": [
+        {
+          "id": 3,
+          "name_1": "Discover Luxurious Penthouses",
+          "name_2": "in Agadir",
+          "description": "Experience the epitome of luxury living in our penthouses in <strong> Agadir</strong>. Offering unrivaled comfort, opulent amenities, and breathtaking views, these residences are designed to elevate your stay to new heights.",
+          "data": [
+            {
+              "id": 1,
+              "catName": "sonaba",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d918cdd70a50edcadf887_L1-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d918ad839f5aa80197b75_R1-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d918bbf4e56d15ac885b6_B1-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d91be714db3c85745e582_L2-p-500.webp"
+                }
+              ],
+              "name": "Penthouse 117",
+              "description": "Embrace the pinnacle of city living in our<strong> 2-bedroom penthouse</strong> situated in the lively Sonaba district of Agadir. Featuring contemporary amenities, elegant design, and breathtaking cityscape views, this stylish haven seamlessly combines comfort and luxury for an unforgettable stay.",
+              "rooms": 2,
+              "bathrooms": 1,
+              "pool": false,
+              "privetePool": false,
+              "roomservices": false,
+              "wifi": false,
+              "balcony": false,
+              "jacuzzi": true
+            },
+            {
+              "id": 2,
+              "catName": "sonaba",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d92396a07dadd538aa061_L-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d923b1eeb41a69e0e120f_R1-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d923cfb99d02ed959da05_R2-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d92391a8d4ae80bbdb05a_B2-p-500.webp"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d923b45599e7bc7a8893f_OP6-p-500.webp"
+                }
+              ],
+              "name": "Penthouse 316",
+              "description": "<strong>2-bedroom penthouse</strong>, nestled in Agadir's vibrant Sonaba district. Featuring modern amenities, elegant décor, and sweeping city views, this stylish sanctuary offers a unique blend of comfort and luxury for an unforgettable stay.",
+              "rooms": 2,
+              "bathrooms": 1,
+              "pool": false,
+              "privetePool": false,
+              "roomservices": false,
+              "wifi": false,
+              "balcony": false,
+              "jacuzzi": true
+            },
+            {
+              "id": 3,
+              "catName": "sonaba",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d92f74b97b7cd11390c47_L2-p-1600.jpg"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d92f7e1fa834e7a6f3c8c_R1-p-500.jpg"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d92f735028cc99200afc3_R2-p-500.jpg"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d92f789983001544c9f14_L3-p-500.jpg"
+                }
+              ],
+              "name": "Penthouse 118",
+              "description": "<strong>3-bedroom penthouse</strong> located in central Agadir, this lavish escape exudes elegance and sophistication. With spacious interiors, awe-inspiring vistas, and meticulous attention to detail, indulge in a memorable stay that exceeds all expectations.",
+              "rooms": 3,
+              "bathrooms": 2,
+              "pool": false,
+              "privetePool": false,
+              "roomservices": false,
+              "wifi": false,
+              "balcony": false,
+              "jacuzzi": true
+            },
+            {
+              "id": 4,
+              "catName": "sonaba",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d933b1a8d4ae80bbec31a_L1-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d933bb23246d76b479f93_R1-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d933b536d824275be8a6b_R2-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d933b4554c3c6492b3d5f_R3-p-500.webp"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d933cc9a99ba86e344961_B3-p-500.webp"
+                }
+              ],
+              "name": "Penthouse 412",
+              "description": "<strong>3-bedroom penthouse</strong> positioned at the heart of Agadir, this prestigious retreat radiates sophistication and comfort. Boasting expansive interiors, panoramic vistas, and meticulous craftsmanship, immerse yourself in a truly unforgettable escape",
+              "rooms": 3,
+              "bathrooms": 2,
+              "pool": false,
+              "privetePool": false,
+              "roomservices": false,
+              "wifi": false,
+              "balcony": false,
+              "jacuzzi": true
+            },
+            {
+              "id": 5,
+              "catName": "sonaba",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d93991a47040fddb3fb72_L1-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d93996e265a0064b0508a_R1-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d9398efe0d9e940a634ff_R2-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d9398f8a4ed2e00281fd6_R3-p-500.webp"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d9399056ebfb7ad0fc1cd_OP3-p-500.webp"
+                }
+              ],
+              "name": "Penthouse 317",
+              "description": "<strong>3-bedroom penthouse</strong> positioned at the heart of Agadir, this prestigious retreat radiates sophistication and comfort. Boasting expansive interiors, panoramic vistas, and meticulous craftsmanship, immerse yourself in a truly unforgettable escape",
+              "rooms": 5,
+              "bathrooms": 3,
+              "pool": false,
+              "privetePool": false,
+              "roomservices": false,
+              "wifi": false,
+              "balcony": false,
+              "jacuzzi": true
+            }
+          ]
+        }
+      ],
+      "car hire": [
+        {
+          "id": 4,
+          "name_1": "Explore Agadir",
+          "name_2": "in Style",
+          "description": "Discover the beauty of Agadir and beyond with our luxury car hire service. Whether you're exploring the city or venturing into the Atlas Mountains, our premium vehicles ensure a comfortable and stylish journey.",
+          "data": [
+            {
+              "id": 1,
+              "catName": "sonaba",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d9a1b1a8d4ae80bbf3b1a_L1-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d9a1b1a8d4ae80bbf3b1a_L1-p-1600.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d9a1b1a8d4ae80bbf3b1a_L1-p-1600.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d9a1b1a8d4ae80bbf3b1a_L1-p-1600.webp"
+                }
+              ],
+              "name": "Mercedes-Benz E-Class",
+              "description": "Experience the epitome of luxury with our Mercedes-Benz E-Class. Combining style, comfort, and performance, this premium vehicle is perfect for exploring Agadir and beyond in style.",
+              "seats": 5,
+              "doors": 4,
+              "transmission": "Automatic",
+              "airConditioning": true,
+              "gps": true,
+              "wifi": true
+            }
+          ]
+        }
       ]
     }
   ]

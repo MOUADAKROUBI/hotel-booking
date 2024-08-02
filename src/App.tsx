@@ -9,6 +9,7 @@ import data from './Data/data.json';
 import AllCategories from './Components/AllCategories/AllCategories';
 import { CssBaseline } from '@mui/material';
 import SingleCategory from './Components/SingleCategory/SingleCategory';
+import NotFound from './Components/NotFound';
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
 
   useEffect(() => {
     const pages = Object.keys(data.data[0]);
-    setCategories(pages);
+    setCategories(["home", ...pages]);
   }, []);
 
   return (
@@ -29,14 +30,14 @@ function App() {
           <Route path="home" element={<Home />} />
           {
             categories.map((category) => (
-              <Route key={category} path={category.replace(' ', '')} element={<AllCategories category={category} />} />
+              <>
+                <Route key={category} path={category.replace(' ', '')} element={<AllCategories category={category} />} />
+                <Route key={category} path={category.replace(' ', '') + '/:id'} element={<SingleCategory category={category} />} />
+                <Route path={`${category}/*`} element={<NotFound />} />                
+              </>
             ))
           }
-          {
-            categories.map((category) => (
-              <Route key={category} path={category.replace(' ', '') + '/:id'} element={<SingleCategory category={category} />} />
-            ))
-          }
+          <Route path="*" element={<NotFound />} />
         </Routes>
         {/* <FeedBack /> */}
         <Footer categories={categories} />

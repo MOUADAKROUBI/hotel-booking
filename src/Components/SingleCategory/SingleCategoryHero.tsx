@@ -1,6 +1,7 @@
 import React from "react";
 import {
   BalconyOutlined,
+  HotTubOutlined,
   PoolOutlined,
   ShowerOutlined,
   WifiOutlined,
@@ -9,7 +10,13 @@ import MeetingRoomIconOutlined from "@mui/icons-material/MeetingRoom";
 import { Box, Container, Typography } from "@mui/material";
 import ButtonBookNow from "../ui/ButtonBookNow";
 
-export default function SingleCategoryHero({ galleryRef, data }: { galleryRef: React.RefObject<HTMLDivElement> ,data: any }) {
+export default function SingleCategoryHero({
+  galleryRef,
+  data,
+}: {
+  galleryRef: React.RefObject<HTMLDivElement>;
+  data: any;
+}) {
   return (
     <>
       <Container>
@@ -194,6 +201,29 @@ export default function SingleCategoryHero({ galleryRef, data }: { galleryRef: R
                   </Typography>
                 </Box>
               )}
+              {data.jacuzzi && (
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <HotTubOutlined fontSize="large" />
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      ml: 1,
+                      letterSpacing: "normal",
+                      whiteSpace: "nowrap",
+                      fontSize: "14px",
+                      fontWeight: 600,
+                      lineHeight: "1em",
+                    }}
+                  >
+                    Jacuzzi
+                  </Typography>
+                </Box>
+              )}
             </Box>
             <Box
               className="room-buttons"
@@ -204,10 +234,12 @@ export default function SingleCategoryHero({ galleryRef, data }: { galleryRef: R
                 flexDirection: { xs: "column", sm: "row" },
               }}
             >
-              <Box 
-                className="btn-gallery" 
+              <Box
+                className="btn-gallery"
                 sx={{ mb: { xs: "50px", sm: 0 } }}
-                onClick={() => galleryRef.current?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() =>
+                  galleryRef.current?.scrollIntoView({ behavior: "smooth" })
+                }
               >
                 <Box
                   component="a"
