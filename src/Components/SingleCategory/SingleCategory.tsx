@@ -8,7 +8,7 @@ import SingleCategoryAmenities from "./SingleCategoryAmenities";
 import Gallery from "./Gallery";
 import NotFound from "../NotFound";
 import { useLanguage } from "../../Contexts/LanguageContext";
-
+import { Helmet } from "react-helmet";
 
 export default function SingleCategory({ category }: { category: string }) {
   const { id } = useParams();
@@ -24,6 +24,23 @@ export default function SingleCategory({ category }: { category: string }) {
 
   return (
     <>
+      <Helmet>
+        <title>
+          {language === "en"
+            ? `Luxury Rentals | ${singleData.name}`
+            : `تأجيرات فاخرة | ${singleData.name}`}
+        </title>
+        <meta
+          name="keywords"
+          content="Luxury, Rentals, Items, Rent, Home, Categories, About Us"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Luxury Rentals" />
+        <meta
+          name="description"
+          content="Luxury Rentals is a website that offers a wide range of luxury items for rent"
+        />
+      </Helmet>
       <Box
         component="section"
         className="single-category"

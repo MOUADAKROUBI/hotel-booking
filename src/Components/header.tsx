@@ -161,7 +161,7 @@ function Header({ categoriesEnglish, categoriesArabic }: { categoriesEnglish: st
             <Link to="/" className="logo">
               <Box
                 component="img"
-                src="/../src/assets/logo.png"
+                src="../src/assets/logo.png"
                 sx={{
                   width: "100px",
                   maxWidth: "none",

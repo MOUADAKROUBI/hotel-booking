@@ -11,6 +11,7 @@ import {
 } from "@mui/icons-material";
 import MeetingRoomIconOutlined from "@mui/icons-material/MeetingRoom";
 import { useLanguage } from "../../Contexts/LanguageContext";
+import { Helmet } from "react-helmet";
 
 export default function AllCategories({ category }: { category: string }) {
   const { language } = useLanguage();
@@ -24,6 +25,17 @@ export default function AllCategories({ category }: { category: string }) {
 
   return (
     <>
+      <Helmet>
+        <title>
+          {dataImported[0].name_1 + " " + dataImported[0].name_2}
+        </title>
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Luxury Rentals" />
+        <meta
+          name="description"
+          content={dataImported[0].description}
+        />
+      </Helmet>
       <Box
         ref={sectionRef}
         className="all-categories"
