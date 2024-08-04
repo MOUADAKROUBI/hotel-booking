@@ -129,6 +129,14 @@ export default function AllCategories({ category }: { category: string }) {
                           {item.name}
                         </Typography>
                       </Link>
+                      <Typography
+                        sx={{
+                          mb: "18px",
+                        }}
+                        dangerouslySetInnerHTML={{
+                          __html: item.description,
+                        }}
+                      />
                       <Divider sx={{ mb: 2 }} />
                       <Box
                         className="about-room"

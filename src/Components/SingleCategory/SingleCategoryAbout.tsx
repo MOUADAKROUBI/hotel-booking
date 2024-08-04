@@ -153,11 +153,14 @@ export default function SingleCategoryAbout({
                 component="div"
                 sx={{ mb: { xs: "40px", lg: "48px", textTransform: 'capitlize' } }}
               >
-                {
-                  language === "en"
-                  ? "Experience the allure of Agadir with mafaman company. We offer luxurious villas, apartments, penthouses, and car hire. Relax and enjoy your stay; we prioritize your peace of mind."
-                  : "استمتع بجاذبية أكادير مع شركة مافامان. نحن نقدم فلل فاخرة وشقق وبنتهاوس وتأجير سيارات. استرخ واستمتع بإقامتك ؛ نحن نولي أولوية لسلامتك النفسية."
-                }
+                <Typography
+                  sx={{
+                    mb: "18px",
+                  }}
+                  dangerouslySetInnerHTML={{
+                    __html: data.description,
+                  }}
+                />
               </Typography>
               
               <ButtonBookNow texten="Book Now" textar="احجز الان" /> 
