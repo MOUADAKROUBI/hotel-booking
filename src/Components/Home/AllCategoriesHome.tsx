@@ -1,18 +1,21 @@
 import React, { useState } from "react";
-import { Box, Typography, Divider, Container } from "@mui/material";
+import { Box, Typography, Divider } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import MeetingRoomIcon from "@mui/icons-material/MeetingRoom";
 import { Link } from "react-router-dom";
 import { Balcony, HotTubOutlined, Pool, Shower, Wifi } from "@mui/icons-material";
-import ReactWhatsapp from "react-whatsapp";
 import data from "../../Data/data.json";
+import { useLanguage } from "../../Contexts/LanguageContext";
+import ButtonBookNow from "../ui/ButtonBookNow";
 
 export default function AllCategoriesHome({ category }) {
-  const dataImported = data.data[0][category];
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const { language } = useLanguage();
+  const dataImported = data[language][0][category];
 
-  const totalSlides = dataImported[0].data.length;
+  const [currentSlide, setCurrentSlide] = useState(language === "ar" ? dataImported?.[0]?.data?.length - 1 : 0);
+
+  const totalSlides = dataImported?.[0]?.data?.length;
 
   const goToPrevious = () => {
     setCurrentSlide((prevSlide) =>
@@ -44,7 +47,7 @@ export default function AllCategoriesHome({ category }) {
             display: "flex",
           }}
         >
-          <div>0{dataImported[0].id + 1}</div>
+          <div>0{dataImported?.[0].id + 1}</div>
           <Box
             className="dash"
             sx={{
@@ -56,8 +59,8 @@ export default function AllCategoriesHome({ category }) {
           />
           <Box sx={{ textTransform: "capitalize" }}>{category}</Box>
         </Box>
-        <h1>{dataImported[0].name_1}</h1>
-        <h2>{dataImported[0].name_2}</h2>
+        <h1>{dataImported?.[0].name_1}</h1>
+        <h2>{dataImported?.[0].name_2}</h2>
         <Typography
           component="p"
           sx={{
@@ -66,7 +69,7 @@ export default function AllCategoriesHome({ category }) {
             mb: { xs: "40px", lg: "48px" },
             px: { xs: "20px", lg: 0 },
           }}
-          dangerouslySetInnerHTML={{ __html: dataImported[0].description }}
+          dangerouslySetInnerHTML={{ __html: dataImported?.[0].description }}
         />
 
         <Box>
@@ -103,7 +106,7 @@ export default function AllCategoriesHome({ category }) {
                   width: "100%",
                   height: "100%",
                   whiteSpace: "normal",
-                  textAlign: "left",
+                  textAlign: language === "en" ? "left" : "right",
                   display: "inline-block",
                   position: "relative",
                 }}
@@ -120,11 +123,11 @@ export default function AllCategoriesHome({ category }) {
                     sx={{
                       display: "flex",
                       transition: "transform 0.5s ease",
-                      transform: `translateX(-${currentSlide * 100}%)`,
+                      transform: `translateX(${language === 'ar' ? '' : '-'}${currentSlide * 100}%)`,
                       width: "100%",
                     }}
                   >
-                    {dataImported[0].data.map((item) => (
+                    {dataImported?.[0].data.map((item) => (
                       <Box
                         key={item.id}
                         className="listItem"
@@ -228,7 +231,10 @@ export default function AllCategoriesHome({ category }) {
                                         lineHeight: "1em",
                                       }}
                                     >
-                                      {item.rooms} Rooms
+                                      {item.rooms}
+                                      {
+                                        language === "en" ? " Rooms" : " غرف"
+                                      }
                                     </Typography>
                                   </Box>
                                 )}
@@ -252,7 +258,10 @@ export default function AllCategoriesHome({ category }) {
                                         lineHeight: "1em",
                                       }}
                                     >
-                                      {item.bathrooms} BathRooms
+                                      {item.bathrooms} 
+                                      {
+                                        language === "en" ? " Bathrooms" : " حمامات"
+                                      }
                                     </Typography>
                                   </Box>
                                 )}
@@ -275,7 +284,9 @@ export default function AllCategoriesHome({ category }) {
                                         lineHeight: "1em",
                                       }}
                                     >
-                                      Private Pool
+                                      {
+                                        language === "en" ? "Private Pool" : "حمام سباحة خاص"
+                                      }
                                     </Typography>
                                   </Box>
                                 )}
@@ -299,7 +310,9 @@ export default function AllCategoriesHome({ category }) {
                                         lineHeight: "1em",
                                       }}
                                     >
-                                      Pool
+                                      {
+                                        language === "en" ? "Pool" : "حمام سباحة"
+                                      }
                                     </Typography>
                                   </Box>
                                 )}
@@ -323,7 +336,9 @@ export default function AllCategoriesHome({ category }) {
                                         lineHeight: "1em",
                                       }}
                                     >
-                                      Wifi
+                                      {
+                                        language === "en" ? "Wifi" : "واي فاي"
+                                      }
                                     </Typography>
                                   </Box>
                                 )}
@@ -346,7 +361,9 @@ export default function AllCategoriesHome({ category }) {
                                         lineHeight: "1em",
                                       }}
                                     >
-                                      Balcony
+                                      {
+                                        language === "en" ? "Balcony" : "شرفة"
+                                      }
                                     </Typography>
                                   </Box>
                                 )}
@@ -369,42 +386,14 @@ export default function AllCategoriesHome({ category }) {
                                         lineHeight: "1em",
                                       }}
                                     >
-                                      Jacuzzi
+                                      {
+                                        language === "en" ? "Jacuzzi" : "جاكوزي"
+                                      }
                                     </Typography>
                                   </Box>
                                 )}
                               </Box>
-                              <Divider sx={{ my: 2 }} />
-                              <ReactWhatsapp
-                                number="+212680-844679"
-                                message="hi..."
-                                element="button"
-                              >
-                                <Link to="#">
-                                  <Typography
-                                    component="span"
-                                    sx={{
-                                      bgcolor: "black",
-                                      color: "white",
-                                      borderRadius: 0,
-                                      fontWeight: { xs: 500, md: 700 },
-                                      letterSpacing: ".1rem",
-                                      px: { xs: 2, md: 4 },
-                                      py: 2,
-                                      textTransform: "uppercase",
-                                      fontSize: { xs: "14px", md: "16px" },
-                                      "&:hover": {
-                                        bgcolor: "white",
-                                        color: "black",
-                                        border: "1.5px solid black",
-                                        boxShadow: "none",
-                                      },
-                                    }}
-                                  >
-                                    Book Now
-                                  </Typography>
-                                </Link>
-                              </ReactWhatsapp>
+                              <ButtonBookNow texten="Book Now" textar="احجز الان" /> 
                             </Box>
                           </Box>
                         </Box>
@@ -461,7 +450,13 @@ export default function AllCategoriesHome({ category }) {
                             fontSize: "16px",
                           }}
                         >
-                          <ArrowBackIcon />
+                          {
+                            language === "en" ? (
+                              <ArrowBackIcon />
+                            ) : (
+                              <ArrowForwardIcon />
+                            )
+                          }
                         </Typography>
                       </Box>
                     </Box>
@@ -502,7 +497,13 @@ export default function AllCategoriesHome({ category }) {
                             fontSize: "16px",
                           }}
                         >
-                          <ArrowForwardIcon />
+                          {
+                            language === "en" ? (
+                              <ArrowForwardIcon />
+                            ) : (
+                              <ArrowBackIcon />
+                            )
+                          }
                         </Typography>
                       </Box>
                     </Box>
@@ -514,14 +515,14 @@ export default function AllCategoriesHome({ category }) {
                         mt: { xs: 3, sm: 0 },
                       }}
                     >
-                      <Link to={`/${category}`} className="button-slider">
+                      <Link to={`/${language}/${category}`} className="button-slider">
                         <Typography
                           sx={{
                             bgcolor: "white",
                             color: "black",
                             borderRadius: 0,
                             fontWeight: 600,
-                            letterSpacing: ".1rem",
+                            letterSpacing: language === "en" ? ".1rem" : "0",
                             px: { xs: 2, md: 4 },
                             py: 2,
                             textTransform: "uppercase",
@@ -537,7 +538,11 @@ export default function AllCategoriesHome({ category }) {
                             },
                           }}
                         >
-                          Brower All {category}
+                          {
+                            language === "en" ? "View All" : "عرض كل"
+                          }
+                          {" "}
+                          {category}
                         </Typography>
                       </Link>
                     </Box>

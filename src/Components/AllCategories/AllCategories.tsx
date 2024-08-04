@@ -1,17 +1,26 @@
 import { Box, Container, Divider, Typography } from "@mui/material";
 import React from "react";
 import data from "../../Data/data.json";
-import { Link } from "react-router-dom";
-import { BalconyOutlined, HotTubOutlined, PoolOutlined, ShowerOutlined, WifiOutlined } from "@mui/icons-material";
+import { Link, useParams } from "react-router-dom";
+import {
+  BalconyOutlined,
+  HotTubOutlined,
+  PoolOutlined,
+  ShowerOutlined,
+  WifiOutlined,
+} from "@mui/icons-material";
 import MeetingRoomIconOutlined from "@mui/icons-material/MeetingRoom";
+import { useLanguage } from "../../Contexts/LanguageContext";
 
 export default function AllCategories({ category }: { category: string }) {
-  const dataImported = data.data[0][category];
+  const { language } = useLanguage();
+  const dataImported = data[language][0][category];
+
   const sectionRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
     sectionRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, []);
+  }, [category]);
 
   return (
     <>
@@ -41,30 +50,24 @@ export default function AllCategories({ category }: { category: string }) {
           />
         </Container>
 
-        <Container
-          className="category-items"
-        >
+        <Container className="category-items">
           <Box className="w-dyn-list">
             <Box
               className="list"
               sx={{
                 display: "grid",
                 gridColumnGap: "24px",
-                gridRowGap: {xs: "40px", sm: "56px"},
-                marginTop: {xs: "20px", sm: "40px", md: "", lg: "55px"},
+                gridRowGap: { xs: "40px", sm: "56px" },
+                marginTop: { xs: "20px", sm: "40px", md: "", lg: "55px" },
                 gridTemplateRows: "auto",
-                gridTemplateColumns: {xs: "1fr", lg: "50% 50%"},
+                gridTemplateColumns: { xs: "1fr", lg: "50% 50%" },
                 gridAutoColumns: "1fr",
                 mx: "auto",
-                maxWidth: {xs: "530px", lg: "100%"},
+                maxWidth: { xs: "530px", lg: "100%" },
               }}
             >
               {dataImported[0].data.map((item) => (
-                <Box 
-                    className="item"
-                    sx={{}}
-                    key={item.id}
-                >
+                <Box className="item" sx={{}} key={item.id}>
                   <Box sx={{}}>
                     <Link className="image-wrapper" to={`${item.id}`}>
                       <Box
@@ -82,9 +85,13 @@ export default function AllCategories({ category }: { category: string }) {
                     <Box
                       className="card-centent"
                       sx={{
-                        marginTop: {xs: "-65px", sm: "-80px", md: "-96px"},
-                        marginRight: {sm: "20px", md: "33px"},
-                        padding: {xs: "30px", sm: "0 40px 0 40px", md: "57px 33px"},
+                        marginTop: { xs: "-65px", sm: "-80px", md: "-96px" },
+                        marginRight: { sm: "20px", md: "33px" },
+                        padding: {
+                          xs: "30px",
+                          sm: "0 40px 0 40px",
+                          md: "57px 33px",
+                        },
                         position: "relative",
                         backgroundColor: "white",
                       }}
@@ -118,13 +125,16 @@ export default function AllCategories({ category }: { category: string }) {
                           __html: dataImported[0].description,
                         }}
                       />
-                      <Divider sx={{mb: 2}} />
+                      <Divider sx={{ mb: 2 }} />
                       <Box
                         className="about-room"
                         sx={{
-                          marginBottom: {xs: "20px", lg: "40px"},
+                          marginBottom: { xs: "20px", lg: "40px" },
                           display: "grid",
-                          gridTemplateColumns: {xs: "auto auto", md: "auto auto auto"},
+                          gridTemplateColumns: {
+                            xs: "auto auto",
+                            md: "auto auto auto",
+                          },
                           gridTemplateRows: "auto",
                           gridColumnGap: "24px",
                           gridRowGap: "24px",
@@ -135,6 +145,7 @@ export default function AllCategories({ category }: { category: string }) {
                             sx={{
                               display: "flex",
                               alignItems: "center",
+                              mr: 4,
                             }}
                           >
                             <MeetingRoomIconOutlined fontSize="large" />
@@ -149,7 +160,8 @@ export default function AllCategories({ category }: { category: string }) {
                                 lineHeight: "1em",
                               }}
                             >
-                              {item.rooms} Rooms
+                              {item.rooms}
+                              {language === "en" ? " Rooms" : " غرف"}
                             </Typography>
                           </Box>
                         )}
@@ -158,6 +170,7 @@ export default function AllCategories({ category }: { category: string }) {
                             sx={{
                               display: "flex",
                               alignItems: "center",
+                              mr: 4,
                             }}
                           >
                             <ShowerOutlined fontSize="large" />
@@ -172,7 +185,8 @@ export default function AllCategories({ category }: { category: string }) {
                                 lineHeight: "1em",
                               }}
                             >
-                              {item.bathrooms} BathRooms
+                              {item.bathrooms}
+                              {language === "en" ? " Bathrooms" : " حمامات"}
                             </Typography>
                           </Box>
                         )}
@@ -195,7 +209,9 @@ export default function AllCategories({ category }: { category: string }) {
                                 lineHeight: "1em",
                               }}
                             >
-                              Private Pool
+                              {language === "en"
+                                ? "Private Pool"
+                                : "حمام سباحة خاص"}
                             </Typography>
                           </Box>
                         )}
@@ -204,6 +220,7 @@ export default function AllCategories({ category }: { category: string }) {
                             sx={{
                               display: "flex",
                               alignItems: "center",
+                              mr: 4,
                             }}
                           >
                             <PoolOutlined fontSize="large" />
@@ -218,7 +235,7 @@ export default function AllCategories({ category }: { category: string }) {
                                 lineHeight: "1em",
                               }}
                             >
-                              Pool
+                              {language === "en" ? "Pool" : "حمام سباحة"}
                             </Typography>
                           </Box>
                         )}
@@ -227,6 +244,7 @@ export default function AllCategories({ category }: { category: string }) {
                             sx={{
                               display: "flex",
                               alignItems: "center",
+                              mr: 4,
                             }}
                           >
                             <WifiOutlined fontSize="large" />
@@ -241,7 +259,7 @@ export default function AllCategories({ category }: { category: string }) {
                                 lineHeight: "1em",
                               }}
                             >
-                              Wifi
+                              {language === "en" ? "Wifi" : "واي فاي"}
                             </Typography>
                           </Box>
                         )}
@@ -264,35 +282,33 @@ export default function AllCategories({ category }: { category: string }) {
                                 lineHeight: "1em",
                               }}
                             >
-                              Balcony
+                              {language === "en" ? "Balcony" : "شرفة"}
                             </Typography>
                           </Box>
                         )}
-                        {
-                          item.jacuzzi && (
-                            <Box
+                        {item.jacuzzi && (
+                          <Box
+                            sx={{
+                              display: "flex",
+                              alignItems: "center",
+                            }}
+                          >
+                            <HotTubOutlined fontSize="large" />
+                            <Typography
+                              variant="body2"
                               sx={{
-                                display: "flex",
-                                alignItems: "center",
+                                ml: 1,
+                                letterSpacing: "normal",
+                                whiteSpace: "nowrap",
+                                fontSize: "14px",
+                                fontWeight: 600,
+                                lineHeight: "1em",
                               }}
                             >
-                              <HotTubOutlined fontSize="large" />
-                              <Typography
-                                variant="body2"
-                                sx={{
-                                  ml: 1,
-                                  letterSpacing: "normal",
-                                  whiteSpace: "nowrap",
-                                  fontSize: "14px",
-                                  fontWeight: 600,
-                                  lineHeight: "1em",
-                                }}
-                              >
-                                Jacuzzi
-                              </Typography>
-                            </Box>
-                          )
-                        }
+                              {language === "en" ? "Jacuzzi" : "جاكوزي"}
+                            </Typography>
+                          </Box>
+                        )}
                       </Box>
                       <Divider sx={{}} />
                       <Link to={`${item.id}`}>
@@ -303,7 +319,7 @@ export default function AllCategories({ category }: { category: string }) {
                             textAlign: "center",
                             borderRadius: 0,
                             fontWeight: { xs: 500, md: 700 },
-                            letterSpacing: ".1rem",
+                            letterSpacing: language === "en" ? ".1rem" : "0",
                             px: { xs: 2, md: 4 },
                             py: 2,
                             textTransform: "uppercase",
@@ -316,7 +332,11 @@ export default function AllCategories({ category }: { category: string }) {
                             },
                           }}
                         >
-                          more information
+                          {
+                            language === "en"
+                              ? "View more information"
+                              : "عرض المزيد من المعلومات"
+                          }
                         </Typography>
                       </Link>
                     </Box>

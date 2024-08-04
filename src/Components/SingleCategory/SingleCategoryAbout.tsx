@@ -2,12 +2,15 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 import ReactWhatsapp from "react-whatsapp";
+import { useLanguage } from "../../Contexts/LanguageContext";
+import ButtonBookNow from "../ui/ButtonBookNow";
 
 export default function SingleCategoryAbout({
   data,
 }: {
   data: any;
 }) {
+  const { language } = useLanguage();
   return (
     <>
       <Box
@@ -85,7 +88,8 @@ export default function SingleCategoryAbout({
                 pt: { md: "80px", lg: "auto" },
                 pb: { md: "80px", lg: "auto" },
                 position: { xs: "static", lg: "absolute" },
-                right: 0,
+                right: language === "en" ? 0 : "auto",
+                left: language === "ar" ? 0 : "auto",
                 order: -1,
                 bgcolor: "white",
               }}
@@ -94,14 +98,14 @@ export default function SingleCategoryAbout({
                 className="subtitle-amenties"
                 sx={{
                   color: "#060606",
-                  "letter-spacing": ".1em",
-                  "text-transform": "uppercase",
-                  "justify-content": "center",
-                  "align-items": "center",
-                  "margin-bottom": "32px",
-                  "font-size": "14px",
-                  "font-weight": 600,
-                  "line-height": "1em",
+                  letterSpacing: ".1em",
+                  textTransform: "uppercase",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginBottom: "32px",
+                  fontSize: "14px",
+                  fontWeight: 600,
+                  lineHeight: "1em",
                   display: "flex",
                 }}
               >
@@ -115,7 +119,11 @@ export default function SingleCategoryAbout({
                     mx: "20px",
                   }}
                 />
-                <Box sx={{ textTransform: "capitalize" }}>learn more</Box>
+                <Box sx={{ textTransform: "capitalize" }}>
+                  {
+                    language === "en" ? 'explore more': 'اكتشف المزيد' 
+                  }
+                </Box>
               </Box>
               <Typography
                 variant="h2"
@@ -134,47 +142,25 @@ export default function SingleCategoryAbout({
                   lineHeight: "1.286em",
                 }}
               >
-                about the {data.name}
+                {
+                  language === "en"
+                  ? "About the " + data.name
+                  : "حول " + data.name
+                }
               </Typography>
               <Typography
                 variant="body1"
                 component="div"
-                sx={{ mb: { xs: "40px", lg: "48px" } }}
+                sx={{ mb: { xs: "40px", lg: "48px", textTransform: 'capitlize' } }}
               >
-                Experience the allure of Agadir with Luxury Rentals. We offer
-                luxurious villas, apartments, penthouses, and car hire. Relax
-                and enjoy your stay; we prioritize your peace of mind.
+                {
+                  language === "en"
+                  ? "Experience the allure of Agadir with mafaman company. We offer luxurious villas, apartments, penthouses, and car hire. Relax and enjoy your stay; we prioritize your peace of mind."
+                  : "استمتع بجاذبية أكادير مع شركة مافامان. نحن نقدم فلل فاخرة وشقق وبنتهاوس وتأجير سيارات. استرخ واستمتع بإقامتك ؛ نحن نولي أولوية لسلامتك النفسية."
+                }
               </Typography>
-              <ReactWhatsapp
-                number="+212680-844679"
-                message="hi..."
-                element="button"
-              >
-                <Link to="#">
-                  <Typography
-                    component="span"
-                    sx={{
-                      bgcolor: "black",
-                      color: "white",
-                      borderRadius: 0,
-                      fontWeight: { xs: 500, md: 700 },
-                      letterSpacing: ".1rem",
-                      px: { xs: 2, md: 4 },
-                      py: 2,
-                      textTransform: "uppercase",
-                      fontSize: { xs: "14px", md: "16px" },
-                      "&:hover": {
-                        bgcolor: "white",
-                        color: "black",
-                        border: "1.5px solid black",
-                        boxShadow: "none",
-                      },
-                    }}
-                  >
-                    Book Now
-                  </Typography>
-                </Link>
-              </ReactWhatsapp>
+              
+              <ButtonBookNow texten="Book Now" textar="احجز الان" /> 
             </Box>
           </Box>
         </Box>

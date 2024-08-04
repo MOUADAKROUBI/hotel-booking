@@ -11,9 +11,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ReactWhatsapp from "react-whatsapp";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import { useLanguage } from "../Contexts/LanguageContext";
 
-export default function Footer({ categories }) {
+export default function Footer({ categoriesEnglish, categoriesArabic }: { categoriesEnglish: string[], categoriesArabic: string[] }) {
   const currentYear = new Date().getFullYear();
+  const { language } = useLanguage();
 
   return (
     <>
@@ -56,14 +58,20 @@ export default function Footer({ categories }) {
                 <Link to="/">
                   <Box
                     component="img"
-                    src="../src/assets/logo.png"
+                    src="/../src/assets/logo.png"
                     sx={{
                       width: "120px",
                     }}
                   />
                 </Link>
               </Box>
-              <p>Begin Your Adventure in the Heart of Morocco</p>
+              <p>
+                {
+                  language === "en"
+                    ? "Begin Your Adventure in the Heart of Morocco"
+                    : "ابدأ مغامرتك في قلب المغرب"
+                }
+              </p>
             </Box>
             <Box className="footer-top-right">
               <Box
@@ -76,7 +84,9 @@ export default function Footer({ categories }) {
                   textTransform: "uppercase",
                 }}
               >
-                follow us
+                {
+                  language === "en" ? "Follow Us" : "تابعنا"
+                }
               </Box>
               <Box
                 className="footer-gap"
@@ -88,7 +98,7 @@ export default function Footer({ categories }) {
                   display: "grid",
                 }}
               >
-                <a href="#">
+                <a target="__black" href="#">
                   <Box
                     className="footer-social-icon"
                     sx={{
@@ -109,7 +119,7 @@ export default function Footer({ categories }) {
                     <i className="fa fa-facebook"></i>
                   </Box>
                 </a>
-                <a href="#">
+                <a target="__black" href="https://www.instagram.com/luxury_rentals_33/">
                   <Box
                     className="footer-social-icon"
                     sx={{
@@ -130,7 +140,7 @@ export default function Footer({ categories }) {
                     <i className="fa fa-instagram"></i>
                   </Box>
                 </a>
-                <a href="#">
+                <a target="__black" href="https://wa.me/message/7EKHM7JVJBYZB1">
                   <Box
                     className="footer-social-icon"
                     sx={{
@@ -148,7 +158,7 @@ export default function Footer({ categories }) {
                       display: "flex",
                     }}
                   >
-                    X
+                    <i className="fa fa-whatsapp"></i>
                   </Box>
                 </a>
               </Box>
@@ -180,7 +190,11 @@ export default function Footer({ categories }) {
                   mb: "32px",
                 }}
               >
-                <h3>Pages</h3>
+                <h3>
+                  {
+                    language === "en" ? "Pages" : "الصفحات"
+                  }
+                </h3>
               </Box>
               {/* categories */}
               <Box
@@ -200,9 +214,9 @@ export default function Footer({ categories }) {
                     display: "flex",
                   }}
                 >
-                  {categories.map((page) => (
-                    <Box key={page} component="li" sx={{ mr: 2, mb: { xs: 2, md: 0 } }}>
-                      <Link to={page.replace(" ", "")}>
+                  {(language === 'en' ? categoriesEnglish : categoriesArabic).map((page, index) => (
+                    <Box key={index} component="li" sx={{ mr: 2, mb: { xs: 2, md: 0 } }}>
+                      <Link to={`/${language}/${(language === 'en' ? page : categoriesEnglish[index]).replace(" ", "")}`}>
                         <Typography
                           sx={{
                             color: "#626262",
@@ -233,7 +247,11 @@ export default function Footer({ categories }) {
                   mb: "32px",
                 }}
               >
-                <h3>Contact US</h3>
+                <h3>
+                  {
+                    language === "en" ? "Contact US" : "اتصل بنا"
+                  }
+                </h3>
               </Box>
               <Box>
                 <Box
@@ -264,25 +282,7 @@ export default function Footer({ categories }) {
                           whiteSpace: "nowrap",
                           fontSize: "18px",
                           lineHeight: "1.25em",
-                        }}
-                      >
-                        address
-                      </Typography>
-                    </Box>
-                    <Box
-                      component="li"
-                      sx={{
-                        alignItems: "center",
-                        marginBottom: "15px",
-                        display: "flex",
-                      }}
-                    >
-                      <Typography
-                        sx={{
-                          color: "#626262",
-                          whiteSpace: "nowrap",
-                          fontSize: "18px",
-                          lineHeight: "1.25em",
+                          direction: "ltr",
                         }}
                       >
                         +212 680-844679
@@ -324,7 +324,11 @@ export default function Footer({ categories }) {
                 aria-controls="panel1-content"
                 id="panel1-header"
               >
-                <h3>Pages</h3>
+                <h3>
+                  {
+                    language === "en" ? "Pages" : "الصفحات"
+                  }
+                </h3>
               </AccordionSummary>
               <AccordionDetails>
                 <Box
@@ -334,9 +338,9 @@ export default function Footer({ categories }) {
                     listStyleType: "none",
                   }}
                 >
-                  {categories.map((page) => (
-                    <Box key={page} component="li" sx={{ mr: 2, mb: { xs: 2, md: 0 } }}>
-                      <Link to={page.replace(" ", "")}>
+                  {(language === 'en' ? categoriesEnglish : categoriesArabic).map((page, index) => (
+                    <Box key={index} component="li" sx={{ mr: 2, mb: { xs: 2, md: 0 } }}>
+                      <Link to={`/${language}/${(language === 'en' ? page : categoriesEnglish[index]).replace(" ", "")}`}>
                         <Typography
                           sx={{
                             color: "#626262",
@@ -366,7 +370,11 @@ export default function Footer({ categories }) {
                 aria-controls="panel2-content"
                 id="panel2-header"
               >
-                <h3>Contact US</h3>
+                <h3>
+                  {
+                    language === "en" ? "Contact US" : "اتصل بنا"
+                  }
+                </h3>
               </AccordionSummary>
               <AccordionDetails>
                 <Box>
@@ -398,25 +406,7 @@ export default function Footer({ categories }) {
                             whiteSpace: "nowrap",
                             fontSize: "18px",
                             lineHeight: "1.25em",
-                          }}
-                        >
-                          address
-                        </Typography>
-                      </Box>
-                      <Box
-                        component="li"
-                        sx={{
-                          alignItems: "center",
-                          marginBottom: "15px",
-                          display: "flex",
-                        }}
-                      >
-                        <Typography
-                          sx={{
-                            color: "#626262",
-                            whiteSpace: "nowrap",
-                            fontSize: "18px",
-                            lineHeight: "1.25em",
+                            direction: "ltr",
                           }}
                         >
                           +212 680-844679
@@ -463,7 +453,10 @@ export default function Footer({ categories }) {
             }}
           >
             <p>
-              {currentYear} © All Rights Reserved | Designed and Developed by{" "}
+              {currentYear} © {" "}
+              {
+                language === "en" ? "All Rights Reserved | Designed and Developed by" : "جميع الحقوق محفوظة | تصميم وتطوير"
+              }
               <Typography
                 component="span"
                 sx={{
@@ -471,6 +464,7 @@ export default function Footer({ categories }) {
                   fontWeight: "bold",
                   fontFamily: "Muli, sans-serif",
                   cursor: "pointer",
+                  mr: language === "en" ? 0 : 1,
                 }}
               >
                 <ReactWhatsapp

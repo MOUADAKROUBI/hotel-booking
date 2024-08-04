@@ -1,8 +1,11 @@
 import React from 'react'
 import { Box, Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../Contexts/LanguageContext';
 
 export default function NotFound() {
+  const { language } = useLanguage();
+
   return (
     <>
       <Box
@@ -52,7 +55,11 @@ export default function NotFound() {
               404
             </Box>
             <h1>
-              <span className="not-found__title">Page Not Found</span>
+              <span className="not-found__title">
+                {
+                  language === "en" ? "Oops!" : "عذرًا!"
+                }
+              </span>
             </h1>
             <Box
               className="not-found__text"
@@ -63,7 +70,9 @@ export default function NotFound() {
                 mr: "auto",
               }}
             >
-              The page you are looking for might have been removed, had its name changed or is temporarily unavailable.
+              {
+                language === "en" ? "The page you are looking for might have been removed, had its name changed or is temporarily unavailable." : "الصفحة التي تبحث عنها قد تمت إزالتها أو تغيير اسمها أو غير متاحة مؤقتًا."
+              }
             </Box>
             <Link to="/home" className="button-slider">
               <Typography
@@ -72,7 +81,7 @@ export default function NotFound() {
                   color: "white",
                   borderRadius: 0,
                   fontWeight: 600,
-                  letterSpacing: ".1rem",
+                  letterSpacing: language === "en" ? ".1rem" : "0",
                   px: { xs: 2, md: 4 },
                   py: 2,
                   textTransform: "uppercase",
@@ -87,7 +96,9 @@ export default function NotFound() {
                   },
                 }}
               >
-                Go to Home
+                {
+                  language === "en" ? "Go to Home" : "العودة للصفحة الرئيسية"
+                }
               </Typography>
             </Link>
           </Box>

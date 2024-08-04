@@ -4,8 +4,10 @@ import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import ButtonBookNow from "../ui/ButtonBookNow";
+import { useLanguage } from "../../Contexts/LanguageContext";
 
 export default function Gallery({ galleryRef, images }: { galleryRef: React.RefObject<HTMLDivElement>, images: any }) {
+  const { language } = useLanguage();
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -60,14 +62,17 @@ export default function Gallery({ galleryRef, images }: { galleryRef: React.RefO
                 mx: "20px",
               }}
             />
-            <Box sx={{ textTransform: "uppercase" }}>gallery</Box>
+            <Box sx={{ textTransform: "uppercase" }}>
+              {language === "en" ? "Gallery" : "الصور"}
+            </Box>
           </Box>
-          <h2>A carefully designed room just for you</h2>
+          <h2>
+            {language === "en"? "A carefully designed room just for you" : "غرفة مصممة بعناية خاصة لك"}
+          </h2>
           <p>
-            lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            {language === "en"
+              ? "A thoughtfully crafted space tailored to meet your needs, combining modern amenities with elegant design for a perfect stay."
+              : "غرفة مصممة بعناية لتلبي احتياجاتك، تجمع بين وسائل الراحة الحديثة والتصميم الأنيق لإقامة مثالية."}
           </p>
         </Container>
         <Container maxWidth="lg" sx={{ mt: 2 }}>
@@ -97,7 +102,7 @@ export default function Gallery({ galleryRef, images }: { galleryRef: React.RefO
                 </Box>
               ))}
             </Box>
-            <ButtonBookNow />
+            <ButtonBookNow texten="Book Now" textar="احجز الان" /> 
           </Box>
         </Container>
       </Box>

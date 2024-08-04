@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate, useParams } from 'react-router-dom';
 import Footer from './Components/Footer';
 import FeedBack from './Components/FeedBack';
 import Home from './Components/Home/Home';
@@ -10,37 +10,42 @@ import AllCategories from './Components/AllCategories/AllCategories';
 import { CssBaseline } from '@mui/material';
 import SingleCategory from './Components/SingleCategory/SingleCategory';
 import NotFound from './Components/NotFound';
+import { useLanguage } from './Contexts/LanguageContext';
 
-function App() {
-
-  const [categories, setCategories] = useState<string[]>([]);
-
+const App: React.FC = () => {
+  const { language } = useLanguage();
+  const [categoriesEnglish, setCategoriesEnglish] = useState<string[]>([]);
+  const [categoriesArabic, setCategoriesArabic] = useState<string[]>([]);
+  
   useEffect(() => {
-    const pages = Object.keys(data.data[0]);
-    setCategories(["home", ...pages]);
-  }, []);
+    const pagesEnglish = Object.keys(data['en'][0]);
+    const pagesArabic = Object.keys(data['ar'][0]);
+    
+    setCategoriesEnglish(['home',...pagesEnglish]);
+    setCategoriesArabic(['الصفحة الرئيسية',...pagesArabic]);
+  }, [language]);
 
   return (
     <>
       <CssBaseline />
       <Router>
-        <Header categories={categories}  />
+        <Header categoriesEnglish={categoriesEnglish} categoriesArabic={categoriesArabic} />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="home" element={<Home />} />
+          <Route path="/" element={<Navigate replace to={`/${localStorage.getItem('language')}/home`} />} />
+          <Route path=":lang/home" element={<Home categories={language === 'en' ? categoriesEnglish : categoriesArabic} />} />
           {
-            categories.map((category) => (
+            (language === 'en' ? categoriesEnglish : categoriesArabic).map((category, index) => (
               <>
-                <Route key={category} path={category.replace(' ', '')} element={<AllCategories category={category} />} />
-                <Route key={category} path={category.replace(' ', '') + '/:id'} element={<SingleCategory category={category} />} />
-                <Route path={`${category}/*`} element={<NotFound />} />                
+                <Route path={`:lang/${categoriesEnglish[index].replace(' ', '')}`} element={<AllCategories category={category} />} />
+                <Route path={`:lang/${categoriesEnglish[index].replace(' ', '') + '/:id'}`} element={<SingleCategory category={category} />} />
+                <Route path={`:lang/${categoriesEnglish[index]}/*`} element={<NotFound />} />                
               </>
             ))
           }
           <Route path="*" element={<NotFound />} />
         </Routes>
         {/* <FeedBack /> */}
-        <Footer categories={categories} />
+        <Footer categoriesEnglish={categoriesEnglish} categoriesArabic={categoriesArabic} />
       </Router>
     </>
   )

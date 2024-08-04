@@ -1,21 +1,19 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import {
-  AppBar,
+  Button,
   Dialog,
   List,
   ListItemButton,
   ListItemText,
   Slide,
-  Toolbar,
 } from "@mui/material";
 import { TransitionProps } from "@mui/material/transitions";
-import CloseIcon from "@mui/icons-material/Close";
+import { useLanguage } from "../Contexts/LanguageContext";
+import ButtonBookNow from "./ui/ButtonBookNow";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -26,8 +24,9 @@ const Transition = React.forwardRef(function Transition(
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-function Header({ categories }) {
+function Header({ categoriesEnglish, categoriesArabic }: { categoriesEnglish: string[], categoriesArabic: string[] }) {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [open, setOpen] = React.useState(false);
 
@@ -40,12 +39,29 @@ function Header({ categories }) {
   };
 
   const handleClickCategory = (categoryName) => {
-    navigate(
-      "/" + categoryName.target.innerText.replace(" ", "").toLowerCase()
-    );
+    if (language === "en") {
+      navigate("/"+language +"/" + categoryName.target.innerText.replace(" ", "").toLowerCase());
+    } else {
+      const index = categoriesArabic.indexOf(categoryName.target.innerText);
+      navigate("/"+language +"/" + categoriesEnglish[index].replace(" ", "").toLowerCase());
+    }
+
     setOpen(false);
   };
 
+  const { language, changeLanguage } = useLanguage();
+  
+  const handleLanguageChange = (newLang: string) => {
+    document.documentElement.lang = newLang;
+    document.documentElement.dir = newLang === "ar" ? "rtl" : "ltr";
+    localStorage.setItem("language", newLang);
+    
+    changeLanguage(newLang);
+    const currentPath = location.pathname;
+    const newPath = currentPath.replace(/^\/(en|ar)/, `/${newLang}`);
+    navigate(newPath);
+  };
+  
   return (
     <Box
       component="header"
@@ -100,15 +116,18 @@ function Header({ categories }) {
                 justifyContent: "flex-end",
                 alignItems: "center",
                 marginBottom: 0,
-                marginRight: 20,
+                marginRight: language === "en" ? 20 : "auto",
                 paddingLeft: 0,
                 listStyleType: "none",
                 display: "flex",
               }}
             >
-              {categories.map((page) => (
-                <Box key={page} component="li" sx={{ ml: 2 }}>
-                  <Link to={page.replace(" ", "")}>
+              {(language === 'en' ? categoriesEnglish : categoriesArabic).map((page, index) => (
+                <Box key={index} component="li" sx={{ 
+                  mr: language === "en" ? 0 : 2,
+                  ml: language === "en" ? 2 : 0,
+                }}>
+                  <Link to={`/${language}/${(language === 'en' ? page : categoriesEnglish[index]).replace(" ", "")}`}>
                     <Typography
                       sx={{
                         color: "#060606",
@@ -142,7 +161,7 @@ function Header({ categories }) {
             <Link to="/" className="logo">
               <Box
                 component="img"
-                src="../src/assets/logo.png"
+                src="/../src/assets/logo.png"
                 sx={{
                   width: "100px",
                   maxWidth: "none",
@@ -158,6 +177,29 @@ function Header({ categories }) {
             alignItems: "center",
           }}
         >
+          <Box className="switch-launguge">
+            <Button
+              sx= {{
+                color: "#060606",
+                textTransform: "uppercase",
+                fontFamily: "Muli, sans-serif",
+                fontSize: "20px",
+                // letterSpacing: ".08em",
+                transition: "color .35s",
+                p: 1,
+                mr: language === "en" ? 2 : 0,
+                ml: language === "ar" ? 2 : 0,
+                "&:hover": {
+                  opacity: 0.7,
+                }
+              }}
+              onClick={() => handleLanguageChange(language === "en" ? "ar" : "en")}
+            >
+              {
+                language === "en" ? "English" : "العربية"
+              }
+            </Button>
+          </Box>
           {/* contact us */}
           <Box
             sx={{
@@ -165,29 +207,7 @@ function Header({ categories }) {
               whiteSpace: "nowrap",
             }}
           >
-            <Link to="/contactUs">
-              <Typography
-                component="span"
-                sx={{
-                  bgcolor: "black",
-                  color: "white",
-                  borderRadius: 0,
-                  fontWeight: 700,
-                  letterSpacing: ".1rem",
-                  textTransform: "uppercase",
-                  fontSize: "1rem",
-                  padding: "18px 2vw",
-                  "&:hover": {
-                    bgcolor: "white",
-                    color: "black",
-                    border: "1.5px solid black",
-                    boxShadow: "none",
-                  },
-                }}
-              >
-                Contact Us
-              </Typography>
-            </Link>
+            <ButtonBookNow texten="Contact US" textar="تواصل معنا" />
           </Box>
 
           {/* menu */}
@@ -198,25 +218,27 @@ function Header({ categories }) {
               sx={{
                 cursor: "pointer",
                 "&:hover": {
-                  backgroundColor: "transparent"
-                }
+                  backgroundColor: "transparent",
+                },
               }}
             >
               <Box
                 className="line-one"
-                sx= {{
+                sx={{
                   width: "40px",
                   height: "3px",
                   backgroundColor: "black",
                   marginBottom: "8px",
                   borderRadius: "5px",
                   transition: "all 0.3s",
-                  transform: open ? "rotate(45deg) translate(5px, 5px)" : "none",
+                  transform: open
+                    ? "rotate(45deg) translate(5px, 5px)"
+                    : "none",
                 }}
               />
               <Box
                 className="line-two"
-                sx= {{
+                sx={{
                   width: "40px",
                   height: "3px",
                   backgroundColor: "black",
@@ -225,21 +247,21 @@ function Header({ categories }) {
                   transition: "all 0.3s",
                   opacity: open ? 0 : 1,
                 }}
-
               />
               <Box
                 className="line-three"
-                sx= {{
+                sx={{
                   width: "40px",
                   height: "3px",
                   backgroundColor: "black",
                   marginBottom: "8px",
                   borderRadius: "5px",
                   transition: "all 0.3s",
-                  transform: open ? "rotate(-45deg) translate(7px, -6px)" : "none",
+                  transform: open
+                    ? "rotate(-45deg) translate(7px, -6px)"
+                    : "none",
                 }}
               />
-
             </Box>
             <Dialog
               fullScreen
@@ -247,36 +269,80 @@ function Header({ categories }) {
               onClose={handleClose}
               TransitionComponent={Transition}
             >
-              <AppBar
+              <Box
                 sx={{
-                  position: "relative",
-                  backgroundColor: "transparent",
-                  color: "black",
-                  boxShadow: "none",
+                  display: "flex",
+                  justifyContent: "space-between",    
+                  alignItems: "center",
+                  borderBottom: "1px solid #e0e0e0",
+                  padding: "24px 16px",
                 }}
               >
-                <Toolbar>
-                  <IconButton
-                    edge="start"
-                    color="inherit"
+                <Box className="section-logo">
+                  <h3>
+                    {
+                      language === "en" ? "Mafaman Company" : "شركة مفامن"
+                    }
+                  </h3>
+                </Box>
+                <Box className="section-close-icon">
+                  <Box
+                    className="btn-menu"
                     onClick={handleClose}
-                    aria-label="close"
+                    sx={{
+                      cursor: "pointer",
+                      "&:hover": {
+                        backgroundColor: "transparent",
+                      },
+                    }}
                   >
-                    <CloseIcon />
-                  </IconButton>
-                  <Typography
-                    sx={{ ml: 2, flex: 1 }}
-                    variant="h6"
-                    component="div"
-                  >
-                    Mafaman Company
-                  </Typography>
-                </Toolbar>
-              </AppBar>
+                    <Box
+                      className="line-one"
+                      sx={{
+                        width: "40px",
+                        height: "3px",
+                        backgroundColor: "black",
+                        marginBottom: "8px",
+                        borderRadius: "5px",
+                        transition: "all 0.3s",
+                        transform: open
+                          ? "rotate(45deg) translate(10px, 8px)"
+                          : "none",
+                      }}
+                    />
+                    <Box
+                      className="line-two"
+                      sx={{
+                        width: "40px",
+                        height: "3px",
+                        backgroundColor: "black",
+                        marginBottom: "8px",
+                        borderRadius: "5px",
+                        transition: "all 0.3s",
+                        opacity: open ? 0 : 1,
+                      }}
+                    />
+                    <Box
+                      className="line-three"
+                      sx={{
+                        width: "40px",
+                        height: "3px",
+                        backgroundColor: "black",
+                        marginBottom: "8px",
+                        borderRadius: "5px",
+                        transition: "all 0.3s",
+                        transform: open
+                          ? "rotate(-45deg) translate(7px, -6px)"
+                          : "none",
+                      }}
+                    />
+                  </Box>
+                </Box>
+              </Box>
               <List>
-                {categories.map((page) => (
+                {(language === 'en' ? categoriesEnglish : categoriesArabic).map((page, index) => (
                   <ListItemButton
-                    key={page}
+                    key={index}
                     onClick={(page) => handleClickCategory(page)}
                     sx={{
                       textTransform: "uppercase",
@@ -286,35 +352,7 @@ function Header({ categories }) {
                     <ListItemText primary={page} />
                   </ListItemButton>
                 ))}
-                <ListItemButton
-                  onClick={() => {
-                    navigate("/contactUs");
-                    setOpen(false);
-                  }}
-                >
-                  <Typography
-                    component="span"
-                    sx={{
-                      bgcolor: "black",
-                      color: "white",
-                      borderRadius: 0,
-                      fontWeight: 700,
-                      letterSpacing: ".1rem",
-                      px: 4,
-                      py: 2,
-                      textTransform: "uppercase",
-                      fontSize: "1rem",
-                      "&:hover": {
-                        bgcolor: "white",
-                        color: "black",
-                        border: "1.5px solid black",
-                        boxShadow: "none",
-                      },
-                    }}
-                  >
-                    Contact Us
-                  </Typography>
-                </ListItemButton>
+                <ButtonBookNow texten="Contact US" textar="تواصل معنا" />
               </List>
             </Dialog>
           </Box>

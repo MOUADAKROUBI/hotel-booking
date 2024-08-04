@@ -9,8 +9,11 @@ import {
   WifiOutlined,
 } from "@mui/icons-material";
 import MeetingRoomIconOutlined from "@mui/icons-material/MeetingRoom";
+import { useLanguage } from "../../Contexts/LanguageContext";
 
 export default function SingleCategoryAmenities({ data }) {
+  const { language } = useLanguage();
+
   return (
     <>
       <Box className="section">
@@ -34,7 +37,7 @@ export default function SingleCategoryAmenities({ data }) {
                 className="subtitle-amenties"
                 sx={{
                   color: "#060606",
-                  letterSpacing: ".1em",
+                  letterSpacing: language === "en" ? ".1rem" : "0",
                   textTransform: "uppercase",
                   justifyContent: { xs: "center", lg: "flex-start" },
                   alignItems: "center",
@@ -55,17 +58,36 @@ export default function SingleCategoryAmenities({ data }) {
                     mx: "20px",
                   }}
                 />
-                <Box sx={{ textTransform: "capitalize" }}>amenities</Box>
+                <Box sx={{ textTransform: "capitalize" }}>
+                  {
+                    language === "en"
+                      ? "Amenities"
+                      : "وسائل الراحة"
+                  }
+                </Box>
               </Box>
-              <h2>Amenities to help you enjoy like never before</h2>
-              <Typography component="p" sx={{ mb: 4 }}>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Cupiditate, soluta harum quos perspiciatis blanditiis magnam!
-                Aperiam velit sint quo non iure natus expedita, sapiente quidem
-                eligendi inventore porro fugit error?
-              </Typography>
+              <Box
+                sx= {{
+                  textAlign: language === "en" ? "left" : "right",
+                }}
+              >
+                <h2>
+                  {
+                    language === "en"
+                      ? ""
+                      : "الوسائل التي تساعدك على الاستمتاع كما لم تفعل من قبل"
+                  }
+                </h2>
+                <Typography component="p" sx={{ mb: 4 }}>
+                  {
+                    language === "en"
+                      ? "Our luxurious properties come equipped with a range of top-notch amenities to ensure your comfort and convenience. Enjoy our high-speed Wi-Fi, modern fitness center, refreshing swimming pool, and secure parking. Each unit is designed with your needs in mind, featuring fully equipped kitchens, comfortable living spaces, and elegant bathrooms. Whether you're staying for business or leisure, our amenities are tailored to enhance your experience and make you feel at home."
+                      : "تأتي عقاراتنا الفاخرة مجهزة بمجموعة متنوعة من الخدمات عالية الجودة لضمان راحتك وراحتك. استمتع بخدمة الواي فاي السريعة، ومركز اللياقة البدنية الحديث، وحمام السباحة المنعش، ومواقف السيارات الآمنة. تم تصميم كل وحدة لتلبية احتياجاتك، وتتميز بمطابخ مجهزة بالكامل ومساحات معيشة مريحة وحمامات أنيقة. سواء كنت تقيم لأغراض العمل أو الترفيه، فإن خدماتنا مصممة لتعزيز تجربتك وجعلك تشعر وكأنك في المنزل."
+                  }
+                </Typography>
+              </Box>
               <Box sx={{ mb: 4, width: "100%" }}>
-                <ButtonBookNow />
+                <ButtonBookNow texten="Book Now" textar="احجز الان" /> 
               </Box>
             </Box>
 
@@ -116,7 +138,12 @@ export default function SingleCategoryAmenities({ data }) {
                       lineHeight: "1em",
                     }}
                   >
-                    {data.rooms} Rooms
+                    {data.rooms} 
+                    {
+                      language === "en"
+                        ? " Rooms"
+                        : " غرف"
+                    }
                   </Typography>
                 </Box>
               )}
@@ -139,7 +166,12 @@ export default function SingleCategoryAmenities({ data }) {
                       lineHeight: "1em",
                     }}
                   >
-                    {data.bathrooms} BathRooms
+                    {data.bathrooms} 
+                    {
+                      language === "en"
+                        ? " Bathrooms"
+                        : " حمامات"
+                    }
                   </Typography>
                 </Box>
               )}
@@ -162,7 +194,11 @@ export default function SingleCategoryAmenities({ data }) {
                       lineHeight: "1em",
                     }}
                   >
-                    Private Pool
+                    {
+                      language === "en"
+                        ? "Private Pool"
+                        : "حمام سباحة خاص"
+                    }
                   </Typography>
                 </Box>
               )}
@@ -185,7 +221,11 @@ export default function SingleCategoryAmenities({ data }) {
                       lineHeight: "1em",
                     }}
                   >
-                    Pool
+                    {
+                      language === "en"
+                        ? "Pool"
+                        : "حمام سباحة"
+                    }
                   </Typography>
                 </Box>
               )}
@@ -208,7 +248,11 @@ export default function SingleCategoryAmenities({ data }) {
                       lineHeight: "1em",
                     }}
                   >
-                    Wifi
+                    {
+                      language === "en"
+                        ? "Wifi"
+                        : "واي فاي"
+                    }
                   </Typography>
                 </Box>
               )}
@@ -231,7 +275,11 @@ export default function SingleCategoryAmenities({ data }) {
                       lineHeight: "1em",
                     }}
                   >
-                    Balcony
+                    {
+                      language === "en"
+                        ? "Balcony"
+                        : "شرفة"
+                    }
                   </Typography>
                 </Box>
               )}
@@ -254,7 +302,11 @@ export default function SingleCategoryAmenities({ data }) {
                       lineHeight: "1em",
                     }}
                   >
-                    Jacuzzi
+                    {
+                      language === "en"
+                        ? "Jacuzzi"
+                        : "جاكوزي"
+                    }
                   </Typography>
                 </Box>
               )}

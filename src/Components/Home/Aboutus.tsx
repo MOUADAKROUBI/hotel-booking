@@ -1,8 +1,11 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../../Contexts/LanguageContext";
 
 export default function Aboutus({ aboutusRef }: { aboutusRef: React.RefObject<HTMLDivElement> }) {
+  const { language } = useLanguage();
+
   return (
     <>
       <Box
@@ -68,7 +71,8 @@ export default function Aboutus({ aboutusRef }: { aboutusRef: React.RefObject<HT
                 pt: {md: '80px', lg: "auto"},
                 pb: {md: '80px', lg: "auto"},
                 position: {xs: "static", lg: "absolute"},
-                right: 0,
+                right: language === "en" ? "0" : "auto",
+                left: language === "en" ? "auto" : "0",
                 order: -1,
                 bgcolor: "white",
               }}
@@ -77,14 +81,14 @@ export default function Aboutus({ aboutusRef }: { aboutusRef: React.RefObject<HT
                 className="subtitle-amenties"
                 sx={{
                   color: "#060606",
-                  "letter-spacing": ".1em",
-                  "text-transform": "uppercase",
-                  "justify-content": "center",
-                  "align-items": "center",
-                  "margin-bottom": "32px",
-                  "font-size": "14px",
-                  "font-weight": 600,
-                  "line-height": "1em",
+                  letterSpacing: ".1em",
+                  textTransform: "uppercase",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginBottom: "32px",
+                  fontSize: "14px",
+                  fontWeight: 600,
+                  lineHeight: "1em",
                   display: "flex",
                 }}
               >
@@ -98,7 +102,9 @@ export default function Aboutus({ aboutusRef }: { aboutusRef: React.RefObject<HT
                     mx: "20px",
                   }}
                 />
-                <Box sx={{ textTransform: "capitalize" }}>about us</Box>
+                <Box sx={{ textTransform: "capitalize" }}>
+                  {language === "en" ? "About Us" : "نبذة عنا"}
+                </Box>
               </Box>
               <Typography
                 variant="h2"
@@ -112,12 +118,18 @@ export default function Aboutus({ aboutusRef }: { aboutusRef: React.RefObject<HT
                   lineHeight: "1.286em",
                  }}
               >
-                Visit our natural services
+                {
+                  language === "en" ? "Discover the beauty of Agadir" : "اكتشف جمال أكادير"
+                }
                 <br />
-                and reconnect with yourself
+                {
+                  language === "en" ? "and reconnect with yourself" : "وأعد الاتصال بنفسك"
+                }
               </Typography>
               <Typography variant="body1" component="div" sx={{ mb: {xs: "40px", lg: "48px"} }}>
-                Experience the allure of Agadir with Luxury Rentals. We offer luxurious villas, apartments, penthouses, and car hire. Relax and enjoy your stay; we prioritize your peace of mind.
+                {
+                  language === "en" ? "Experience the allure of Agadir with mafaman company. We offer luxurious villas, apartments, penthouses, and car hire. Relax and enjoy your stay; we prioritize your peace of mind." : "استمتع بجاذبية أكادير مع شركة مافامان. نحن نقدم فيلات فاخرة وشقق وبنتهاوسات وتأجير سيارات. استرخ واستمتع بإقامتك؛ نحن نولي أولوية لسلامتك."
+                }
               </Typography>
               <Link to="#">
                 <Typography
@@ -127,7 +139,7 @@ export default function Aboutus({ aboutusRef }: { aboutusRef: React.RefObject<HT
                     color: "white",
                     borderRadius: 0,
                     fontWeight: {xs: 500, md: 700},
-                    letterSpacing: ".1rem",
+                    letterSpacing: language === "en" ? ".1rem" : "0",
                     px: {xs: 2, md: 4},
                     py: 2,
                     textTransform: "uppercase",
@@ -140,7 +152,9 @@ export default function Aboutus({ aboutusRef }: { aboutusRef: React.RefObject<HT
                     },
                   }}
                 >
-                  Explore more
+                  {
+                    language === "en" ? "Explore more" : "استكشف المزيد"
+                  }
                 </Typography>
               </Link>
             </Box>

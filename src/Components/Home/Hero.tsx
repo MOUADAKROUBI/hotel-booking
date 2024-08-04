@@ -1,7 +1,10 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
+import { useLanguage } from "../../Contexts/LanguageContext";
 
 export default function Hero({ aboutusRef }: { aboutusRef: React.RefObject<HTMLDivElement> }) {
+  const { language } = useLanguage();
+
   return (
     <>
       <Box
@@ -42,7 +45,9 @@ export default function Hero({ aboutusRef }: { aboutusRef: React.RefObject<HTMLD
                 ml: "24px",
               }}
             >
-              Embark on Your Journey in the Heart of Morocco
+              {
+                language === "en" ? "Embark on Your Journey in the Heart of Morocco" : "إنطلق في رحلتك في قلب المغرب"
+              }
             </Typography>
             <Typography
               variant="h6"
@@ -52,7 +57,9 @@ export default function Hero({ aboutusRef }: { aboutusRef: React.RefObject<HTMLD
                 maxWidth: { xs: "100%", lg: "500px" },
               }}
             >
-              Welcome to Agadir Concierge, your gateway to a hassle-free vacation experience in Agadir.
+              {
+                language === "en" ? "Welcome to mafaman company, your gateway to a hassle-free vacation experience in Agadir." : "مرحبًا بك في شركة مفمان، بوابتك إلى تجربة عطلة خالية من المتاعب في أكادير."
+              }
             </Typography>
             <Box sx={{ mt: 5, ml: 3, cursor: "pointer" }}>
               <Box
@@ -65,7 +72,7 @@ export default function Hero({ aboutusRef }: { aboutusRef: React.RefObject<HTMLD
                     color: "white",
                     borderRadius: 0,
                     fontWeight: 700,
-                    letterSpacing: ".1rem",
+                    letterSpacing: language === "en" ? ".1rem" : "0",
                     px: 4,
                     py: 2,
                     textTransform: "uppercase",
@@ -78,7 +85,9 @@ export default function Hero({ aboutusRef }: { aboutusRef: React.RefObject<HTMLD
                     },
                   }}
                 >
-                  About Us
+                  {
+                    language === "en" ? "Read More" : "نبذة عنا"
+                  }
                 </Typography>
               </Box>
             </Box>
@@ -92,7 +101,8 @@ export default function Hero({ aboutusRef }: { aboutusRef: React.RefObject<HTMLD
             position: { xs: "static", lg: "absolute" },
             top: 0,
             bottom: 0,
-            right: 0,
+            right: language === "en" ? 0 : "auto",
+            left: language === "en" ? "auto" : 0,
           }}
         >
           <Box

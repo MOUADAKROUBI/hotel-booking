@@ -1,5 +1,5 @@
 {
-  "data": [
+  "en": [
     {
       "villas": [
         {
@@ -775,33 +775,1103 @@
               "images": [
                 {
                   "id": 1,
-                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d9a1b1a8d4ae80bbf3b1a_L1-p-1600.webp"
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783156/Bmw%20serie%20pack%20M/yfhf0kx0mzobfiao6ldi.png"
                 },
                 {
                   "id": 2,
-                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d9a1b1a8d4ae80bbf3b1a_L1-p-1600.webp"
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783156/Bmw%20serie%20pack%20M/yfhf0kx0mzobfiao6ldi.png"
                 },
                 {
                   "id": 3,
-                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d9a1b1a8d4ae80bbf3b1a_L1-p-1600.webp"
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783161/Bmw%20serie%20pack%20M/hvhicisglma82mn7qdwn.png"
                 },
                 {
                   "id": 4,
-                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d9a1b1a8d4ae80bbf3b1a_L1-p-1600.webp"
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783160/Bmw%20serie%20pack%20M/t61lydudyqkomsmj95br.png"
+                },
+                {
+                  "id": 5,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783152/Bmw%20serie%20pack%20M/oqrwu0ji3cfvikednoed.png"
                 }
               ],
-              "name": "Mercedes-Benz E-Class",
-              "description": "Experience the epitome of luxury with our Mercedes-Benz E-Class. Combining style, comfort, and performance, this premium vehicle is perfect for exploring Agadir and beyond in style.",
-              "seats": 5,
-              "doors": 4,
-              "transmission": "Automatic",
-              "airConditioning": true,
-              "gps": true,
-              "wifi": true
+              "name": "Bmw serie pack M"
+            },
+            {
+              "id": 2,
+              "catName": "sonaba",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783168/Bmw%20serie5/vfvduvzjicst4nhvkrbt.png"
+                },
+                {
+                  "id": 2,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783167/Bmw%20serie5/risz6pf2gtavl8oibhyh.png"
+                },
+                {
+                  "id": 3,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783162/Bmw%20serie5/e8crxz5lhw296ffmortq.png"
+                },
+                {
+                  "id": 4,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783160/Bmw%20serie5/mpzrbzpg5yjpfc40cjfy.png"
+                }
+              ],
+              "name": "BMW serie 5"
+            },
+            {
+              "id": 3,
+              "catName": "sonaba",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783147/Clio%204%20aquilibre/fspma6vauzozhpsxrlml.png"
+                },
+                {
+                  "id": 2,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783146/Clio%204%20aquilibre/vyuikbz9mminb8lkruk1.png"
+                },
+                {
+                  "id": 3,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783145/Clio%204%20aquilibre/x3ukxgu7gyeusou9zhoi.png"
+                },
+                {
+                  "id": 4,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783143/Clio%204%20aquilibre/i77doimq0jngdicbhfgh.png"
+                },
+                {
+                  "id": 5,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783142/Clio%204%20aquilibre/somfczjkmf0yllnbuxya.png"
+                }
+              ],
+              "name": "Clio 4 aquilibre"
+            },
+            {
+              "id": 4,
+              "catName": "sonaba",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783142/Clio%204%20automatique/g1x3akuurewwkj7b4jfm.png"
+                },
+                {
+                  "id": 2,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783139/Clio%204%20automatique/ryztcx4uubmrxvoeyoux.png"
+                },
+                {
+                  "id": 3,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783139/Clio%204%20automatique/ah3krwpdnkcej4a0juxe.png"
+                },
+                {
+                  "id": 4,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783138/Clio%204%20automatique/hhiqhaapo5rp2cshgemo.png"
+                },
+                {
+                  "id": 5,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783134/Clio%204%20automatique/kodn21nqkl9nq6i6errw.png"
+                }
+              ],
+              "name": "Clio 4 automatique"
+            },
+            {
+              "id": 5,
+              "catName": "sonaba",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783167/golf%208/skjhr3kydgjdne2oftiu.png"
+                },
+                {
+                  "id": 2,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783167/golf%208/olwxbjbxfekc7dwg9b9k.png"
+                },
+                {
+                  "id": 3,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783164/golf%208/v3nvczpe09qwcfhi4izn.png"
+                },
+                {
+                  "id": 4,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783163/golf%208/cwpdr9f3sexjx3qllnl1.png"
+                },
+                {
+                  "id": 5,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783162/golf%208/rtocjc8jskkojnlxvyoo.png"
+                }
+              ],
+              "name": "golf 8"
+            },
+            {
+              "id": 6,
+              "catName": "sonaba",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783151/Twareg/wwm941v6ehtiapmtfohh.png"
+                },
+                {
+                  "id": 2,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783149/Twareg/tcdsxrhz2xj9hcpkgurs.png"
+                },
+                {
+                  "id": 3,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783149/Twareg/sy66u9jswhup4cw2tj9v.png"
+                },
+                {
+                  "id": 4,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783148/Twareg/tw0ynlaz7rpr8q8binjm.png"
+                },
+                {
+                  "id": 5,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783148/Twareg/qsrsak7vb2fejvyleus7.png"
+                },
+                {
+                  "id": 6,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783146/Twareg/q9eeckwyolwyamfpaetd.png"
+                }
+              ],
+              "name": "Twareg"
             }
           ]
         }
       ]
+    }
+  ],
+  "ar": [
+    {
+      "فلات": [
+        {
+          "id": 1,
+          "name_1": "الفخامة",
+          "name_2": "فلل في أغادير",
+          "description": "<strong>اختبر</strong> أعلى مستويات الفخامة في الفلل المختارة من أجادير كونسيرج، التي تقع وسط المناظر الخلابة لأغادير، المغرب. سواء كنت تبحث عن ملاذ هادئ أو هروب فاخر، فإن فيلاتنا توفر تجربة مميزة تم تصميمها لتتجاوز أعلى توقعاتك.",
+          "data": [
+            {
+              "id": 1,
+              "catName": "فلل إليغ",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7f2_Main%20Image.jpeg"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7f6_Room%25203-p-500.jpeg"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7f1_Room%25202-p-500.jpeg"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7fc_WhatsApp%2520Image%25202024-02-22%2520at%252019.14.51%2520(3)-p-500.jpeg"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7fa_WhatsApp%2520Image%25202024-02-22%2520at%252019.14.50%2520(8)-p-500.jpeg"
+                }
+              ],
+              "name": "فيلا بـ5 غرف نوم",
+              "description": "اغمر نفسك في الفخامة: اكتشف ذروة الفخامة في فيلتنا ذات الخمس غرف نوم. تتميز بمساحات داخلية واسعة ومناظر خلابة وخدمات من الدرجة الأولى، هذه الفيلا هي الملاذ المثالي للعائلات أو المجموعات التي تبحث عن تجربة مميزة.",
+              "rooms": 5,
+              "bathrooms": 3,
+              "privetePool": true,
+              "wifi": false,
+              "balcony": false
+            },
+            {
+              "id": 2,
+              "catName": "فلل إليغ",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df812_Main.jpeg"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df811_Room%25201-p-500.jpeg"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df810_WhatsApp%20Image%202024-02-04%20at%2014.46.17%20(5).jpeg"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df813_WhatsApp%2520Image%25202024-02-04%2520at%252014.46.53-p-500.jpeg"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df814_WhatsApp%2520Image%25202024-02-04%2520at%252014.47.21%2520(2)-p-500.jpeg"
+                }
+              ],
+              "name": "فيلا بـ6 غرف نوم",
+              "description": "استمتع بالفخامة القصوى في فيلتنا <strong>ذات الست غرف نوم.</strong> مع مساحات داخلية واسعة ومناظر خلابة وخدمات فاخرة، تقدم هذه الفيلا ملاذًا لا مثيل له للعائلات أو المجموعات.",
+              "rooms": 6,
+              "bathrooms": 3,
+              "privetePool": true,
+              "wifi": false,
+              "balcony": false
+            },
+            {
+              "id": 3,
+              "catName": "فلل إليغ",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df723_WhatsApp%20Image%202024-02-04%20at%2014.48.47%20(7).jpeg"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df71f_Room%25201-p-500.jpeg"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df71e_Room%25202-p-500.jpeg"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df72c_WhatsApp%2520Image%25202024-02-04%2520at%252014.48.48%2520(2)-p-500.jpeg"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df724_A.Main-p-500.jpeg"
+                }
+              ],
+              "name": "فيلا بـ6 غرف نوم",
+              "description": "اختبر الفخامة القصوى في حياتك في فيلتنا الرائعة <strong>ذات الست غرف نوم.</strong> مثالية للعائلات الكبيرة أو المجموعات، هذا الملاذ الفسيح يتميز بالخدمات الفاخرة والمناظر الخلابة.",
+              "rooms": 6,
+              "bathrooms": 3,
+              "privetePool": true,
+              "wifi": false,
+              "balcony": false
+            },
+            {
+              "id": 4,
+              "catName": "فلل إليغ",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/6635180127c2366e6ea5d0bf_Main.jpeg"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/66351801bc76b440a4e662c1_R3-p-500.jpeg"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/663518013e880ee7c8daf893_R5-p-500.jpeg"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/6635180279c51318fb6a2bd8_WhatsApp%20Image%202024-05-01%20at%2017.32.06-p-500.jpeg"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/66351801c4a87bf5e3f75b0d_WhatsApp%20Image%202024-05-01%20at%2017.32.06%20(4)-p-500.jpeg"
+                }
+              ],
+              "name": "فيلا بـ6 غرف نوم",
+              "description": "<strong>فيلا بـ6 غرف نوم.</strong> مثالية للعائلات الكبيرة أو المجموعات، هذا الملاذ الفسيح يتميز بالخدمات الفاخرة والمناظر الخلابة.",
+              "rooms": 6,
+              "bathrooms": 5,
+              "privetePool": true,
+              "wifi": true,
+              "balcony": true
+            },
+            {
+              "id": 5,
+              "catName": "فلل إليغ",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df796_WhatsApp%20Image%202024-02-04%20at%2014.37.50%20(7).jpeg"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df78b_Room%25204-p-500.jpeg"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df784_Room%25206-p-500.jpeg"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df799_WhatsApp%2520Image%25202024-02-04%2520at%252014.37.50%2520(3)-p-500.jpeg"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df79d_WhatsApp%2520Image%25202024-02-04%2520at%252014.38.24%2520(4)-p-500.jpeg"
+                }
+              ],
+              "name": "فيلا بـ8 غرف نوم",
+              "description": "اهرب إلى الفخامة في فيلتنا المرموقة <strong>ذات الثماني غرف نوم.</strong> توفر مساحات معيشة واسعة وراحة لا مثيل لها وخدمات من الدرجة الأولى، هذه الفيلا مثالية لاستيعاب المجموعات الكبيرة أو العائلات.",
+              "rooms": 8,
+              "bathrooms": 4,
+              "privetePool": true,
+              "wifi": false,
+              "balcony": false
+            },
+            {
+              "id": 6,
+              "catName": "فلل صونابا",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7c1_WhatsApp%20Image%202024-02-04%20at%2014.53.13.jpeg"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7c3_IMG-20230113-WA0049-1-p-500.jpg"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7be_WhatsApp%2520Image%25202024-02-04%2520at%252014.53.13%2520(4)-p-500.jpeg"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7bc_WhatsApp%2520Image%25202024-02-04%2520at%252014.53.13%2520(3)-p-500.jpeg"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7c2_WhatsApp%2520Image%25202024-02-04%2520at%252014.53.13%2520(2)-p-500.jpeg"
+                }
+              ],
+              "name": "فيلا بـ3 غرف نوم",
+              "description": "<strong>فيلا بـ3 غرف نوم</strong> مثالية للعائلات أو المجموعات الصغيرة، هذا الملاذ المريح يوفر خدمات حديثة ومناظر خلابة وخدمة شخصية.",
+              "rooms": 3,
+              "bathrooms": 2,
+              "privetePool": true,
+              "wifi": false,
+              "balcony": false
+            }
+          ]
+        }
+      ],
+      "شقق": [
+        {
+          "id": 2,
+          "name_1": "اكتشف الشقق الرائعة",
+          "name_2": "في أغادير",
+          "description": "سواء كنت تبحث عن هروب هادئ أو ملاذ فاخر، فإن شققنا في <strong>أغادير</strong> تعدك بتجربة لا تُنسى مصممة لتفوق جميع التوقعات.",
+          "data": [
+            {
+              "id": 1,
+              "catName": "صونابا",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd88f0f09d85f79988d26_L-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd88f0f09d85f79988d7c_R1-1-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd8983274d0d4dec7713e_OP1-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd88e602641e2afd0be1e_B-p-500.webp"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd88f1c199e177a6a3828_OP2-p-500.webp"
+                }
+              ],
+              "name": "شقة 404",
+              "description": "موجودة في صونابا، هذه <strong>الشقة المكونة من غرفة نوم</strong> توفر ملاذاً مريحاً مع وسائل الراحة الحديثة وأجواء أنيقة. تقع في موقع مثالي لاستكشاف شوارع أغادير النابضة بالحياة، وتوفر قاعدة مثالية لمغامراتك في المدينة.",
+              "rooms": 1,
+              "bathrooms": 1,
+              "pool": true,
+              "privetePool": false,
+              "roomservices": true,
+              "wifi": true,
+              "balcony": false
+            },
+            {
+              "id": 2,
+              "catName": "صونابا",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd8ac0f09d85f7998a3d3_L-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd8ad656f8bb6e546dc35_R1-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd8983274d0d4dec7713e_OP1-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd88e602641e2afd0be1e_B-p-500.webp"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd88f1c199e177a6a3828_OP2-p-500.webp"
+                }
+              ],
+              "name": "شقة 405",
+              "description": "موجودة في صونابا، هذه <strong>الشقة المكونة من غرفة نوم</strong> توفر ملاذاً مريحاً مع وسائل الراحة الحديثة وأجواء أنيقة. تقع في موقع مثالي لاستكشاف شوارع أغادير النابضة بالحياة، وتوفر قاعدة مثالية لمغامراتك في المدينة.",
+              "rooms": 1,
+              "bathrooms": 1,
+              "pool": true,
+              "privetePool": false,
+              "roomservices": true,
+              "wifi": true,
+              "balcony": false
+            },
+            {
+              "id": 3,
+              "catName": "صونابا",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd8bdd75afffac60313f4_L-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd8bec39aaaef6b5b4575_R1-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd8be9c4b8999e4b9cbab_B1-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd8bd85963119377b7899_OP1-p-500.webp"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd8bd0f09d85f7998af98_OP2-p-500.webp"
+                }
+              ],
+              "name": "شقة 406",
+              "description": "<strong>اختبر</strong> الطاقة النابضة لأغادير من هذه الشقة المكونة من غرفة نوم واحدة في صونابا. مصممة للمستكشفين الحضريين، تجمع بين وسائل الراحة المعاصرة والأجواء الدافئة، مقدمة ملاذاً أنيقاً ومبهجاً في المدينة.",
+              "rooms": 1,
+              "bathrooms": 1,
+              "pool": true,
+              "privetePool": false,
+              "roomservices": true,
+              "wifi": true,
+              "balcony": true
+            },
+            {
+              "id": 4,
+              "catName": "صونابا",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9483fe11c38a0128fe9_L-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9480347f760d83658c3_R1-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9473274d0d4dec7f5ab_B-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd949239d0d1fc855c2da_OP2-p-500.webp"
+                }
+              ],
+              "name": "شقة 109",
+              "description": "اختبر نبض أغادير النابض من هذه <strong>الشقة المكونة من غرفتي نوم</strong> في صونابا. مصممة للمستكشفين الحضريين، تجمع بين وسائل الراحة المعاصرة والأجواء الدافئة، مما يجعلها قاعدة مثالية لملاذ حضري لا يُنسى.",
+              "rooms": 2,
+              "bathrooms": 1,
+              "pool": true,
+              "privetePool": false,
+              "roomservices": true,
+              "wifi": true,
+              "balcony": true
+            },
+            {
+              "id": 5,
+              "catName": "صونابا",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd958656f8bb6e5476e12_L1-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9589c4b8999e4ba35e2_R1-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9586a438b97b006d5dd_OP1-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9586a438b97b006d5dd_OP2-p-500.webp"
+                }
+              ],
+              "name": "شقة 201",
+              "description": "موجودة في صونابا، توفر هذه <strong>الشقة المكونة من غرفتي نوم</strong> مزيجاً مثالياً من الراحة والأناقة. مع وسائل الراحة الحديثة ومساحات المعيشة الرحبة، فإنها تضمن إقامة مريحة وممتعة في قلب المدينة.",
+              "rooms": 2,
+              "bathrooms": 1,
+              "pool": true,
+              "privetePool": false,
+              "roomservices": true,
+              "wifi": true,
+              "balcony": true
+            },
+            {
+              "id": 6,
+              "catName": "صونابا",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd981f59319b6bb9b6449_L-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd980c21eebf81b077682_R1-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd957b70d6d5d1c152dbe_B-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd957c21eebf81b074cc7_OP1-p-500.webp"
+                }
+              ],
+              "name": "شقة 202",
+              "description": "<strong>شقة مكونة من غرفتي نوم</strong> تقع في مركز صونابا الحيوي. مصممة لاكتشاف أجواء أغادير النشطة، هذا الملاذ الأنيق يوفر وسائل الراحة الحديثة وأجواءً مرحبة، مما يضمن إجازة حضرية لا تُنسى.",
+              "rooms": 2,
+              "bathrooms": 1,
+              "pool": true,
+              "privetePool": false,
+              "roomservices": true,
+              "wifi": true,
+              "balcony": true
+            },
+            {
+              "id": 7,
+              "catName": "صونابا",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9ba39758bbef79fda6d_L-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9ba9d354ff31710efbd_R1-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9bbc0ac6e1ce4d59530_R2-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9b9b01abe152dfd485c_B1-p-500.webp"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9b9b01abe152dfd485c_B1-p-500.webp"
+                }
+              ],
+              "name": "شقة 106",
+              "description": "شقة مكونة من غرفتي نوم، تقع في قلب صونابا الحيوي. مصممة بعناية للمسافرين الراقيين، هذا المسكن الأنيق يتميز بميزات حديثة ولمسات فاخرة، مما يضمن مزيجًا لا مثيل له من الراحة والأناقة.",
+              "rooms": 2,
+              "bathrooms": 2,
+              "pool": true,
+              "privetePool": false,
+              "roomservices": true,
+              "wifi": true,
+              "balcony": true
+            },
+            {
+              "id": 8,
+              "catName": "صونابا",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7da_WhatsApp%20Image%202024-02-18%20at%2019.04.11%20(2).jpeg"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7d4_WhatsApp%2520Image%25202024-02-18%2520at%252019.04.11%2520(5)-p-500.jpeg"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7d6_WhatsApp%2520Image%25202024-02-18%2520at%252019.04.11%2520(3)-p-500.jpeg"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/65d886c725c69624ce3df7d7_WhatsApp%2520Image%25202024-02-18%2520at%252019.04.11%2520(1)-p-500.jpeg"
+                }
+              ],
+              "name": "شقة 107",
+              "description": "شقة مكونة من غرفتي نوم، تقع في قلب صونابا الحيوي. مصممة بعناية للمسافرين الراقيين، هذا المسكن الأنيق يتميز بميزات حديثة ولمسات فاخرة، مما يضمن مزيجًا لا مثيل له من الراحة والأناقة.",
+              "rooms": 3,
+              "bathrooms": 2,
+              "pool": true,
+              "privetePool": false,
+              "roomservices": true,
+              "wifi": true,
+              "balcony": true
+            },
+            {
+              "id": 9,
+              "catName": "صونابا",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9cbdfaed297ea89cceb_L1-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9cb70317b01a3aa6d53_R2-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9ca3274d0d4dec85513_L3-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9cae846c8879e112368_OP3-p-500.webp"
+                }
+              ],
+              "name": "شقة 111",
+              "description": "شقة فاخرة مكونة من غرفتي نوم، تقع في مركز صونابا. مصممة للمسافرين المميزين، هذا الملاذ الفاخر يتميز بوسائل الراحة الحديثة ولمسات أنيقة.",
+              "rooms": 2,
+              "bathrooms": 2,
+              "pool": true,
+              "privetePool": false,
+              "roomservices": true,
+              "wifi": true,
+              "balcony": true
+            },
+            {
+              "id": 10,
+              "catName": "صونابا",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9dd3274d0d4dec86831_L2-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9de424e563902030fe5_R1-p-800.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9ddfa3dd45aa94b3769_OP1-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9ddb70d6d5d1c159214_OP2-p-500.webp"
+                }
+              ],
+              "name": "شقة 112",
+              "description": "شقة راقية مكونة من غرفتي نوم، تقع في صونابا. مصممة للنزلاء المميزين، هذه الإقامة الأنيقة توفر وسائل الراحة الحديثة والتشطيبات الفاخرة، مما يقدم مزيجًا لا مثيل له من الأناقة والراحة في قلب أغادير.",
+              "rooms": 2,
+              "bathrooms": 1,
+              "pool": true,
+              "privetePool": false,
+              "roomservices": true,
+              "wifi": true,
+              "balcony": true
+            },
+            {
+              "id": 11,
+              "catName": "صونابا",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9f7d1a96b992c4056f2_L1-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9f82529026867cc21c0_R1-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9f7740cf5042e6aefdb_R2-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9f758ac00c2932d8fe3_OP3-p-500.webp"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660dd9f7393dad4baddcd46b_OP2-p-500.webp"
+                }
+              ],
+              "name": "شقة 303",
+              "description": "شقة فاخرة مكونة من غرفتي نوم تقع في قلب صونابا. مصممة للمسافرين المميزين، هذه الإقامة الأنيقة توفر وسائل الراحة الحديثة والتفاصيل الفاخرة، مما يضمن مزيجًا استثنائيًا من الأناقة والراحة.",
+              "rooms": 2,
+              "bathrooms": 2,
+              "pool": true,
+              "privetePool": false,
+              "roomservices": true,
+              "wifi": true,
+              "balcony": true
+            }
+          ]
+        }
+      ],
+      "البنتهاوسات": [
+        {
+          "id": 3,
+          "name_1": "اكتشف بنتهاوسات فاخرة",
+          "name_2": "في أكادير",
+          "description": "عيش تجربة قمة الحياة الفاخرة في بنتهاوساتنا في <strong>أكادير</strong>. تقدم هذه الإقامات راحة لا تضاهى، ووسائل راحة فاخرة، وإطلالات خلابة، وتم تصميمها لرفع مستوى إقامتك إلى آفاق جديدة.",
+          "data": [
+            {
+              "id": 1,
+              "catName": "سونابا",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d918cdd70a50edcadf887_L1-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d918ad839f5aa80197b75_R1-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d918bbf4e56d15ac885b6_B1-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d91be714db3c85745e582_L2-p-500.webp"
+                }
+              ],
+              "name": "بنتهاوس 117",
+              "description": "استمتع بقمة الحياة المدنية في بنتهاوس <strong>غرفتي نوم</strong> الموجود في حي سونابا الحيوي في أكادير. يضم وسائل راحة معاصرة وتصميم أنيق وإطلالات خلابة على المدينة، يقدم هذا الملاذ الأنيق مزيجًا مثاليًا من الراحة والفخامة لإقامة لا تُنسى.",
+              "rooms": 2,
+              "bathrooms": 1,
+              "pool": false,
+              "privetePool": false,
+              "roomservices": false,
+              "wifi": false,
+              "balcony": false,
+              "jacuzzi": true
+            },
+            {
+              "id": 2,
+              "catName": "سونابا",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d92396a07dadd538aa061_L-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d923b1eeb41a69e0e120f_R1-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d923cfb99d02ed959da05_R2-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d92391a8d4ae80bbdb05a_B2-p-500.webp"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d923b45599e7bc7a8893f_OP6-p-500.webp"
+                }
+              ],
+              "name": "بنتهاوس 316",
+              "description": "<strong>بنتهاوس بغرفتي نوم</strong> في حي سونابا النابض بالحياة في أكادير. يضم وسائل راحة حديثة وديكور أنيق وإطلالات شاملة على المدينة، يقدم هذا الملاذ الأنيق مزيجًا فريدًا من الراحة والفخامة لإقامة لا تُنسى.",
+              "rooms": 2,
+              "bathrooms": 1,
+              "pool": false,
+              "privetePool": false,
+              "roomservices": false,
+              "wifi": false,
+              "balcony": false,
+              "jacuzzi": true
+            },
+            {
+              "id": 3,
+              "catName": "سونابا",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d92f74b97b7cd11390c47_L2-p-1600.jpg"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d92f7e1fa834e7a6f3c8c_R1-p-500.jpg"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d92f735028cc99200afc3_R2-p-500.jpg"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d92f789983001544c9f14_L3-p-500.jpg"
+                }
+              ],
+              "name": "بنتهاوس 118",
+              "description": "<strong>بنتهاوس بثلاث غرف نوم</strong> يقع في وسط أكادير، هذا الملاذ الفاخر يجسد الأناقة والرقي. مع مساحات داخلية فسيحة وإطلالات خلابة واهتمام دقيق بالتفاصيل، استمتع بإقامة لا تُنسى تتجاوز جميع التوقعات.",
+              "rooms": 3,
+              "bathrooms": 2,
+              "pool": false,
+              "privetePool": false,
+              "roomservices": false,
+              "wifi": false,
+              "balcony": false,
+              "jacuzzi": true
+            },
+            {
+              "id": 4,
+              "catName": "سونابا",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d933b1a8d4ae80bbec31a_L1-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d933bb23246d76b479f93_R1-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d933b536d824275be8a6b_R2-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d933b4554c3c6492b3d5f_R3-p-500.webp"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d933cc9a99ba86e344961_B3-p-500.webp"
+                }
+              ],
+              "name": "بنتهاوس 412",
+              "description": "<strong>بنتهاوس بثلاث غرف نوم</strong> في قلب أكادير، هذا الملاذ المرموق يشع أناقة وراحة. بفضل المساحات الداخلية الواسعة والإطلالات البانورامية والحرفية الدقيقة، انغمس في هروب لا يُنسى.",
+              "rooms": 3,
+              "bathrooms": 2,
+              "pool": false,
+              "privetePool": false,
+              "roomservices": false,
+              "wifi": false,
+              "balcony": false,
+              "jacuzzi": true
+            },
+            {
+              "id": 5,
+              "catName": "سونابا",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d93991a47040fddb3fb72_L1-p-1600.webp"
+                },
+                {
+                  "id": 2,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d93996e265a0064b0508a_R1-p-500.webp"
+                },
+                {
+                  "id": 3,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d9398efe0d9e940a634ff_R2-p-500.webp"
+                },
+                {
+                  "id": 4,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d9398f8a4ed2e00281fd6_R3-p-500.webp"
+                },
+                {
+                  "id": 5,
+                  "url": "https://cdn.prod.website-files.com/65d886c725c69624ce3df5d6/660d9399056ebfb7ad0fc1cd_OP3-p-500.webp"
+                }
+              ],
+              "name": "بنتهاوس 317",
+              "description": "<strong>بنتهاوس بثلاث غرف نوم</strong> في قلب أكادير، هذا الملاذ المرموق يشع أناقة وراحة. بفضل المساحات الداخلية الواسعة والإطلالات البانورامية والحرفية الدقيقة، انغمس في هروب لا يُنسى.",
+              "rooms": 3,
+              "bathrooms": 2,
+              "pool": false,
+              "privetePool": false,
+              "roomservices": false,
+              "wifi": false,
+              "balcony": false,
+              "jacuzzi": true
+            }
+          ]
+        }
+      ],
+      "استئجار السيارات": [
+        {
+          "id": 4,
+          "name_1": "اكتشف أكادير",
+          "name_2": "بأناقة",
+          "description": "اكتشف جمال أكادير وما وراءها مع خدمة استئجار السيارات الفاخرة لدينا. سواء كنت تستكشف المدينة أو تتجول في جبال الأطلس، فإن سياراتنا الفاخرة تضمن لك رحلة مريحة وأنيقة.",
+          "data": [
+            {
+              "id": 1,
+              "catName": "سونابا",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783156/Bmw%20serie%20pack%20M/yfhf0kx0mzobfiao6ldi.png"
+                },
+                {
+                  "id": 2,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783156/Bmw%20serie%20pack%20M/yfhf0kx0mzobfiao6ldi.png"
+                },
+                {
+                  "id": 3,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783161/Bmw%20serie%20pack%20M/hvhicisglma82mn7qdwn.png"
+                },
+                {
+                  "id": 4,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783160/Bmw%20serie%20pack%20M/t61lydudyqkomsmj95br.png"
+                },
+                {
+                  "id": 5,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783152/Bmw%20serie%20pack%20M/oqrwu0ji3cfvikednoed.png"
+                }
+              ],
+              "name": "بي ام دبليو سلسلة باك إم"
+            },
+            {
+              "id": 2,
+              "catName": "سونابا",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783168/Bmw%20serie5/vfvduvzjicst4nhvkrbt.png"
+                },
+                {
+                  "id": 2,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783167/Bmw%20serie5/risz6pf2gtavl8oibhyh.png"
+                },
+                {
+                  "id": 3,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783162/Bmw%20serie5/e8crxz5lhw296ffmortq.png"
+                },
+                {
+                  "id": 4,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783160/Bmw%20serie5/mpzrbzpg5yjpfc40cjfy.png"
+                }
+              ],
+              "name": "بي ام دبليو سلسلة 5"
+            },
+            {
+              "id": 3,
+              "catName": "سونابا",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783147/Clio%204%20aquilibre/fspma6vauzozhpsxrlml.png"
+                },
+                {
+                  "id": 2,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783146/Clio%204%20aquilibre/vyuikbz9mminb8lkruk1.png"
+                },
+                {
+                  "id": 3,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783145/Clio%204%20aquilibre/x3ukxgu7gyeusou9zhoi.png"
+                },
+                {
+                  "id": 4,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783143/Clio%204%20aquilibre/i77doimq0jngdicbhfgh.png"
+                },
+                {
+                  "id": 5,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783142/Clio%204%20aquilibre/somfczjkmf0yllnbuxya.png"
+                }
+              ],
+              "name": "كليو 4 أكويليبري"
+            },
+            {
+              "id": 4,
+              "catName": "سونابا",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783142/Clio%204%20automatique/g1x3akuurewwkj7b4jfm.png"
+                },
+                {
+                  "id": 2,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783139/Clio%204%20automatique/ryztcx4uubmrxvoeyoux.png"
+                },
+                {
+                  "id": 3,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783139/Clio%204%20automatique/ah3krwpdnkcej4a0juxe.png"
+                },
+                {
+                  "id": 4,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783138/Clio%204%20automatique/hhiqhaapo5rp2cshgemo.png"
+                },
+                {
+                  "id": 5,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783134/Clio%204%20automatique/kodn21nqkl9nq6i6errw.png"
+                }
+              ],
+              "name": "كليو 4 أوتوماتيك"
+            },
+            {
+              "id": 5,
+              "catName": "سونابا",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783167/golf%208/skjhr3kydgjdne2oftiu.png"
+                },
+                {
+                  "id": 2,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783167/golf%208/olwxbjbxfekc7dwg9b9k.png"
+                },
+                {
+                  "id": 3,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783164/golf%208/v3nvczpe09qwcfhi4izn.png"
+                },
+                {
+                  "id": 4,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783163/golf%208/cwpdr9f3sexjx3qllnl1.png"
+                },
+                {
+                  "id": 5,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783162/golf%208/rtocjc8jskkojnlxvyoo.png"
+                }
+              ],
+              "name": "غولف 8"
+            },
+            {
+              "id": 6,
+              "catName": "سونابا",
+              "images": [
+                {
+                  "id": 1,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783151/Twareg/wwm941v6ehtiapmtfohh.png"
+                },
+                {
+                  "id": 2,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783149/Twareg/tcdsxrhz2xj9hcpkgurs.png"
+                },
+                {
+                  "id": 3,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783149/Twareg/sy66u9jswhup4cw2tj9v.png"
+                },
+                {
+                  "id": 4,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783148/Twareg/tw0ynlaz7rpr8q8binjm.png"
+                },
+                {
+                  "id": 5,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783148/Twareg/qsrsak7vb2fejvyleus7.png"
+                },
+                {
+                  "id": 6,
+                  "url": "https://res.cloudinary.com/dauctzvq5/image/upload/v1722783146/Twareg/q9eeckwyolwyamfpaetd.png"
+                }
+              ],
+              "name": "توارج"
+            }
+          ]
+        }
+      ]
+
     }
   ]
 }

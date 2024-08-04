@@ -9,6 +9,7 @@ import {
 import MeetingRoomIconOutlined from "@mui/icons-material/MeetingRoom";
 import { Box, Container, Typography } from "@mui/material";
 import ButtonBookNow from "../ui/ButtonBookNow";
+import { useLanguage } from "../../Contexts/LanguageContext";
 
 export default function SingleCategoryHero({
   galleryRef,
@@ -17,6 +18,8 @@ export default function SingleCategoryHero({
   galleryRef: React.RefObject<HTMLDivElement>;
   data: any;
 }) {
+  const { language } = useLanguage()
+  
   return (
     <>
       <Container>
@@ -68,6 +71,7 @@ export default function SingleCategoryHero({
                   sx={{
                     display: "flex",
                     alignItems: "center",
+                    mr: 4,
                   }}
                 >
                   <MeetingRoomIconOutlined fontSize="large" />
@@ -82,7 +86,8 @@ export default function SingleCategoryHero({
                       lineHeight: "1em",
                     }}
                   >
-                    {data.rooms} Rooms
+                    {data.rooms}
+                    {language === "en" ? " Rooms" : " غرف"}
                   </Typography>
                 </Box>
               )}
@@ -91,6 +96,7 @@ export default function SingleCategoryHero({
                   sx={{
                     display: "flex",
                     alignItems: "center",
+                    mr: 4,
                   }}
                 >
                   <ShowerOutlined fontSize="large" />
@@ -105,7 +111,8 @@ export default function SingleCategoryHero({
                       lineHeight: "1em",
                     }}
                   >
-                    {data.bathrooms} BathRooms
+                    {data.bathrooms}
+                    {language === "en" ? " Bathrooms" : " حمامات"}
                   </Typography>
                 </Box>
               )}
@@ -128,7 +135,7 @@ export default function SingleCategoryHero({
                       lineHeight: "1em",
                     }}
                   >
-                    Private Pool
+                    {language === "en" ? "Private Pool" : "حمام سباحة خاص"}
                   </Typography>
                 </Box>
               )}
@@ -137,6 +144,7 @@ export default function SingleCategoryHero({
                   sx={{
                     display: "flex",
                     alignItems: "center",
+                    mr: 4,
                   }}
                 >
                   <PoolOutlined fontSize="large" />
@@ -151,7 +159,7 @@ export default function SingleCategoryHero({
                       lineHeight: "1em",
                     }}
                   >
-                    Pool
+                    {language === "en" ? "Pool" : "حمام سباحة"}
                   </Typography>
                 </Box>
               )}
@@ -160,6 +168,7 @@ export default function SingleCategoryHero({
                   sx={{
                     display: "flex",
                     alignItems: "center",
+                    mr: 4,
                   }}
                 >
                   <WifiOutlined fontSize="large" />
@@ -174,7 +183,7 @@ export default function SingleCategoryHero({
                       lineHeight: "1em",
                     }}
                   >
-                    Wifi
+                    {language === "en" ? "Wifi" : "واي فاي"}
                   </Typography>
                 </Box>
               )}
@@ -197,7 +206,7 @@ export default function SingleCategoryHero({
                       lineHeight: "1em",
                     }}
                   >
-                    Balcony
+                    {language === "en" ? "Balcony" : "شرفة"}
                   </Typography>
                 </Box>
               )}
@@ -220,7 +229,7 @@ export default function SingleCategoryHero({
                       lineHeight: "1em",
                     }}
                   >
-                    Jacuzzi
+                    {language === "en" ? "Jacuzzi" : "جاكوزي"}
                   </Typography>
                 </Box>
               )}
@@ -247,7 +256,8 @@ export default function SingleCategoryHero({
                   sx={{
                     border: "1px solid #060606",
                     color: "#060606",
-                    mr: 1,
+                    mr: language === "en" ? 2 : 0,
+                    ml: language === "en" ? 0 : 2,
                     mb: { xs: "40px", sm: 0 },
                     textAlign: "center",
                     letterSpacing: ".08em",
@@ -258,7 +268,13 @@ export default function SingleCategoryHero({
                     textDecoration: "none",
                   }}
                 >
-                  <span>View Gallery</span>
+                  <span>
+                    {
+                      language === "en"
+                        ? "View Gallery"
+                        : "عرض الصور"
+                    }
+                  </span>
                   <Box
                     sx={{
                       display: "none",
@@ -280,7 +296,7 @@ export default function SingleCategoryHero({
                 </Box>
               </Box>
 
-              <ButtonBookNow />
+              <ButtonBookNow texten="Book Now" textar="احجز الان" /> 
             </Box>
           </Box>
         </Box>

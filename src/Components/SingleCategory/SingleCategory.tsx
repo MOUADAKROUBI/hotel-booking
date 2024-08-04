@@ -7,12 +7,15 @@ import SingleCategoryAbout from "./SingleCategoryAbout";
 import SingleCategoryAmenities from "./SingleCategoryAmenities";
 import Gallery from "./Gallery";
 import NotFound from "../NotFound";
+import { useLanguage } from "../../Contexts/LanguageContext";
 
 
 export default function SingleCategory({ category }: { category: string }) {
   const { id } = useParams();
-  const dataImported = data.data[0][category];
-  const singleData = dataImported[0].data.find(
+  const { language } = useLanguage();
+  const dataImported = data[language][0][category];
+
+  const singleData = dataImported?.[0].data.find(
     (singleData: any) => singleData.id == id
   );
   const galleryRef = useRef<HTMLDivElement>(null);
