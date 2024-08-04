@@ -107,7 +107,7 @@ export default function Hero({ aboutusRef }: { aboutusRef: React.RefObject<HTMLD
         >
           <Box
             component="img"
-            src="../src/assets/hero.jpeg"
+            src="/images/hero.jpeg"
             alt="hero"
             sx={{
               height: {xs: '300px', sm: '400px', md: '500px', lg: '800px'},

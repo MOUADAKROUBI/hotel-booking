@@ -58,7 +58,7 @@ export default function Footer({ categoriesEnglish, categoriesArabic }: { catego
                 <Link to="/">
                   <Box
                     component="img"
-                    src="../src/assets/logo.png"
+                    src="/images/logo.png"
                     sx={{
                       width: "120px",
                     }}
