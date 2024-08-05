@@ -1,7 +1,7 @@
 import { Box, Container, Divider, Typography } from "@mui/material";
 import React from "react";
 import data from "../../Data/data.json";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   BalconyOutlined,
   HotTubOutlined,
@@ -12,6 +12,7 @@ import {
 import MeetingRoomIconOutlined from "@mui/icons-material/MeetingRoom";
 import { useLanguage } from "../../Contexts/LanguageContext";
 import { Helmet } from "react-helmet";
+import { motion, Variants } from "framer-motion";
 
 export default function AllCategories({ category }: { category: string }) {
   const { language } = useLanguage();
@@ -23,18 +24,27 @@ export default function AllCategories({ category }: { category: string }) {
     sectionRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [category]);
 
+  const cardVariants: Variants = {
+    offscreen: {
+      y: 300
+    },
+    onscreen: {
+      y: 30,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 0.8
+      }
+    }
+  };
+
   return (
     <>
       <Helmet>
-        <title>
-          {dataImported[0].name_1 + " " + dataImported[0].name_2}
-        </title>
+        <title>{dataImported[0].name_1 + " " + dataImported[0].name_2}</title>
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Luxury Rentals" />
-        <meta
-          name="description"
-          content={dataImported[0].description}
-        />
+        <meta name="description" content={dataImported[0].description} />
       </Helmet>
       <Box
         ref={sectionRef}
@@ -50,16 +60,48 @@ export default function AllCategories({ category }: { category: string }) {
             textAlign: "center",
           }}
         >
-          <h1>{dataImported[0].name_1 + " " + dataImported[0].name_2}</h1>
-          <Typography
-            component="p"
-            sx={{
-              mb: "18px",
-              margin: "auto",
-              maxWidth: "800px",
+          <motion.div
+            className="box"
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.3,
+              ease: [0, 0.71, 0.2, 1.01],
+              scale: {
+                type: "spring",
+                damping: 5,
+                stiffness: 100,
+                restDelta: 0.001,
+              },
             }}
-            dangerouslySetInnerHTML={{ __html: dataImported[0].description }}
-          />
+          >
+            <h1>{dataImported[0].name_1 + " " + dataImported[0].name_2}</h1>
+          </motion.div>
+          <motion.div
+            className="box"
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.3,
+              ease: [0, 0.71, 0.2, 1.01],
+              scale: {
+                type: "spring",
+                damping: 5,
+                stiffness: 100,
+                restDelta: 0.001,
+              },
+            }}
+          >
+            <Typography
+              component="p"
+              sx={{
+                mb: "18px",
+                margin: "auto",
+                maxWidth: "800px",
+              }}
+              dangerouslySetInnerHTML={{ __html: dataImported[0].description }}
+            />
+          </motion.div>
         </Container>
 
         <Container className="category-items">
@@ -79,8 +121,17 @@ export default function AllCategories({ category }: { category: string }) {
               }}
             >
               {dataImported[0].data.map((item) => (
-                <Box className="item" sx={{}} key={item.id}>
-                  <Box sx={{}}>
+                <motion.div
+                  key={item}
+                  className="card-container"
+                  initial="offscreen"
+                  whileInView="onscreen"
+                  viewport={{ once: true, amount: 0.8 }}
+                >
+                  <motion.div
+                    className="card"
+                    variants={cardVariants}
+                  >
                     <Link className="image-wrapper" to={`${item.id}`}>
                       <Box
                         component="img"
@@ -88,7 +139,7 @@ export default function AllCategories({ category }: { category: string }) {
                         alt={item.name + " image"}
                         sx={{
                           maxHeight: "400px",
-                          width: "100%",
+                          width: "100vw",
                           objectFit: "cover",
                           objectPosition: "0% 50%",
                         }}
@@ -344,16 +395,14 @@ export default function AllCategories({ category }: { category: string }) {
                             },
                           }}
                         >
-                          {
-                            language === "en"
-                              ? "View more information"
-                              : "عرض المزيد من المعلومات"
-                          }
+                          {language === "en"
+                            ? "View more information"
+                            : "عرض المزيد من المعلومات"}
                         </Typography>
                       </Link>
                     </Box>
-                  </Box>
-                </Box>
+                  </motion.div>
+                </motion.div>
               ))}
             </Box>
           </Box>

@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import data from "../../Data/data.json";
 import SingleCategoryHero from "./SingleCategoryHero";
@@ -19,6 +19,11 @@ export default function SingleCategory({ category }: { category: string }) {
     (singleData: any) => singleData.id == id
   );
   const galleryRef = useRef<HTMLDivElement>(null);
+  const sectionRef = React.useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [id]);
 
   if (!singleData) return <NotFound />;
 
@@ -43,6 +48,7 @@ export default function SingleCategory({ category }: { category: string }) {
       </Helmet>
       <Box
         component="section"
+        ref={sectionRef}
         className="single-category"
         sx={{
           paddingTop: {xs: "246px", sm: "320px", md: "349px", lg: "563px"},
@@ -58,6 +64,7 @@ export default function SingleCategory({ category }: { category: string }) {
             top: 0,
             left: 0,
             right: 0,
+            overflow: "hidden",
           }}
         >
           <Box

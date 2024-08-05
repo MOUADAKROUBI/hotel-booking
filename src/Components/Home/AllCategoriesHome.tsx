@@ -1,19 +1,31 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Box, Typography, Divider } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import MeetingRoomIcon from "@mui/icons-material/MeetingRoom";
 import { Link } from "react-router-dom";
-import { Balcony, HotTubOutlined, Pool, Shower, Wifi } from "@mui/icons-material";
+import {
+  Balcony,
+  HotTubOutlined,
+  Pool,
+  Shower,
+  Wifi,
+} from "@mui/icons-material";
 import data from "../../Data/data.json";
 import { useLanguage } from "../../Contexts/LanguageContext";
 import ButtonBookNow from "../ui/ButtonBookNow";
+import { useInView } from "framer-motion";
 
-export default function AllCategoriesHome({ category }) {
+export default function AllCategoriesHome({ category, index }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   const { language } = useLanguage();
+  const pagesEnglish = Object.keys(data['en'][0]);
   const dataImported = data[language][0][category];
 
-  const [currentSlide, setCurrentSlide] = useState(language === "ar" ? dataImported?.[0]?.data?.length - 1 : 0);
+  const [currentSlide, setCurrentSlide] = useState(
+    language === "ar" ? dataImported?.[0]?.data?.length - 1 : 0
+  );
 
   const totalSlides = dataImported?.[0]?.data?.length;
 
@@ -31,12 +43,22 @@ export default function AllCategoriesHome({ category }) {
 
   return (
     <>
-      <Box className="section" sx={{ mt: 4, textAlign: "center" }}>
+      <Box
+        ref={ref}
+        className="section"
+        sx={{
+          mt: 4,
+          textAlign: "center",
+          transform: isInView ? "none" : "translateX(-200px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}
+      >
         <Box
           className="subtitle-amenties"
           sx={{
             color: "#060606",
-            letterSpacing: ".1em",
+            letterSpacing: language === "en" ? ".1em" : "0",
             textTransform: "uppercase",
             justifyContent: "center",
             alignItems: "center",
@@ -123,7 +145,9 @@ export default function AllCategoriesHome({ category }) {
                     sx={{
                       display: "flex",
                       transition: "transform 0.5s ease",
-                      transform: `translateX(${language === 'ar' ? '' : '-'}${currentSlide * 100}%)`,
+                      transform: `translateX(${language === "ar" ? "" : "-"}${
+                        currentSlide * 100
+                      }%)`,
                       width: "100%",
                     }}
                   >
@@ -232,9 +256,7 @@ export default function AllCategoriesHome({ category }) {
                                       }}
                                     >
                                       {item.rooms}
-                                      {
-                                        language === "en" ? " Rooms" : " غرف"
-                                      }
+                                      {language === "en" ? " Rooms" : " غرف"}
                                     </Typography>
                                   </Box>
                                 )}
@@ -258,10 +280,10 @@ export default function AllCategoriesHome({ category }) {
                                         lineHeight: "1em",
                                       }}
                                     >
-                                      {item.bathrooms} 
-                                      {
-                                        language === "en" ? " Bathrooms" : " حمامات"
-                                      }
+                                      {item.bathrooms}
+                                      {language === "en"
+                                        ? " Bathrooms"
+                                        : " حمامات"}
                                     </Typography>
                                   </Box>
                                 )}
@@ -284,9 +306,9 @@ export default function AllCategoriesHome({ category }) {
                                         lineHeight: "1em",
                                       }}
                                     >
-                                      {
-                                        language === "en" ? "Private Pool" : "حمام سباحة خاص"
-                                      }
+                                      {language === "en"
+                                        ? "Private Pool"
+                                        : "حمام سباحة خاص"}
                                     </Typography>
                                   </Box>
                                 )}
@@ -310,9 +332,9 @@ export default function AllCategoriesHome({ category }) {
                                         lineHeight: "1em",
                                       }}
                                     >
-                                      {
-                                        language === "en" ? "Pool" : "حمام سباحة"
-                                      }
+                                      {language === "en"
+                                        ? "Pool"
+                                        : "حمام سباحة"}
                                     </Typography>
                                   </Box>
                                 )}
@@ -336,9 +358,7 @@ export default function AllCategoriesHome({ category }) {
                                         lineHeight: "1em",
                                       }}
                                     >
-                                      {
-                                        language === "en" ? "Wifi" : "واي فاي"
-                                      }
+                                      {language === "en" ? "Wifi" : "واي فاي"}
                                     </Typography>
                                   </Box>
                                 )}
@@ -361,9 +381,7 @@ export default function AllCategoriesHome({ category }) {
                                         lineHeight: "1em",
                                       }}
                                     >
-                                      {
-                                        language === "en" ? "Balcony" : "شرفة"
-                                      }
+                                      {language === "en" ? "Balcony" : "شرفة"}
                                     </Typography>
                                   </Box>
                                 )}
@@ -386,14 +404,15 @@ export default function AllCategoriesHome({ category }) {
                                         lineHeight: "1em",
                                       }}
                                     >
-                                      {
-                                        language === "en" ? "Jacuzzi" : "جاكوزي"
-                                      }
+                                      {language === "en" ? "Jacuzzi" : "جاكوزي"}
                                     </Typography>
                                   </Box>
                                 )}
                               </Box>
-                              <ButtonBookNow texten="Book Now" textar="احجز الان" /> 
+                              <ButtonBookNow
+                                texten="Book Now"
+                                textar="احجز الان"
+                              />
                             </Box>
                           </Box>
                         </Box>
@@ -450,13 +469,11 @@ export default function AllCategoriesHome({ category }) {
                             fontSize: "16px",
                           }}
                         >
-                          {
-                            language === "en" ? (
-                              <ArrowBackIcon />
-                            ) : (
-                              <ArrowForwardIcon />
-                            )
-                          }
+                          {language === "en" ? (
+                            <ArrowBackIcon />
+                          ) : (
+                            <ArrowForwardIcon />
+                          )}
                         </Typography>
                       </Box>
                     </Box>
@@ -497,13 +514,11 @@ export default function AllCategoriesHome({ category }) {
                             fontSize: "16px",
                           }}
                         >
-                          {
-                            language === "en" ? (
-                              <ArrowForwardIcon />
-                            ) : (
-                              <ArrowBackIcon />
-                            )
-                          }
+                          {language === "en" ? (
+                            <ArrowForwardIcon />
+                          ) : (
+                            <ArrowBackIcon />
+                          )}
                         </Typography>
                       </Box>
                     </Box>
@@ -515,7 +530,10 @@ export default function AllCategoriesHome({ category }) {
                         mt: { xs: 3, sm: 0 },
                       }}
                     >
-                      <Link to={`/${language}/${category}`} className="button-slider">
+                      <Link
+                        to={`/${language}/${pagesEnglish[index].replace(" ", "")}`}
+                        className="button-slider"
+                      >
                         <Typography
                           sx={{
                             bgcolor: "white",
@@ -538,11 +556,7 @@ export default function AllCategoriesHome({ category }) {
                             },
                           }}
                         >
-                          {
-                            language === "en" ? "View All" : "عرض كل"
-                          }
-                          {" "}
-                          {category}
+                          {language === "en" ? "View All" : "عرض كل"} {category}
                         </Typography>
                       </Link>
                     </Box>

@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Box, Container, CardMedia, Modal } from "@mui/material";
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import ButtonBookNow from "../ui/ButtonBookNow";
 import { useLanguage } from "../../Contexts/LanguageContext";
+import { useInView } from "framer-motion";
 
 export default function Gallery({ galleryRef, images }: { galleryRef: React.RefObject<HTMLDivElement>, images: any }) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true });
   const { language } = useLanguage();
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -78,6 +81,7 @@ export default function Gallery({ galleryRef, images }: { galleryRef: React.RefO
         <Container maxWidth="lg" sx={{ mt: 2 }}>
           <Box className="w-dyn-list">
             <Box
+              ref={ref}
               className="list"
               sx={{
                 gridColumnGap: "20px",
@@ -87,6 +91,9 @@ export default function Gallery({ galleryRef, images }: { galleryRef: React.RefO
                 gridAutoColumns: "1fr",
                 display: "grid",
                 mb: "48px",
+                transform: isInView ? "none" : "translateX(-200px)",
+                opacity: isInView ? 1 : 0,
+                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
               }}
             >
               {images.map((image, index) => (

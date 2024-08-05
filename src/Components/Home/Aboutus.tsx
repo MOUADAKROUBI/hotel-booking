@@ -1,31 +1,25 @@
-import { Box, Typography } from "@mui/material";
-import React from "react";
+import { Box, Container, Typography } from "@mui/material";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../../Contexts/LanguageContext";
+import { useInView } from "framer-motion";
 
 export default function Aboutus({ aboutusRef }: { aboutusRef: React.RefObject<HTMLDivElement> }) {
   const { language } = useLanguage();
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true }); 
 
   return (
     <>
       <Box
+        className="section section-about"
         component="section"
         sx={{
           backgroundColor: "#f8f8f8",
-          paddingTop: {xs: "80px", sm: "100px", md: "120px", lg: "140px"},
-          paddingBottom: {xs: "80px", sm: "100px", md: "120px", lg: "140px"},
           overflow: {xs: "hidden", lg: "visible"},
         }}
       >
-        <Box
-          sx={{
-            maxWidth: "1224px",
-            marginLeft: "auto",
-            marginRight: "auto",
-            paddingLeft: {xs: "16px", lg: "24px"},
-            paddingRight: {xs: "16px", lg: "24px"},
-          }}
-        >
+        <Container>
           <Box
             ref={aboutusRef}
             sx={{
@@ -51,7 +45,7 @@ export default function Aboutus({ aboutusRef }: { aboutusRef: React.RefObject<HT
             >
               <Box
                 component="img"
-                src="https://assets-global.website-files.com/5f28567562c2bb7095a14f34/5f32c12d2ffe390a4b9e01a2_image-about-section-hotel-template-p-1080.jpeg"
+                src="/images/aboutus.jpg"
                 alt="Scenic view"
                 sx={{
                   maxWidth: "100%",
@@ -59,11 +53,8 @@ export default function Aboutus({ aboutusRef }: { aboutusRef: React.RefObject<HT
               />
             </Box>
             <Box
+              ref={ref}
               sx={{
-                transform:
-                  "translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                transformStyle: "preserve-3d",
-                opacity: 1,
                 zIndex: 1,
                 maxWidth: "663px",
                 textAlign: {xs: "left", lg: "center"},
@@ -75,13 +66,16 @@ export default function Aboutus({ aboutusRef }: { aboutusRef: React.RefObject<HT
                 left: language === "en" ? "auto" : "0",
                 order: -1,
                 bgcolor: "white",
+                transform: isInView ? "none" : "translateX(-200px)",
+                opacity: isInView ? .9 : 0,
+                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
               }}
             >
               <Box
                 className="subtitle-amenties"
                 sx={{
                   color: "#060606",
-                  letterSpacing: ".1em",
+                  letterSpacing: language === "en" ? ".1rem" : "0",
                   textTransform: "uppercase",
                   justifyContent: "center",
                   alignItems: "center",
@@ -159,7 +153,7 @@ export default function Aboutus({ aboutusRef }: { aboutusRef: React.RefObject<HT
               </Link>
             </Box>
           </Box>
-        </Box>
+        </Container>
       </Box>
     </>
   );

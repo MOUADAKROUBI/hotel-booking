@@ -13,7 +13,13 @@ import ReactWhatsapp from "react-whatsapp";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import { useLanguage } from "../Contexts/LanguageContext";
 
-export default function Footer({ categoriesEnglish, categoriesArabic }: { categoriesEnglish: string[], categoriesArabic: string[] }) {
+export default function Footer({
+  categoriesEnglish,
+  categoriesArabic,
+}: {
+  categoriesEnglish: string[];
+  categoriesArabic: string[];
+}) {
   const currentYear = new Date().getFullYear();
   const { language } = useLanguage();
 
@@ -66,11 +72,9 @@ export default function Footer({ categoriesEnglish, categoriesArabic }: { catego
                 </Link>
               </Box>
               <p>
-                {
-                  language === "en"
-                    ? "Begin Your Adventure in the Heart of Morocco"
-                    : "ابدأ مغامرتك في قلب المغرب"
-                }
+                {language === "en"
+                  ? "Begin Your Adventure in the Heart of Morocco"
+                  : "ابدأ مغامرتك في قلب المغرب"}
               </p>
             </Box>
             <Box className="footer-top-right">
@@ -84,9 +88,7 @@ export default function Footer({ categoriesEnglish, categoriesArabic }: { catego
                   textTransform: "uppercase",
                 }}
               >
-                {
-                  language === "en" ? "Follow Us" : "تابعنا"
-                }
+                {language === "en" ? "Follow Us" : "تابعنا"}
               </Box>
               <Box
                 className="footer-gap"
@@ -114,12 +116,19 @@ export default function Footer({ categoriesEnglish, categoriesArabic }: { catego
                       textDecoration: "none",
                       transition: "color .35s, background-color .35s",
                       display: "flex",
+                      "&:hover": {
+                        backgroundColor: "#E0B006",
+                        border: 'none'
+                      },
                     }}
                   >
                     <i className="fa fa-facebook"></i>
                   </Box>
                 </a>
-                <a target="__black" href="https://www.instagram.com/luxury_rentals_33/">
+                <a
+                  target="__black"
+                  href="https://www.instagram.com/luxury_rentals_33/"
+                >
                   <Box
                     className="footer-social-icon"
                     sx={{
@@ -135,6 +144,10 @@ export default function Footer({ categoriesEnglish, categoriesArabic }: { catego
                       textDecoration: "none",
                       transition: "color .35s, background-color .35s",
                       display: "flex",
+                      "&:hover": {
+                        backgroundColor: "#E0B006",
+                        border: 'none'
+                      },
                     }}
                   >
                     <i className="fa fa-instagram"></i>
@@ -156,6 +169,10 @@ export default function Footer({ categoriesEnglish, categoriesArabic }: { catego
                       textDecoration: "none",
                       transition: "color .35s, background-color .35s",
                       display: "flex",
+                      "&:hover": {
+                        backgroundColor: "#E0B006",
+                        border: 'none'
+                      },
                     }}
                   >
                     <i className="fa fa-whatsapp"></i>
@@ -190,11 +207,7 @@ export default function Footer({ categoriesEnglish, categoriesArabic }: { catego
                   mb: "32px",
                 }}
               >
-                <h3>
-                  {
-                    language === "en" ? "Pages" : "الصفحات"
-                  }
-                </h3>
+                <h3>{language === "en" ? "Pages" : "الصفحات"}</h3>
               </Box>
               {/* categories */}
               <Box
@@ -214,9 +227,22 @@ export default function Footer({ categoriesEnglish, categoriesArabic }: { catego
                     display: "flex",
                   }}
                 >
-                  {(language === 'en' ? categoriesEnglish : categoriesArabic).map((page, index) => (
-                    <Box key={index} component="li" sx={{ mr: 2, mb: { xs: 2, md: 0 } }}>
-                      <Link to={`/${language}/${(language === 'en' ? page : categoriesEnglish[index]).replace(" ", "")}`}>
+                  {(language === "en"
+                    ? categoriesEnglish
+                    : categoriesArabic
+                  ).map((page, index) => (
+                    <Box
+                      key={index}
+                      className="link-li"
+                      component="li"
+                      sx={{ mr: 2, mb: { xs: 2, md: 0 } }}
+                    >
+                      <Link
+                        to={`/${language}/${(language === "en"
+                          ? page
+                          : categoriesEnglish[index]
+                        ).replace(" ", "")}`}
+                      >
                         <Typography
                           sx={{
                             color: "#626262",
@@ -224,7 +250,7 @@ export default function Footer({ categoriesEnglish, categoriesArabic }: { catego
                             whiteSpace: "nowrap",
                             fontFamily: "Muli, sans-serif",
                             fontSize: "18px",
-                            letterSpacing: ".08em",
+                            letterSpacing: language === "en" ? ".08em" : "0em",
                             lineHeight: "1em",
                             transition: "color .35s",
                             "&:hover": {
@@ -247,11 +273,7 @@ export default function Footer({ categoriesEnglish, categoriesArabic }: { catego
                   mb: "32px",
                 }}
               >
-                <h3>
-                  {
-                    language === "en" ? "Contact US" : "اتصل بنا"
-                  }
-                </h3>
+                <h3>{language === "en" ? "Contact US" : "اتصل بنا"}</h3>
               </Box>
               <Box>
                 <Box
@@ -285,7 +307,7 @@ export default function Footer({ categoriesEnglish, categoriesArabic }: { catego
                           direction: "ltr",
                         }}
                       >
-                        +212 680-844679
+                        +212 605-231427
                       </Typography>
                     </Box>
                     <Box
@@ -324,11 +346,7 @@ export default function Footer({ categoriesEnglish, categoriesArabic }: { catego
                 aria-controls="panel1-content"
                 id="panel1-header"
               >
-                <h3>
-                  {
-                    language === "en" ? "Pages" : "الصفحات"
-                  }
-                </h3>
+                <h3>{language === "en" ? "Pages" : "الصفحات"}</h3>
               </AccordionSummary>
               <AccordionDetails>
                 <Box
@@ -338,9 +356,21 @@ export default function Footer({ categoriesEnglish, categoriesArabic }: { catego
                     listStyleType: "none",
                   }}
                 >
-                  {(language === 'en' ? categoriesEnglish : categoriesArabic).map((page, index) => (
-                    <Box key={index} component="li" sx={{ mr: 2, mb: { xs: 2, md: 0 } }}>
-                      <Link to={`/${language}/${(language === 'en' ? page : categoriesEnglish[index]).replace(" ", "")}`}>
+                  {(language === "en"
+                    ? categoriesEnglish
+                    : categoriesArabic
+                  ).map((page, index) => (
+                    <Box
+                      key={index}
+                      component="li"
+                      sx={{ mr: 2, mb: { xs: 2, md: 0 } }}
+                    >
+                      <Link
+                        to={`/${language}/${(language === "en"
+                          ? page
+                          : categoriesEnglish[index]
+                        ).replace(" ", "")}`}
+                      >
                         <Typography
                           sx={{
                             color: "#626262",
@@ -370,11 +400,7 @@ export default function Footer({ categoriesEnglish, categoriesArabic }: { catego
                 aria-controls="panel2-content"
                 id="panel2-header"
               >
-                <h3>
-                  {
-                    language === "en" ? "Contact US" : "اتصل بنا"
-                  }
-                </h3>
+                <h3>{language === "en" ? "Contact US" : "اتصل بنا"}</h3>
               </AccordionSummary>
               <AccordionDetails>
                 <Box>
@@ -409,7 +435,7 @@ export default function Footer({ categoriesEnglish, categoriesArabic }: { catego
                             direction: "ltr",
                           }}
                         >
-                          +212 680-844679
+                          +212 605-231427
                         </Typography>
                       </Box>
                       <Box
@@ -453,10 +479,10 @@ export default function Footer({ categoriesEnglish, categoriesArabic }: { catego
             }}
           >
             <p>
-              {currentYear} © {" "}
-              {
-                language === "en" ? "All Rights Reserved | Designed and Developed by" : "جميع الحقوق محفوظة | تصميم وتطوير"
-              }
+              {currentYear} ©{" "}
+              {language === "en"
+                ? "All Rights Reserved | Designed and Developed by"
+                : "جميع الحقوق محفوظة | تصميم وتطوير"}
               <Typography
                 component="span"
                 sx={{
@@ -465,6 +491,8 @@ export default function Footer({ categoriesEnglish, categoriesArabic }: { catego
                   fontFamily: "Muli, sans-serif",
                   cursor: "pointer",
                   mr: language === "en" ? 0 : 1,
+                  transition: "color .35s",
+                  '&:hover': {color: '#E0B006'}
                 }}
               >
                 <ReactWhatsapp

@@ -24,7 +24,13 @@ const Transition = React.forwardRef(function Transition(
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-function Header({ categoriesEnglish, categoriesArabic }: { categoriesEnglish: string[], categoriesArabic: string[] }) {
+function Header({
+  categoriesEnglish,
+  categoriesArabic,
+}: {
+  categoriesEnglish: string[];
+  categoriesArabic: string[];
+}) {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -40,28 +46,38 @@ function Header({ categoriesEnglish, categoriesArabic }: { categoriesEnglish: st
 
   const handleClickCategory = (categoryName) => {
     if (language === "en") {
-      navigate("/"+language +"/" + categoryName.target.innerText.replace(" ", "").toLowerCase());
+      navigate(
+        "/" +
+          language +
+          "/" +
+          categoryName.target.innerText.replace(" ", "").toLowerCase()
+      );
     } else {
       const index = categoriesArabic.indexOf(categoryName.target.innerText);
-      navigate("/"+language +"/" + categoriesEnglish[index].replace(" ", "").toLowerCase());
+      navigate(
+        "/" +
+          language +
+          "/" +
+          categoriesEnglish[index].replace(" ", "").toLowerCase()
+      );
     }
 
     setOpen(false);
   };
 
   const { language, changeLanguage } = useLanguage();
-  
+
   const handleLanguageChange = (newLang: string) => {
     document.documentElement.lang = newLang;
     document.documentElement.dir = newLang === "ar" ? "rtl" : "ltr";
     localStorage.setItem("language", newLang);
-    
+
     changeLanguage(newLang);
     const currentPath = location.pathname;
     const newPath = currentPath.replace(/^\/(en|ar)/, `/${newLang}`);
     navigate(newPath);
   };
-  
+
   return (
     <Box
       component="header"
@@ -122,31 +138,43 @@ function Header({ categoriesEnglish, categoriesArabic }: { categoriesEnglish: st
                 display: "flex",
               }}
             >
-              {(language === 'en' ? categoriesEnglish : categoriesArabic).map((page, index) => (
-                <Box key={index} component="li" sx={{ 
-                  mr: language === "en" ? 0 : 2,
-                  ml: language === "en" ? 2 : 0,
-                }}>
-                  <Link to={`/${language}/${(language === 'en' ? page : categoriesEnglish[index]).replace(" ", "")}`}>
-                    <Typography
-                      sx={{
-                        color: "#060606",
-                        textTransform: "uppercase",
-                        fontFamily: "Muli, sans-serif",
-                        fontSize: "16px",
-                        letterSpacing: ".08em",
-                        lineHeight: "1em",
-                        transition: "color .35s",
-                        "&:hover": {
-                          opacity: 0.7,
-                        },
-                      }}
+              {(language === "en" ? categoriesEnglish : categoriesArabic).map(
+                (page, index) => (
+                  <Box
+                    key={index}
+                    className="link-li"
+                    component="li"
+                    sx={{
+                      mr: language === "en" ? 0 : 2,
+                      ml: language === "en" ? 2 : 0,
+                    }}
+                  >
+                    <Link
+                      to={`/${language}/${(language === "en"
+                        ? page
+                        : categoriesEnglish[index]
+                      ).replace(" ", "")}`}
                     >
-                      {page}
-                    </Typography>
-                  </Link>
-                </Box>
-              ))}
+                      <Typography
+                        sx={{
+                          color: "#060606",
+                          textTransform: "uppercase",
+                          fontFamily: "Muli, sans-serif",
+                          fontSize: "16px",
+                          letterSpacing: language === "en" ? ".08em" : "0",
+                          lineHeight: "1em",
+                          transition: "color .35s",
+                          "&:hover": {
+                            opacity: 0.7,
+                          },
+                        }}
+                      >
+                        {page}
+                      </Typography>
+                    </Link>
+                  </Box>
+                )
+              )}
             </Box>
           </Box>
           {/* logo */}
@@ -179,7 +207,7 @@ function Header({ categoriesEnglish, categoriesArabic }: { categoriesEnglish: st
         >
           <Box className="switch-launguge">
             <Button
-              sx= {{
+              sx={{
                 color: "#060606",
                 textTransform: "uppercase",
                 fontFamily: "Muli, sans-serif",
@@ -191,13 +219,13 @@ function Header({ categoriesEnglish, categoriesArabic }: { categoriesEnglish: st
                 ml: language === "ar" ? 2 : 0,
                 "&:hover": {
                   opacity: 0.7,
-                }
+                },
               }}
-              onClick={() => handleLanguageChange(language === "en" ? "ar" : "en")}
-            >
-              {
-                language === "en" ? "English" : "العربية"
+              onClick={() =>
+                handleLanguageChange(language === "en" ? "ar" : "en")
               }
+            >
+              {language === "ar" ? "English" : "العربية"}
             </Button>
           </Box>
           {/* contact us */}
@@ -272,7 +300,7 @@ function Header({ categoriesEnglish, categoriesArabic }: { categoriesEnglish: st
               <Box
                 sx={{
                   display: "flex",
-                  justifyContent: "space-between",    
+                  justifyContent: "space-between",
                   alignItems: "center",
                   borderBottom: "1px solid #e0e0e0",
                   padding: "24px 16px",
@@ -280,9 +308,7 @@ function Header({ categoriesEnglish, categoriesArabic }: { categoriesEnglish: st
               >
                 <Box className="section-logo">
                   <h3>
-                    {
-                      language === "en" ? "Mafaman Company" : "شركة مفامن"
-                    }
+                    {language === "en" ? "Mafaman Company" : "شركة مفامن"}
                   </h3>
                 </Box>
                 <Box className="section-close-icon">
@@ -340,18 +366,20 @@ function Header({ categoriesEnglish, categoriesArabic }: { categoriesEnglish: st
                 </Box>
               </Box>
               <List>
-                {(language === 'en' ? categoriesEnglish : categoriesArabic).map((page, index) => (
-                  <ListItemButton
-                    key={index}
-                    onClick={(page) => handleClickCategory(page)}
-                    sx={{
-                      textTransform: "uppercase",
-                      letterSpacing: ".1rem",
-                    }}
-                  >
-                    <ListItemText primary={page} />
-                  </ListItemButton>
-                ))}
+                {(language === "en" ? categoriesEnglish : categoriesArabic).map(
+                  (page, index) => (
+                    <ListItemButton
+                      key={index}
+                      onClick={(page) => handleClickCategory(page)}
+                      sx={{
+                        textTransform: "uppercase",
+                        letterSpacing: ".1rem",
+                      }}
+                    >
+                      <ListItemText primary={page} />
+                    </ListItemButton>
+                  )
+                )}
                 <ButtonBookNow texten="Contact US" textar="تواصل معنا" />
               </List>
             </Dialog>

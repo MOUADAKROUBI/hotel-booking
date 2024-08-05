@@ -8,7 +8,12 @@ import { useLanguage } from '../../Contexts/LanguageContext'
 
 export default function Home( { categories }: { categories: string[] }) {
   const aboutusRef = React.useRef<HTMLDivElement>(null);
+  const sectionRef = React.useRef<HTMLDivElement>(null);
   const { language } = useLanguage()
+
+  React.useEffect(() => {
+    sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, []);
 
   return (
     <>
@@ -23,11 +28,11 @@ export default function Home( { categories }: { categories: string[] }) {
         <meta name="author" content="Luxury Rentals" />
         <meta name="description" content="Luxury Rentals is a website that offers a wide range of luxury items for rent" />
       </Helmet>
-      <Hero aboutusRef={aboutusRef} />
+      <Hero sectionRef= {sectionRef} aboutusRef={aboutusRef} />
       <Aboutus aboutusRef={aboutusRef} />
       {
-        categories.slice(1, 5).map((category) => (
-          <AllCategoriesHome key={category} category={category} />
+        categories.slice(1, 5).map((category, index) => (
+          <AllCategoriesHome key={category} category={category} index={index} />
         ))
       }
     </>

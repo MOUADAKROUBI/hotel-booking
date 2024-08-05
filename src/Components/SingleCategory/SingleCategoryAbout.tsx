@@ -1,15 +1,17 @@
-import { Box, Typography } from "@mui/material";
-import React from "react";
-import { Link } from "react-router-dom";
-import ReactWhatsapp from "react-whatsapp";
+import { Box, Container, Typography } from "@mui/material";
+import React, { useRef } from "react";
 import { useLanguage } from "../../Contexts/LanguageContext";
 import ButtonBookNow from "../ui/ButtonBookNow";
+import { useInView } from "framer-motion";
 
 export default function SingleCategoryAbout({
   data,
 }: {
   data: any;
 }) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true });
+
   const { language } = useLanguage();
   return (
     <>
@@ -26,15 +28,7 @@ export default function SingleCategoryAbout({
           overflow: { xs: "hidden", lg: "visible" },
         }}
       >
-        <Box
-          sx={{
-            maxWidth: "1224px",
-            marginLeft: "auto",
-            marginRight: "auto",
-            paddingLeft: { xs: "16px", lg: "24px" },
-            paddingRight: { xs: "16px", lg: "24px" },
-          }}
-        >
+        <Container>
           <Box
             sx={{
               alignItems: "center",
@@ -46,10 +40,6 @@ export default function SingleCategoryAbout({
           >
             <Box
               sx={{
-                transform:
-                  "translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                transformStyle: "preserve-3d",
-                opacity: 1,
                 width: { xs: "115%", sm: "110%" },
                 height: { xs: "500px", sm: "600px", md: "700px", lg: "auto" },
                 marginTop: {
@@ -72,11 +62,8 @@ export default function SingleCategoryAbout({
               />
             </Box>
             <Box
+              ref={ref}
               sx={{
-                transform:
-                  "translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                transformStyle: "preserve-3d",
-                opacity: 1,
                 zIndex: 1,
                 maxWidth: "663px",
                 textAlign: { xs: "left", lg: "center" },
@@ -92,6 +79,9 @@ export default function SingleCategoryAbout({
                 left: language === "ar" ? 0 : "auto",
                 order: -1,
                 bgcolor: "white",
+                transform: isInView ? "none" : "translateX(-200px)",
+                opacity: isInView ? 1 : 0,
+                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
               }}
             >
               <Box
@@ -166,7 +156,7 @@ export default function SingleCategoryAbout({
               <ButtonBookNow texten="Book Now" textar="احجز الان" /> 
             </Box>
           </Box>
-        </Box>
+        </Container>
       </Box>
     </>
   );
