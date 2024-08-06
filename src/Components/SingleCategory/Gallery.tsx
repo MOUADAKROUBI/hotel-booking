@@ -44,7 +44,7 @@ export default function Gallery({ galleryRef, images }: { galleryRef: React.RefO
             className="subtitle-amenties"
             sx={{
               color: "#060606",
-              letterSpacing: ".1em",
+              letterSpacing: language === "en" ? ".1em" : 0,
               textTransform: "uppercase",
               justifyContent: "center",
               alignItems: "center",
@@ -97,7 +97,7 @@ export default function Gallery({ galleryRef, images }: { galleryRef: React.RefO
               }}
             >
               {images.map((image, index) => (
-                <Box key={index} className="item-gallery">
+                <Box key={index} className="item-gallery" sx= {{ cursor: 'pointer' }}>
                   <CardMedia
                     component="img"
                     key={index}
@@ -120,7 +120,7 @@ export default function Gallery({ galleryRef, images }: { galleryRef: React.RefO
             top: '50%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
-            width: '80%',
+            width: '80vw',
             bgcolor: 'background.paper',
             boxShadow: "20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff",
             outline: 'none',
@@ -128,12 +128,12 @@ export default function Gallery({ galleryRef, images }: { galleryRef: React.RefO
         >
           <Slider {...settings} >
             {images.map((src, index) => (
-              <Box key={index} sx={{  }}>
+              <Box key={index}>
                 <CardMedia
                   component="img"
                   src={src.url}
                   alt={`Carousel Image ${index + 1}`}
-                  sx={{ width: '100%', maxHeight: '85vh' }}
+                  sx={{ width: '100%', maxHeight: '85vh', objectFit: 'cover' }}
                 />
               </Box>
             ))}

@@ -100,31 +100,6 @@ export default function Footer({
                   display: "grid",
                 }}
               >
-                <a target="__black" href="#">
-                  <Box
-                    className="footer-social-icon"
-                    sx={{
-                      width: "40px",
-                      height: "40px",
-                      border: "1px solid #060606",
-                      backgroundColor: "#060606",
-                      color: "white",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      fontFamily: "Icons Hotel Template, sans-serif",
-                      lineHeight: "1em",
-                      textDecoration: "none",
-                      transition: "color .35s, background-color .35s",
-                      display: "flex",
-                      "&:hover": {
-                        backgroundColor: "#E0B006",
-                        border: 'none'
-                      },
-                    }}
-                  >
-                    <i className="fa fa-facebook"></i>
-                  </Box>
-                </a>
                 <a
                   target="__black"
                   href="https://www.instagram.com/luxury_rentals_33/"
@@ -490,7 +465,8 @@ export default function Footer({
                   fontWeight: "bold",
                   fontFamily: "Muli, sans-serif",
                   cursor: "pointer",
-                  mr: language === "en" ? 0 : 1,
+                  ml: language === "ar" ? 0 : 1,
+                  mr: language === "ar" ? 1 : 0,
                   transition: "color .35s",
                   '&:hover': {color: '#E0B006'}
                 }}

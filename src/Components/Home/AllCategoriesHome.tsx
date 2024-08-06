@@ -168,7 +168,7 @@ export default function AllCategoriesHome({ category, index }) {
                             flexDirection: { xs: "column", lg: "row" },
                           }}
                         >
-                          <div className="linkCate">
+                          <Link className="linkCate" to={`/${language}/${pagesEnglish[index].replace(" ", "")}`}>
                             <Box
                               component="img"
                               src={item.images[0].url}
@@ -185,7 +185,7 @@ export default function AllCategoriesHome({ category, index }) {
                                 objectFit: "cover",
                               }}
                             />
-                          </div>
+                          </Link>
                           <Box
                             sx={{
                               maxWidth: { xs: "90%", lg: "570px" },

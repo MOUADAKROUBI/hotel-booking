@@ -88,7 +88,7 @@ export default function SingleCategoryAbout({
                 className="subtitle-amenties"
                 sx={{
                   color: "#060606",
-                  letterSpacing: ".1em",
+                  letterSpacing: language === "en" ? ".1em" : 0,
                   textTransform: "uppercase",
                   justifyContent: "center",
                   alignItems: "center",
