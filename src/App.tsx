@@ -16,6 +16,7 @@ const App: React.FC = () => {
   const { language } = useLanguage();
   const [categoriesEnglish, setCategoriesEnglish] = useState<string[]>([]);
   const [categoriesArabic, setCategoriesArabic] = useState<string[]>([]);
+  console.log(categoriesEnglish, categoriesArabic);
   
   useEffect(() => {
     const pagesEnglish = Object.keys(data['en'][0]);

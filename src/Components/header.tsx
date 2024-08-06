@@ -66,6 +66,8 @@ function Header({
   };
 
   const { language, changeLanguage } = useLanguage();
+  document.documentElement.lang = language;
+  document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
 
   const handleLanguageChange = (newLang: string) => {
     document.documentElement.lang = newLang;
