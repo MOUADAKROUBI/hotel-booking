@@ -31,7 +31,7 @@ const App: React.FC = () => {
       <Router>
         <Header categoriesEnglish={categoriesEnglish} categoriesArabic={categoriesArabic} />
         <Routes>
-          <Route path="/" element={<Navigate replace to={`/${localStorage.getItem('language')}/home`} />} />
+          <Route path="/" element={<Navigate replace to={`/${localStorage.getItem('language') || 'en'}/home`} />} />
           <Route path=":lang/home" element={<Home categories={language === 'en' ? categoriesEnglish : categoriesArabic} />} />
           {
             (language === 'en' ? categoriesEnglish : categoriesArabic).map((category, index) => (
