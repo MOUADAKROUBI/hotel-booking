@@ -3,7 +3,13 @@ import React from "react";
 import { useLanguage } from "../../Contexts/LanguageContext";
 import { motion } from "framer-motion";
 
-export default function Hero({ sectionRef ,aboutusRef }: { sectionRef: React.RefObject<HTMLDivElement> ,aboutusRef: React.RefObject<HTMLDivElement> }) {
+export default function Hero({
+  sectionRef,
+  aboutusRef,
+}: {
+  sectionRef: React.RefObject<HTMLDivElement>;
+  aboutusRef: React.RefObject<HTMLDivElement>;
+}) {
   const { language } = useLanguage();
 
   return (
@@ -15,7 +21,7 @@ export default function Hero({ sectionRef ,aboutusRef }: { sectionRef: React.Ref
         sx={{
           paddingTop: "200px",
           paddingBottom: { xs: "0px", lg: "60px" },
-          height: {xs: 'auto', lg: '100vh'},
+          height: { xs: "auto", lg: "100vh" },
           position: "relative",
         }}
       >
@@ -30,17 +36,18 @@ export default function Hero({ sectionRef ,aboutusRef }: { sectionRef: React.Ref
               type: "spring",
               damping: 5,
               stiffness: 100,
-              restDelta: 0.001
-            }
+              restDelta: 0.001,
+            },
           }}
         >
           <Container>
             <Box
-              sx= {{
-                maxWidth: {xs: '100%', lg: "70%"},
+              sx={{
+                maxWidth: { xs: "100%", lg: "70%" },
                 marginBottom: "60px",
-                transform: "translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                transformStyle: 'preserve-3d',
+                transform:
+                  "translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
+                transformStyle: "preserve-3d",
                 opacity: 1,
               }}
             >
@@ -56,9 +63,9 @@ export default function Hero({ sectionRef ,aboutusRef }: { sectionRef: React.Ref
                   ml: "24px",
                 }}
               >
-                {
-                  language === "en" ? "Embark on Your Journey in the Heart of Morocco" : "إنطلق في رحلتك في قلب المغرب"
-                }
+                {language === "en"
+                  ? "Embark on Your Journey in the Heart of Morocco"
+                  : "إنطلق في رحلتك في قلب المغرب"}
               </Typography>
               <Typography
                 variant="h6"
@@ -68,13 +75,17 @@ export default function Hero({ sectionRef ,aboutusRef }: { sectionRef: React.Ref
                   maxWidth: { xs: "100%", lg: "500px" },
                 }}
               >
-                {
-                  language === "en" ? "Welcome to mafaman company, your gateway to a hassle-free vacation experience in Agadir." : "مرحبًا بك في شركة مفمان، بوابتك إلى تجربة عطلة خالية من المتاعب في أكادير."
-                }
+                {language === "en"
+                  ? "Welcome to mafaman company, your gateway to a hassle-free vacation experience in Agadir."
+                  : "مرحبًا بك في شركة مفمان، بوابتك إلى تجربة عطلة خالية من المتاعب في أكادير."}
               </Typography>
               <Box sx={{ mt: 5, ml: 3, cursor: "pointer" }}>
-                <Box
-                  onClick={() => {aboutusRef.current?.scrollIntoView({ behavior: "smooth" })}}
+                <motion.button
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.8 }}
+                  onClick={() => {
+                    aboutusRef.current?.scrollIntoView({ behavior: "smooth" });
+                  }}
                 >
                   <Typography
                     component="span"
@@ -96,41 +107,39 @@ export default function Hero({ sectionRef ,aboutusRef }: { sectionRef: React.Ref
                       },
                     }}
                   >
-                    {
-                      language === "en" ? "Read More" : "نبذة عنا"
-                    }
+                    {language === "en" ? "Read More" : "نبذة عنا"}
                   </Typography>
-                </Box>
+                </motion.button>
               </Box>
             </Box>
           </Container>
         </motion.div>
 
+        <Box
+          sx={{
+            zIndex: -1,
+            width: { xs: "100%", lg: "46%" },
+            opacity: 1,
+            position: { xs: "static", lg: "absolute" },
+            top: 0,
+            bottom: 0,
+            right: language === "en" ? 0 : "auto",
+            left: language === "en" ? "auto" : 0,
+          }}
+        >
           <Box
+            component="img"
+            src="/images/hero.jpeg"
+            alt="hero"
             sx={{
-              zIndex: -1,
-              width: { xs: "100%", lg: "46%" },
+              height: { xs: "300px", sm: "400px", md: "500px", lg: "100vh" },
+              width: "100%",
+              objectFit: "cover",
+              overflow: "hidden",
               opacity: 1,
-              position: { xs: "static", lg: "absolute" },
-              top: 0,
-              bottom: 0,
-              right: language === "en" ? 0 : "auto",
-              left: language === "en" ? "auto" : 0,
             }}
-          >
-            <Box
-              component="img"
-              src="/images/hero.jpeg"
-              alt="hero"
-              sx={{
-                height: {xs: '300px', sm: '400px', md: '500px', lg: '100vh'},
-                width: "100%",
-                objectFit: "cover",
-                overflow: "hidden",
-                opacity: 1,
-              }}
-            />
-          </Box>
+          />
+        </Box>
       </Box>
     </>
   );

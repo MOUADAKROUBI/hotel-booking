@@ -1310,6 +1310,45 @@
           ]
         }
       ]
+    },
+    {
+      "feedback": [
+        {
+          "feddback-content": "I had a great experience with mafaman compnay. The team was very helpful and responsive, and the apartment was beautiful and well-equipped. I would definitely recommend them to anyone looking for a luxury stay in Agadir.",
+          "name": "papel",
+          "location": "london",
+          "contry": "united kingdom",
+          "flag-country": "https://www.worldometers.info/img/flags/uk-flag.gif"
+        },
+        {
+          "feddback-content": "We are 5 friends who shared an penthouse and it was of the same standard and the price was cheaper than hotels due to the same servicesr.",
+          "name": "arman",
+          "location": "london",
+          "contry": "united kingdom",
+          "flag-country": "https://www.worldometers.info/img/flags/uk-flag.gif"
+        },
+        {
+          "feddback-content": "I had a great experience with Agadir Concierge. The team was very helpful and responsive, and the apartment was beautiful and well-equipped. I would definitely recommend them to anyone looking for a luxury stay in Agadir.",
+          "name": "Brendan",
+          "location": "london",
+          "contry": "united kingdom",
+          "flag-country": "https://www.worldometers.info/img/flags/uk-flag.gif"
+        },
+        {
+          "feddback-content": "unique. See you soon.",
+          "name": "jhon",
+          "location": "Toronto",
+          "contry": "canada",
+          "flag-country": "https://www.worldometers.info/img/flags/ca-flag.gif"
+        },
+        {
+          "feddback-content": "The location is good and the staff's treatment is excellent .",
+          "name": "Darman",
+          "location": "al quahirah",
+          "contry": "egypt",
+          "flag-country": "https://www.worldometers.info/img/flags/eg-flag.gif"
+        }
+      ]
     }
   ],
   "ar": [
@@ -2619,7 +2658,32 @@
           ]
         }
       ]
-
+    },
+    {
+      "feedback": [
+        {
+          "feddback-content": "الخدمة ١٠/١٠ تواصل طوال مدة الاقامة والمكان جد ممتاز و الثمن مناسب مع الخدمة صراحة اتمنى يشتغلون على توفير مزيد من الشقق.",
+          "name": "فواز",
+          "location": "الرياض",
+          "contry": "المملكة العربية السعودية",
+          "flag-country": "https://www.worldometers.info/img/flags/sa-flag.gif"
+        },
+        {
+          "feddback-content": "الشقق نضيفة و كل الاساسيات متواجدة والسيارة جديدة تجربة ممتازة",
+          "name": "نايف",
+          "location": "دبي",
+          "contry": "الإمارات العربية المتحدة",
+          "flag-country": "https://www.worldometers.info/img/flags/ae-flag.gif"
+        },
+        {
+          "feddback-content": "ممتاز",
+          "name": "محمد",
+          "location": "الكويت",
+          "contry": "الكويت",
+          "flag-country": "https://www.worldometers.info/img/flags/ku-flag.gif"
+        }
+      ]
+      
     }
   ]
 }

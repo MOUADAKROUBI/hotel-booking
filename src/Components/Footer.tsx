@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import ReactWhatsapp from "react-whatsapp";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import { useLanguage } from "../Contexts/LanguageContext";
+import { motion } from "framer-motion";
 
 export default function Footer({
   categoriesEnglish,
@@ -439,8 +440,11 @@ export default function Footer({
             </Accordion>
           </Box>
         </Container>
-        <Box
-          sx={{
+        <motion.div
+          className="box"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          style={{
             backgroundColor: "#060606",
             color: "#cfcfcf",
             textAlign: "center",
@@ -481,7 +485,7 @@ export default function Footer({
               </Typography>
             </p>
           </Box>
-        </Box>
+        </motion.div>
       </Box>
     </>
   );

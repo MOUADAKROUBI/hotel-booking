@@ -45,7 +45,7 @@ const App: React.FC = () => {
           }
           <Route path="*" element={<NotFound />} />
         </Routes>
-        {/* <FeedBack /> */}
+        <FeedBack />
         <Footer categoriesEnglish={categoriesEnglish} categoriesArabic={categoriesArabic} />
       </Router>
     </>

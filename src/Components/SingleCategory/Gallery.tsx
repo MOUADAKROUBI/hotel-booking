@@ -38,7 +38,7 @@ export default function Gallery({ galleryRef, images }: { galleryRef: React.RefO
         id="Gallery"
         sx={{ backgroundColor: "#f8f8f8" }}
       >
-        <Container sx={{ textAlign: "center" }} maxWidth="sm">
+        <Container sx={{ textAlign: "center" }}>
           <Box
             ref={galleryRef}
             className="subtitle-amenties"
@@ -79,7 +79,11 @@ export default function Gallery({ galleryRef, images }: { galleryRef: React.RefO
           </p>
         </Container>
         <Container maxWidth="lg" sx={{ mt: 2 }}>
-          <Box className="w-dyn-list">
+          <Box className="w-dyn-list"
+            sx= {{
+              textAlign: "center",
+            }}
+          >
             <Box
               ref={ref}
               className="list"
@@ -91,7 +95,7 @@ export default function Gallery({ galleryRef, images }: { galleryRef: React.RefO
                 gridAutoColumns: "1fr",
                 display: "grid",
                 mb: "48px",
-                transform: isInView ? "none" : "translateX(-200px)",
+                transform: isInView ? "none" : `${language === 'en' ? 'translateX(-200px)' : 'translateX(200px)'}`,
                 opacity: isInView ? 1 : 0,
                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
               }}

@@ -1,15 +1,13 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import { useLanguage } from "../../Contexts/LanguageContext";
+import { motion } from "framer-motion";
 
 export default function ButtonBookNow({ texten, textar }: { texten: string, textar: string }) {
   const { language } = useLanguage();
+  
   return (
-    <Box
-      sx= {{
-        textAlign: "center"
-      }}
-    >
+    <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
       <a href="https://wa.me/message/7EKHM7JVJBYZB1" target="__black" className="btn-book-now">
         <Typography
           component="span"
@@ -51,6 +49,6 @@ export default function ButtonBookNow({ texten, textar }: { texten: string, text
           />
         </Typography>
       </a>
-    </Box>
+    </motion.div>
   );
 }

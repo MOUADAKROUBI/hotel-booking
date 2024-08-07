@@ -69,7 +69,7 @@ export default function SingleCategory({ category }: { category: string }) {
         >
           <Box
             component="img"
-            src={`https://assets-global.website-files.com/5f28567562c2bb18b4a14f33/5f32cfe2e9e05b64cefc0521_image-room-01-hotel-template.jpg`}
+            src={`${(category === 'car hire' || category === 'استئجار السيارات') ? '/images/rangerover.jpeg' : 'https://assets-global.website-files.com/5f28567562c2bb18b4a14f33/5f32cfe2e9e05b64cefc0521_image-room-01-hotel-template.jpg'}`}
             alt={id}
             sx={{
               width: "100%",

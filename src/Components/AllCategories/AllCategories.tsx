@@ -26,16 +26,16 @@ export default function AllCategories({ category }: { category: string }) {
 
   const cardVariants: Variants = {
     offscreen: {
-      y: 300
+      y: 300,
     },
     onscreen: {
       y: 30,
       transition: {
         type: "spring",
         bounce: 0.4,
-        duration: 0.8
-      }
-    }
+        duration: 0.8,
+      },
+    },
   };
 
   return (
@@ -128,10 +128,7 @@ export default function AllCategories({ category }: { category: string }) {
                   whileInView="onscreen"
                   viewport={{ once: true, amount: 0.8 }}
                 >
-                  <motion.div
-                    className="card"
-                    variants={cardVariants}
-                  >
+                  <motion.div className="card" variants={cardVariants}>
                     <Link className="image-wrapper" to={`${item.id}`}>
                       <Box
                         component="img"
@@ -374,32 +371,37 @@ export default function AllCategories({ category }: { category: string }) {
                         )}
                       </Box>
                       <Divider sx={{}} />
-                      <Link to={`${item.id}`}>
-                        <Typography
-                          sx={{
-                            bgcolor: "black",
-                            color: "white",
-                            textAlign: "center",
-                            borderRadius: 0,
-                            fontWeight: { xs: 500, md: 700 },
-                            letterSpacing: language === "en" ? ".1rem" : "0",
-                            px: { xs: 2, md: 4 },
-                            py: 2,
-                            textTransform: "uppercase",
-                            fontSize: { xs: "14px", md: "16px" },
-                            "&:hover": {
-                              bgcolor: "white",
-                              color: "black",
-                              border: "1.5px solid black",
-                              boxShadow: "none",
-                            },
-                          }}
-                        >
-                          {language === "en"
-                            ? "View more information"
-                            : "عرض المزيد من المعلومات"}
-                        </Typography>
-                      </Link>
+                      <motion.div
+                        whileHover={{ scale: 1.2 }}
+                        whileTap={{ scale: 0.8 }}
+                      >
+                        <Link to={`${item.id}`}>
+                          <Typography
+                            sx={{
+                              bgcolor: "black",
+                              color: "white",
+                              textAlign: "center",
+                              borderRadius: 0,
+                              fontWeight: { xs: 500, md: 700 },
+                              letterSpacing: language === "en" ? ".1rem" : "0",
+                              px: { xs: 2, md: 4 },
+                              py: 2,
+                              textTransform: "uppercase",
+                              fontSize: { xs: "14px", md: "16px" },
+                              "&:hover": {
+                                bgcolor: "white",
+                                color: "black",
+                                border: "1.5px solid black",
+                                boxShadow: "none",
+                              },
+                            }}
+                          >
+                            {language === "en"
+                              ? "View more information"
+                              : "عرض المزيد من المعلومات"}
+                          </Typography>
+                        </Link>
+                      </motion.div>
                     </Box>
                   </motion.div>
                 </motion.div>

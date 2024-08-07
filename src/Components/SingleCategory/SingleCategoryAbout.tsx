@@ -17,14 +17,8 @@ export default function SingleCategoryAbout({
     <>
       <Box
         component="section"
+        className="section single-category-about"
         sx={{
-          paddingTop: { xs: "80px", sm: "100px", md: "120px", lg: "140px" },
-          paddingBottom: {
-            xs: "80px",
-            sm: "100px",
-            md: "120px",
-            lg: "140px",
-          },
           overflow: { xs: "hidden", lg: "visible" },
         }}
       >
@@ -79,7 +73,7 @@ export default function SingleCategoryAbout({
                 left: language === "ar" ? 0 : "auto",
                 order: -1,
                 bgcolor: "white",
-                transform: isInView ? "none" : "translateX(-200px)",
+                transform: isInView ? "none" : `${language === 'en' ? 'translateX(-200px)' : 'translateX(200px)'}`,
                 opacity: isInView ? 1 : 0,
                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
               }}

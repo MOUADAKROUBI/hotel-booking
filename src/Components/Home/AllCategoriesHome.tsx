@@ -49,7 +49,7 @@ export default function AllCategoriesHome({ category, index }) {
         sx={{
           mt: 4,
           textAlign: "center",
-          transform: isInView ? "none" : "translateX(-200px)",
+          transform: isInView ? "none" : `${language === 'en' ? 'translateX(-200px)' : 'translateX(200px)'}`,
           opacity: isInView ? 1 : 0,
           transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
         }}
@@ -145,10 +145,10 @@ export default function AllCategoriesHome({ category, index }) {
                     sx={{
                       display: "flex",
                       transition: "transform 0.5s ease",
+                      width: "100%",
                       transform: `translateX(${language === "ar" ? "" : "-"}${
                         currentSlide * 100
                       }%)`,
-                      width: "100%",
                     }}
                   >
                     {dataImported?.[0].data.map((item) => (

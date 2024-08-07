@@ -41,7 +41,7 @@ export default function SingleCategoryHero({
         >
           <Box
             component="section"
-            className="book-now"
+            className="section book-now"
             sx={{
               backgroundColor: "white",
               pt: { sm: "50px" },
@@ -267,46 +267,51 @@ export default function SingleCategoryHero({
                     galleryRef.current?.scrollIntoView({ behavior: "smooth" })
                   }
                 >
-                  <Box
-                    component="a"
-                    href="#Gallery"
-                    sx={{
-                      border: "1px solid #060606",
-                      color: "#060606",
-                      mr: language === "en" ? 2 : 0,
-                      ml: language === "en" ? 0 : 2,
-                      mb: { xs: "40px", sm: 0 },
-                      textAlign: "center",
-                      letterSpacing: ".08em",
-                      textTransform: "uppercase",
-                      padding: { xs: "22px 30px", sm: "22px 46px" },
-                      fontSize: "16px",
-                      lineHeight: "1.125em",
-                      textDecoration: "none",
-                    }}
+                  <motion.div
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.8 }}
                   >
-                    <span>
-                      {language === "en" ? "View Gallery" : "عرض الصور"}
-                    </span>
                     <Box
+                      component="a"
+                      href="#Gallery"
                       sx={{
-                        display: "none",
-                        width: "0px",
-                        height: "62px",
-                        backgroundColor: "#060606",
-                        position: "absolute",
-                        top: "0%",
-                        bottom: "0%",
-                        left: "0%",
-                        right: "0%",
-                        "&:hover": {
-                          display: "block",
-                          width: "100%",
-                          height: "62px",
-                        },
+                        border: "1px solid #060606",
+                        color: "#060606",
+                        mr: language === "en" ? 2 : 0,
+                        ml: language === "en" ? 0 : 2,
+                        mb: { xs: "40px", sm: 0 },
+                        textAlign: "center",
+                        letterSpacing: ".08em",
+                        textTransform: "uppercase",
+                        padding: { xs: "22px 30px", sm: "22px 46px" },
+                        fontSize: "16px",
+                        lineHeight: "1.125em",
+                        textDecoration: "none",
                       }}
-                    />
-                  </Box>
+                    >
+                      <span>
+                        {language === "en" ? "View Gallery" : "عرض الصور"}
+                      </span>
+                      <Box
+                        sx={{
+                          display: "none",
+                          width: "0px",
+                          height: "62px",
+                          backgroundColor: "#060606",
+                          position: "absolute",
+                          top: "0%",
+                          bottom: "0%",
+                          left: "0%",
+                          right: "0%",
+                          "&:hover": {
+                            display: "block",
+                            width: "100%",
+                            height: "62px",
+                          },
+                        }}
+                      />
+                    </Box>
+                  </motion.div>
                 </Box>
 
                 <ButtonBookNow texten="Book Now" textar="احجز الان" />

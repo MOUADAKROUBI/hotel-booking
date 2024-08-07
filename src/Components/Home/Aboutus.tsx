@@ -66,7 +66,7 @@ export default function Aboutus({ aboutusRef }: { aboutusRef: React.RefObject<HT
                 left: language === "en" ? "auto" : "0",
                 order: -1,
                 bgcolor: "white",
-                transform: isInView ? "none" : "translateX(-200px)",
+                transform: isInView ? "none" : `${language === 'en' ? 'translateX(-200px)' : 'translateX(200px)'}`,
                 opacity: isInView ? .9 : 0,
                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
               }}

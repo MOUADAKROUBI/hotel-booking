@@ -14,6 +14,7 @@ import {
 import { TransitionProps } from "@mui/material/transitions";
 import { useLanguage } from "../Contexts/LanguageContext";
 import ButtonBookNow from "./ui/ButtonBookNow";
+import { motion } from "framer-motion";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -207,7 +208,7 @@ function Header({
             alignItems: "center",
           }}
         >
-          <Box className="switch-launguge">
+          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} className="switch-langs">
             <Button
               sx={{
                 color: "#060606",
@@ -229,7 +230,7 @@ function Header({
             >
               {language === "ar" ? "English" : "العربية"}
             </Button>
-          </Box>
+          </motion.div>
           {/* contact us */}
           <Box
             sx={{
@@ -367,7 +368,11 @@ function Header({
                   </Box>
                 </Box>
               </Box>
-              <List>
+              <List
+                sx= {{
+                  mb: 2,
+                }}
+              >
                 {(language === "en" ? categoriesEnglish : categoriesArabic).map(
                   (page, index) => (
                     <ListItemButton
@@ -375,15 +380,16 @@ function Header({
                       onClick={(page) => handleClickCategory(page)}
                       sx={{
                         textTransform: "uppercase",
-                        letterSpacing: ".1rem",
+                        letterSpacing: language === "en" ? ".01em" : "0",
+                        
                       }}
                     >
                       <ListItemText primary={page} />
                     </ListItemButton>
                   )
                 )}
-                <ButtonBookNow texten="Contact US" textar="تواصل معنا" />
               </List>
+              <ButtonBookNow texten="Contact US" textar="تواصل معنا" />
             </Dialog>
           </Box>
         </Box>
