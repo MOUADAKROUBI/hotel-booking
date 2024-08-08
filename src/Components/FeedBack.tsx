@@ -13,9 +13,7 @@ export default function FeedBack() {
   const { language } = useLanguage();
   const dataImported = data[language][1].feedback;
 
-  const [currentSlide, setCurrentSlide] = useState(
-    language === "ar" ? dataImported?.length - 1 : 0
-  );
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const totalSlides = dataImported?.length;
 
@@ -148,7 +146,7 @@ export default function FeedBack() {
                     WebkitBoxOrient: "vertical",
                   }}
                 >
-                  <p>{item["feddback-content"]}</p>
+                  <p>{item["feedback-content"]}</p>
                 </Box>
                 <Divider sx={{ margin: "24px 0" }} />
                 <Box
@@ -210,7 +208,7 @@ export default function FeedBack() {
                           lineHeight: "1em",
                         }}
                       >
-                        {item.location}, {item.contry}
+                        {item.location}, {item.country}
                       </Box>
                     </Box>
                   </Box>
@@ -237,6 +235,7 @@ export default function FeedBack() {
               mb: "40px",
             }}
           >
+            {/* show the previous arrow if the current silder is greth than 0 */}
             <motion.button
               onClick={goToPrevious}
               whileHover={{ scale: 1.2 }}
