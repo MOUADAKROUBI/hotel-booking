@@ -177,14 +177,23 @@ export default function AllCategories({ category }: { category: string }) {
                           {item.name}
                         </Typography>
                       </Link>
-                      <Typography
-                        sx={{
+                      <Box className="item-description"
+                        sx= {{
                           mb: "18px",
+                          height: category != 'car hire' ? "100px" : "auto",
+                          overflow: "hidden",
+                          textOverflow: "ellipsis",
+                          display: "-webkit-box",
+                          WebkitLineClamp: category != 'car hire' ? 4 : 0,
+                          WebkitBoxOrient: "vertical",
                         }}
-                        dangerouslySetInnerHTML={{
-                          __html: item.description,
-                        }}
-                      />
+                      >
+                        <Typography
+                          dangerouslySetInnerHTML={{
+                            __html: item.description,
+                          }}
+                        />
+                      </Box>
                       <Divider sx={{ mb: 2 }} />
                       <Box
                         className="about-room"
