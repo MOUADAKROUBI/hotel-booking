@@ -23,6 +23,12 @@ body {
     line-height: 1.778em !important;
 }
 
+.hero-title {
+    background: linear-gradient(to bottom, var(--neutral-400), #060606) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
 .linkCate {
     overflow: hidden;
 }

@@ -52,9 +52,9 @@ export default function Hero({
               }}
             >
               <Typography
-                variant="h1"
+                className="hero-title"
+                component="h1"
                 sx={{
-                  color: "black",
                   fontSize: { xs: "49px", sm: "58px", md: "70px", lg: "84px" },
                   fontWeight: 400,
                   lineHeight: "1.095em",
@@ -68,9 +68,8 @@ export default function Hero({
                   : "إنطلق في رحلتك في قلب المغرب"}
               </Typography>
               <Typography
-                variant="h6"
+                component="p"
                 sx={{
-                  color: "#626262",
                   pl: "24px",
                   maxWidth: { xs: "100%", lg: "500px" },
                 }}
