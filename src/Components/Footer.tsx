@@ -122,7 +122,7 @@ export default function Footer({
                       display: "flex",
                       "&:hover": {
                         backgroundColor: "#E0B006",
-                        border: 'none'
+                        border: "none",
                       },
                     }}
                   >
@@ -147,7 +147,7 @@ export default function Footer({
                       display: "flex",
                       "&:hover": {
                         backgroundColor: "#E0B006",
-                        border: 'none'
+                        border: "none",
                       },
                     }}
                   >
@@ -305,6 +305,27 @@ export default function Footer({
                         contact@mafaman.com
                       </Typography>
                     </Box>
+                    <Box
+                      component="li"
+                      sx={{
+                        alignItems: "center",
+                        marginBottom: "15px",
+                        display: "flex",
+                      }}
+                    >
+                      <Typography
+                        sx={{
+                          color: "#626262",
+                          whiteSpace: "nowrap",
+                          fontSize: "18px",
+                          lineHeight: "1.25em",
+                        }}
+                      >
+                        {language === "en"
+                          ? "Founty Agadir, Morocco"
+                          : "  فونتي، أكادير, المغرب"}
+                      </Typography>
+                    </Box>
                   </Box>
                 </Box>
               </Box>
@@ -433,6 +454,27 @@ export default function Footer({
                           contact@mafaman.com
                         </Typography>
                       </Box>
+                      <Box
+                        component="li"
+                        sx={{
+                          alignItems: "center",
+                          marginBottom: "15px",
+                          display: "flex",
+                        }}
+                      >
+                        <Typography
+                          sx={{
+                            color: "#626262",
+                            whiteSpace: "nowrap",
+                            fontSize: "18px",
+                            lineHeight: "1.25em",
+                          }}
+                        >
+                          {language === "en"
+                            ? "Founty Agadir, Morocco"
+                            : "  فونتي، أكادير, المغرب"}
+                        </Typography>
+                      </Box>
                     </Box>
                   </Box>
                 </Box>
@@ -472,7 +514,7 @@ export default function Footer({
                   ml: language === "ar" ? 0 : 1,
                   mr: language === "ar" ? 1 : 0,
                   transition: "color .35s",
-                  '&:hover': {color: '#E0B006'}
+                  "&:hover": { color: "#E0B006" },
                 }}
               >
                 <ReactWhatsapp
