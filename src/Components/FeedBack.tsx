@@ -292,7 +292,7 @@ export default function FeedBack() {
               }
             </motion.button>
           </Box>
-          <ButtonBookNow texten="Book Now" textar="احجز الأن" />
+          <ButtonBookNow texten="book now " textar="احجز الأن" />
         </Container>
       </Box>
     </>

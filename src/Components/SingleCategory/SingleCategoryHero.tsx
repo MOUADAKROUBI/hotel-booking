@@ -314,7 +314,7 @@ export default function SingleCategoryHero({
                   </motion.div>
                 </Box>
 
-                <ButtonBookNow texten="Book Now" textar="احجز الان" />
+                <ButtonBookNow texten="book now " textar="احجز الان" />
               </Box>
             </Box>
           </Box>

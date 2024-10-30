@@ -410,7 +410,7 @@ export default function AllCategoriesHome({ category, index }) {
                                 )}
                               </Box>
                               <ButtonBookNow
-                                texten="Book Now"
+                                texten="book now "
                                 textar="احجز الان"
                               />
                             </Box>

@@ -147,7 +147,7 @@ export default function SingleCategoryAbout({
                 />
               </Typography>
               
-              <ButtonBookNow texten="Book Now" textar="احجز الان" /> 
+              <ButtonBookNow texten="book now " textar="احجز الان" /> 
             </Box>
           </Box>
         </Container>

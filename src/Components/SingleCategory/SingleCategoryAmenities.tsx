@@ -95,7 +95,7 @@ export default function SingleCategoryAmenities({ data }) {
                   </Typography>
                 </Box>
                 <Box sx={{ mb: 4, width: "100%" }}>
-                  <ButtonBookNow texten="Book Now" textar="احجز الان" />
+                  <ButtonBookNow texten="book now " textar="احجز الان" />
                 </Box>
               </Box>
 

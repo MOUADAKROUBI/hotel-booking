@@ -113,7 +113,7 @@ export default function Gallery({ galleryRef, images }: { galleryRef: React.RefO
                 </Box>
               ))}
             </Box>
-            <ButtonBookNow texten="Book Now" textar="احجز الان" /> 
+            <ButtonBookNow texten="book now " textar="احجز الان" /> 
           </Box>
         </Container>
       </Box>
