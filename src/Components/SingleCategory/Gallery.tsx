@@ -137,7 +137,7 @@ export default function Gallery({ galleryRef, images }: { galleryRef: React.RefO
                   component="img"
                   src={src.url}
                   alt={`Carousel Image ${index + 1}`}
-                  sx={{ width: '100%', maxHeight: '85vh', objectFit: 'cover' }}
+                  sx={{ width: '100%', height: '95vh', objectFit: 'contain' }}  
                 />
               </Box>
             ))}
