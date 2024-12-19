@@ -120,7 +120,7 @@ export default function AllCategories({ category }: { category: string }) {
                 maxWidth: { xs: "530px", lg: "100%" },
               }}
             >
-              {dataImported[0].data.map((item) => (
+              {dataImported[0].data.filter((data) => data.id != 4).map((item) => (
                 <motion.div
                   key={item}
                   className="card-container"
